@@ -1,5 +1,6 @@
 HOME ?= `$HOME`
 PWD ?= `pwd`
+OS ?= $(shell uname -s)
 SUBLIME_FOLDER ?= $(HOME)/Library/Application Support/Sublime Text 3/Packages/User
 
 .PHONY: provision
@@ -23,5 +24,7 @@ bashfiles:
 
 .PHONY: sublime
 sublime:
+ifeq ($(OS),Darwin)
 	ln -sf "$(PWD)/Preferences.sublime-settings" "$(SUBLIME_FOLDER)/Preferences.sublime-settings"
 	ln -sf "$(PWD)/Default (OSX).sublime-keymap" "$(SUBLIME_FOLDER)/Default (OSX).sublime-keymap"
+endif
