@@ -1,0 +1,9 @@
+[
+    { "keys": ["super+shift+c"], "command": "phpcs_clear_sniffer_marks" },
+    { "keys": ["super+ctrl+a"], "command": "alignment" },
+    { "keys": ["super+k", "super+r"], "command": "reveal_in_side_bar"},
+    { "keys": ["super+k", "super+f"], "command": "phpcs_fix_this_file", "args": {"tool": "CodeBeautifier"}},
+    { "keys": ["super+k", "super+j"], "command": "show_jenkins_dashboard"},
+    { "keys": ["shift+super+alt+down"], "command": "goto_definition" },
+    { "keys": ["super+shift+r"], "command": "goto_symbol_in_project" }
+]

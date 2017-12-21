@@ -1,0 +1,36 @@
+[user]
+    name = Ben Selby
+    email = benmatselby@gmail.com
+[core]
+    excludesfile = /Users/Ben/.gitignore
+    editor = vim
+[color]
+    ui = true
+[alias]
+    b = branch -vv
+    ba = branch -avv
+    clean-wd = clean -fd
+    clean-wd-sanity = clean -fdn
+    co = checkout
+    commit-naughty = commit --no-verify
+    d = diff --no-ext-diff -w
+    dcache = diff -w --cached
+    dex = diff -w
+    dn = diff --name-only
+    ds = diff --name-status
+    ignored = ls-files -o -i --exclude-standard
+    l = log --no-merges
+    lop = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --no-merges
+    lol = log --graph --decorate --color --date=iso
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    rebasec = rebase --continue
+    rs = remote show
+    rr = remote rm
+    sh = show
+    shn = show --name-only
+    st = status
+    stf = !git status --porcelain | awk '{print $2}'
+    t = tag --sort version:refname
+    f = fetch -p
+[diff]
+    compactionHeuristic = true
