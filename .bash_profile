@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin/"
 export GREP_COLOR="1;35"
 
 # Setup the prompts
-export PS1='\[\e[035;40m\]\h \D{%F %T}: \[\033[33m\]\w\[\033[00m\] $(__git_ps1 "(%s)")\n\$ '
+export PS1='\[\e[35m\]\h \D{%F %T}: \[\e[33m\]\w\[\e[m\] $(__git_ps1 "(%s)")\n\$ '
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # PHP versioning
