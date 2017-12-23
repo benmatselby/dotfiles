@@ -30,66 +30,6 @@ function lint-diff()
 }
 
 ##
-# Sniff each file in diff
-#
-# Basic at the moment, doesn't perform checking etc
-#
-function phpcs-diff()
-{
-    cmd=`_diff-command $1`
-    echo $cmd
-    for i in `$cmd`
-    do
-        phpcs $i;
-    done
-}
-
-##
-# Fix each file in the diff using php-cs-fixer
-#
-# Basic at the moment, doesn't perform checking etc
-#
-function php-cs-fixer-diff()
-{
-    cmd=`_diff-command $1`
-    echo $cmd
-    for i in `$cmd`
-    do
-        php-cs-fixer fix $i --verbose;
-    done
-}
-
-##
-# Update my toolset
-#
-function update-toolset()
-{
-    echo 'Composer...'
-    composer.phar self-update
-    composer.phar global update
-
-    echo ''
-    echo 'Symfony'
-    symfony self-update
-
-    echo ''
-    echo 'Brew...'
-    brew update && brew upgrade
-
-    echo ''
-    echo 'Node...'
-    npm update
-
-    echo ''
-    echo 'Checking Virtualbox'
-    python $HOME/git/external/life/tools/check-virtual-box-versions.py
-
-    echo ''
-    echo 'Checking Vagrant'
-    vagrant version
-}
-
-##
 # Go Faster stripes for the mac terminal
 # Pretty much brute force
 #
