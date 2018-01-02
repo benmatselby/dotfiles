@@ -1,6 +1,5 @@
-[user]
-    name = Ben Selby
-    email = benmatselby@gmail.com
+[include]
+    path = ~/.gitconfig.local
 [core]
     excludesfile = /Users/Ben/.gitignore
     editor = vim
