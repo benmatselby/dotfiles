@@ -4,7 +4,7 @@ OS ?= $(shell uname -s)
 SUBLIME_FOLDER ?= $(HOME)/Library/Application Support/Sublime Text 3/Packages/User
 
 .PHONY: provision
-provision: bashfiles sublime
+provision: bashfiles setup-git-config sublime
 
 .PHONY: bashfiles
 bashfiles:
@@ -24,6 +24,21 @@ bashfiles:
 		echo $$file; \
 		ln -sf $(PWD)/$$file $(HOME)/$$file; \
 	done
+
+.PHONY: setup-git-config
+setup-git-config:
+	@echo '##'
+	@echo '# Setup the local git configuration'
+	@echo '##'
+ifeq ("$(wildcard $(HOME)/.gitconfig.local)","")
+	cp .gitconfig.local $(HOME)/.gitconfig.local
+	@echo "Enter your full name";
+	@read -e name; \
+	sed -i '' "s/GITNAME/$$name/" $(HOME)/.gitconfig.local
+	@echo "Enter your email address";
+	@read -e email; \
+	sed -i '' "s/GITEMAIL/$$email/g" $(HOME)/.gitconfig.local
+endif
 
 .PHONY: sublime
 sublime:
