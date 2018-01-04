@@ -8,6 +8,9 @@ provision: bashfiles sublime
 
 .PHONY: bashfiles
 bashfiles:
+	@echo '##'
+	@echo '# Symlink the dot files in'
+	@echo '##'
 	for file in  \
 	.bash_aliases \
 	.bash_functions \
@@ -24,6 +27,9 @@ bashfiles:
 
 .PHONY: sublime
 sublime:
+	@echo '##'
+	@echo '# Setup the Sublime Text Preferences'
+	@echo '##'
 ifeq ($(OS),Darwin)
 	ln -sf "$(PWD)/Preferences.sublime-settings" "$(SUBLIME_FOLDER)/Preferences.sublime-settings"
 	ln -sf "$(PWD)/Default (OSX).sublime-keymap" "$(SUBLIME_FOLDER)/Default (OSX).sublime-keymap"
