@@ -3,7 +3,6 @@ export HISTSIZE=1000
 export HISTFILESIZE=2000
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
-export PATH="$PATH:$HOME/.composer/vendor/bin/"
 export GREP_COLOR="1;35"
 
 # Setup the prompts
