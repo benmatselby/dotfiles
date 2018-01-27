@@ -17,6 +17,7 @@ bashfiles:
 	.bash_profile \
 	.bash_docker \
 	.bash_git \
+	.exports \
 	.gitconfig \
 	.gitignore \
 	.vimrc \

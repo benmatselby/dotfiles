@@ -1,0 +1,7 @@
+export PS1='\[\e[35m\]\h \D{%F %T}: \[\e[33m\]\w\[\e[m\] $(__git_ps1 "(%s)")\n\$ '
+export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+export HISTCONTROL=ignoreboth
+export EDITOR=vim
+export GREP_COLOR="1;35"
