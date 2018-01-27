@@ -1,3 +1,14 @@
 alias docker-rai='docker rmi $(docker images -q)'
 alias docker-rac='docker rm $(docker ps -aq)'
 alias docker-soc='docker stop $(docker ps -aq)'
+
+export DOCKER_REPO_PREFIX=benmatselby
+
+trello() {
+    docker run \
+        --rm \
+        -eTRELLO_CLI_KEY \
+        -eTRELLO_CLI_SECRET \
+        --name trello \
+        ${DOCKER_REPO_PREFIX}/trello-cli "$@"
+}
