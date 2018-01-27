@@ -12,3 +12,9 @@ trello() {
         --name trello \
         ${DOCKER_REPO_PREFIX}/trello-cli "$@"
 }
+crime() {
+	docker run \
+		--rm \
+		--name crime \
+		${DOCKER_REPO_PREFIX}/uk-crime "$@"
+}
