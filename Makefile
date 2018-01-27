@@ -19,6 +19,7 @@ bashfiles:
 	.gitignore \
 	.vimrc \
 	.curlrc \
+	.inputrc \
 	; \
 	do \
 		echo $$file; \
