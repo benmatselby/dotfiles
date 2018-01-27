@@ -1,7 +1,5 @@
 alias ls='ls -lh'
 alias la='ls -lah'
 alias grep='grep --color'
-alias git-top='git rev-parse --show-toplevel'
-alias gfo='git f origin'
 alias vssh='vagrant ssh'
 alias open-chrome='open -a "Google Chrome"'

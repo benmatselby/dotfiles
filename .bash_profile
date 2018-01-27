@@ -26,6 +26,7 @@ fi
 
 source ~/.bash_aliases
 source ~/.bash_docker
+source ~/.bash_git
 source ~/.bash_functions
 
 if [ -f ~/.bash_work_aliases ]; then
