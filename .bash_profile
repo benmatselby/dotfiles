@@ -24,15 +24,11 @@ if [ -f /usr/local/etc/bash_completion ]; then
     source /usr/local/etc/bash_completion
 fi
 
-# Alias information
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
+source ~/.bash_aliases
+source ~/.bash_docker
+source ~/.bash_functions
+
 if [ -f ~/.bash_work_aliases ]; then
     source ~/.bash_work_aliases
 fi
 
-# Functions
-if [ -f ~/.bash_functions ]; then
-    source ~/.bash_functions
-fi

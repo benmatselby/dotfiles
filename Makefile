@@ -15,6 +15,7 @@ bashfiles:
 	.bash_aliases \
 	.bash_functions \
 	.bash_profile \
+	.bash_docker \
 	.gitconfig \
 	.gitignore \
 	.vimrc \
