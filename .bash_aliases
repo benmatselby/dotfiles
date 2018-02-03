@@ -1,6 +1,5 @@
 alias ls='ls -lh'
 alias la='ls -lah'
 alias grep='grep --color'
-alias vssh='vagrant ssh'
 alias open-chrome='open -a "Google Chrome"'
 alias week='date +%V'

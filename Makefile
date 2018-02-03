@@ -16,6 +16,7 @@ bashfiles:
 	.bash_functions \
 	.bash_profile \
 	.bash_docker \
+	.bash_vagrant \
 	.bash_git \
 	.exports \
 	.gitconfig \

@@ -1,0 +1,2 @@
+alias vssh='vagrant ssh'
+alias vprune='vagrant box prune'
