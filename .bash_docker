@@ -25,3 +25,11 @@ clisplattr() {
         -v ${HOME}/.clisplattr:/root/.clisplattr \
         ${DOCKER_REPO_PREFIX}/clisplattr "$@"
 }
+baldrick() {
+    docker run \
+        -d \
+        --rm \
+        -eBALDRICK_SLACK_TOKEN \
+        -eBALDRICK_JENKINS_URL \
+        benmatselby/baldrick
+}
