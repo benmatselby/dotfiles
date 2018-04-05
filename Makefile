@@ -21,7 +21,6 @@ bashfiles:
 	.gitconfig \
 	.gitignore \
 	.vimrc \
-	.curlrc \
 	.inputrc \
 	; \
 	do \
