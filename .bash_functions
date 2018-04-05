@@ -55,6 +55,7 @@ function sniff-diff()
     files=`_diff-command`
     for i in `${files}`
     do
+        echo $i;
         ${cmd} $i;
     done
 }
