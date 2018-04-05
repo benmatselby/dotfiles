@@ -13,6 +13,7 @@ bashfiles:
 	.bash_aliases \
 	.bash_functions \
 	.bash_profile \
+	.bash_prompt \
 	.bash_docker \
 	.bash_vagrant \
 	.bash_git \
