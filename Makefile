@@ -22,7 +22,6 @@ bashfiles:
 	.vimrc \
 	.curlrc \
 	.inputrc \
-	.tmux.conf \
 	; \
 	do \
 		echo $$file; \
