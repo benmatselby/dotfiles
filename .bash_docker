@@ -4,6 +4,16 @@ alias docker-soc='docker stop $(docker ps -aq)'
 
 export DOCKER_REPO_PREFIX=benmatselby
 
+donny() {
+    docker run \
+        --rm \
+        -t \
+        -eVSTS_ACCOUNT \
+        -eVSTS_PROJECT \
+        -eVSTS_TEAM \
+        -eVSTS_TOKEN \
+        ${DOCKER_REPO_PREFIX}/donny "$@"
+}
 trello() {
     docker run \
         --rm \
