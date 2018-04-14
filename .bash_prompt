@@ -1,11 +1,23 @@
 # Pulled mainly from @necolas’s prompt: https://github.com/necolas/dotfiles
 
+# Display the git branch name if we are in a git repo
 prompt_git() {
     branchName=$(__git_ps1 %s)
     if [ "${branchName}" == "" ]; then
         return
     else
         echo -e "${white} on ${blue}${branchName}";
+    fi
+}
+
+# Provide some kind of visual queue as to whether the last command was successful,
+# so we don't need to keep checking $?
+last_command() {
+    success=$?
+    if [ ${success} -ne 0 ]; then
+        echo -e "${red}✗ "
+    else
+        echo -e "${green}✓ "
     fi
 }
 
@@ -42,6 +54,7 @@ else
 fi
 
 PS1="\n" # newline
+PS1+='$(last_command)'
 PS1+="\[$purple\]\h" # hostname
 PS1+="\[$white\] at "
 PS1+="\[$orange\]\D{%T}" # time
