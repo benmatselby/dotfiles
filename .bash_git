@@ -1,2 +1,0 @@
-alias git-top='git rev-parse --show-toplevel'
-alias gfo='git f origin'

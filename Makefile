@@ -15,8 +15,6 @@ bashfiles:
 	.bash_profile \
 	.bash_prompt \
 	.bash_docker \
-	.bash_vagrant \
-	.bash_git \
 	.exports \
 	.gitconfig \
 	.gitignore \
