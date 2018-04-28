@@ -1,5 +1,17 @@
 export DOCKER_REPO_PREFIX=benmatselby
 
+precis() {
+    docker run \
+        --rm \
+        -t \
+        -eVSTS_ACCOUNT \
+        -eVSTS_PROJECT \
+        -eVSTS_TEAM \
+        -eVSTS_TOKEN \
+        -eTRAVIS_CI_TOKEN \
+        -eTRAVIS_CI_OWNER \
+        ${DOCKER_REPO_PREFIX}/precis "$@"
+}
 donny() {
     docker run \
         --rm \
