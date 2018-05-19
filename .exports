@@ -4,5 +4,12 @@ export HISTFILESIZE=2000
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
 export GREP_COLOR="1;35"
+
+# You need some random in your life
 export ANSIBLE_COW_SELECTION=random
+
+# Go home
 export GOPATH=$HOME/go
+
+# Keeps the man page on the screne
+export MANPAGER="less -X";
