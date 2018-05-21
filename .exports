@@ -15,4 +15,4 @@ export GOPATH=$HOME/go
 export MANPAGER="less -X";
 
 # Define the folders `cd` will look in
-export CDPATH=${CDPATH}:${GOPATH}/src/github.com:${GOPATH}/src
+export CDPATH=${CDPATH}:${GOPATH}/src/github.com:${GOPATH}/src:~/git
