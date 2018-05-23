@@ -94,3 +94,31 @@ function make-safari-great-again()
 {
     sudo rm -f ~/Library/Preferences/com.apple.Safari.plist
 }
+
+##
+# Sync the codebases for a branch
+#
+function sync-code()
+{
+    if [ -z "$1" ]
+    then
+        branch="master"
+    else
+        branch="$1"
+    fi
+
+    for dir in `ls -1`; do
+        echo ${dir}
+        cd ${dir}
+
+        if [ -d .git ]; then
+            git fetch -p origin && \
+            git pull origin ${branch}
+        else
+            echo 'Not a git repo, skipping...'
+        fi
+
+        echo ''
+        cd ..
+    done
+}
