@@ -51,3 +51,10 @@ baldrick() {
         -eBALDRICK_JENKINS_URL \
         ${DOCKER_REPO_PREFIX}/baldrick
 }
+travis() {
+    docker run --rm -t \
+        -v "$(pwd):/usr/src/repo:ro" \
+        --workdir /usr/src/repo \
+        -eTRAVIS_TOKEN=${TRAVIS_CI_TOKEN} \
+        jess/travis "$@"
+}
