@@ -49,5 +49,5 @@ baldrick() {
         --rm \
         -eBALDRICK_SLACK_TOKEN \
         -eBALDRICK_JENKINS_URL \
-        benmatselby/baldrick
+        ${DOCKER_REPO_PREFIX}/baldrick
 }
