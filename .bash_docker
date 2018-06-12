@@ -2,6 +2,9 @@
 
 export DOCKER_REPO_PREFIX=benmatselby
 
+udict() {
+    docker run --rm -t jess/udict "$@"
+}
 shellcheck() {
     docker run --rm \
         -v "$PWD:/mnt" \
