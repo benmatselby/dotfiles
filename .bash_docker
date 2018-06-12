@@ -58,9 +58,11 @@ gaudit() {
         jess/audit "$@"
 }
 travis() {
-    docker run --rm -t \
-        -v "$(pwd):/usr/src/repo:ro" \
+    docker run --rm -it \
+        -v "${HOME}/.travis:/root/.travis" \
+        -v "$(pwd):/usr/src/repo" \
         --workdir /usr/src/repo \
+        --log-driver none \
         -eTRAVIS_TOKEN="${TRAVIS_CI_TOKEN}" \
         jess/travis "$@"
 }
