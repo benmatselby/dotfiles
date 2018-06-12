@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ##
 # Get diff command
 #
@@ -11,7 +12,7 @@ function _diff-command()
         cmd="git dn $1"
     fi
 
-    echo $cmd
+    echo "$cmd"
 }
 
 ##
@@ -21,15 +22,15 @@ function _diff-command()
 function _get-composer-tool-path()
 {
     tool=$1
-    if [ -f ./bin/${tool} ]; then
-        tool=./bin/${tool}
+    if [ -f ./bin/"${tool}" ]; then
+        tool=./bin/"${tool}"
     fi
 
-    if [ -f ./vendor/bin/${tool} ]; then
-        tool=./vendor/bin/${tool}
+    if [ -f ./vendor/bin/"${tool}" ]; then
+        tool=./vendor/bin/"${tool}"
     fi
 
-    echo ${tool}
+    echo "${tool}"
 }
 
 ##
@@ -39,10 +40,10 @@ function _get-composer-tool-path()
 #
 function lint-diff()
 {
-    cmd=`_diff-command $1`
-    for i in `$cmd`
+    cmd=$(_diff-command "$1")
+    for i in $(${cmd})
     do
-        php -l $i;
+        php -l "$i";
     done
 }
 
@@ -51,12 +52,12 @@ function lint-diff()
 #
 function sniff-diff()
 {
-    cmd=`_get-composer-tool-path phpcs`
-    files=`_diff-command`
-    for i in `${files}`
+    cmd=$(_get-composer-tool-path phpcs)
+    files=$(_diff-command)
+    for i in $(${files})
     do
-        echo $i;
-        ${cmd} $i;
+        echo "$i";
+        ${cmd} "$i";
     done
 }
 
@@ -65,11 +66,11 @@ function sniff-diff()
 #
 function mess-diff()
 {
-    cmd=`_get-composer-tool-path phpmd`
-    files=`_diff-command`
-    for i in `${files}`
+    cmd=$(_get-composer-tool-path phpmd)
+    files=$(_diff-command)
+    for i in $(${files})
     do
-        ${cmd} $i text codesize,controversial,design,naming,unusedcode;
+        ${cmd} "$i" text codesize,controversial,design,naming,unusedcode;
     done
 }
 
@@ -107,18 +108,18 @@ function sync-code()
         branch="$1"
     fi
 
-    for dir in `ls -1`; do
-        echo ${dir}
-        cd ${dir}
+    for dir in */; do
+        (
+            echo "${dir}"
+            cd "${dir}" || exit
 
-        if [ -d .git ]; then
-            git fetch -p origin && \
-            git pull origin ${branch}
-        else
-            echo 'Not a git repo, skipping...'
-        fi
-
-        echo ''
-        cd ..
+            if [ -d .git ]; then
+                git fetch -p origin && \
+                git pull origin "${branch}"
+            else
+                echo 'Not a git repo, skipping...'
+            fi
+            echo ""
+        )
     done
 }

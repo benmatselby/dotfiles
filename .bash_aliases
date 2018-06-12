@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Filsystem
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -22,7 +24,7 @@ alias gbms='cd $GOPATH/src/github.com/benmatselby'
 
 # IP addresses
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2"
+alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\\  -f2"
 
 # Vagrant
 alias vssh='vagrant ssh'

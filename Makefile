@@ -40,3 +40,7 @@ ifeq ("$(wildcard $(HOME)/.gitconfig.local)","")
 	@read -e email; \
 	sed -i '' "s/GITEMAIL/$$email/g" $(HOME)/.gitconfig.local
 endif
+
+.PHONY: test
+test:
+	shellcheck .bash_* .exports

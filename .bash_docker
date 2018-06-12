@@ -1,5 +1,12 @@
+#!/bin/bash
+
 export DOCKER_REPO_PREFIX=benmatselby
 
+shellcheck() {
+    docker run --rm \
+        -v "$PWD:/mnt" \
+        koalaman/shellcheck "$@"
+}
 precis() {
     docker run \
         --rm \
@@ -31,16 +38,14 @@ trello() {
         ${DOCKER_REPO_PREFIX}/trello-cli "$@"
 }
 crime() {
-    docker run \
-        --rm \
-        ${DOCKER_REPO_PREFIX}/uk-crime "$@"
+    docker run --rm ${DOCKER_REPO_PREFIX}/uk-crime "$@"
 }
 clisplattr() {
     docker run \
         -t \
         --sig-proxy \
         --rm \
-        -v ${HOME}/.clisplattr:/root/.clisplattr \
+        -v "${HOME}/.clisplattr":/root/.clisplattr \
         ${DOCKER_REPO_PREFIX}/clisplattr "$@"
 }
 baldrick() {
@@ -55,6 +60,6 @@ travis() {
     docker run --rm -t \
         -v "$(pwd):/usr/src/repo:ro" \
         --workdir /usr/src/repo \
-        -eTRAVIS_TOKEN=${TRAVIS_CI_TOKEN} \
+        -eTRAVIS_TOKEN="${TRAVIS_CI_TOKEN}" \
         jess/travis "$@"
 }
