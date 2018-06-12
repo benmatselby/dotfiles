@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 export HISTSIZE=1000
 export HISTFILESIZE=2000
