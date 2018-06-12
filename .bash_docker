@@ -2,14 +2,6 @@
 
 export DOCKER_REPO_PREFIX=benmatselby
 
-udict() {
-    docker run --rm -t jess/udict "$@"
-}
-shellcheck() {
-    docker run --rm \
-        -v "$PWD:/mnt" \
-        koalaman/shellcheck "$@"
-}
 precis() {
     docker run \
         --rm \
@@ -59,10 +51,26 @@ baldrick() {
         -eBALDRICK_JENKINS_URL \
         ${DOCKER_REPO_PREFIX}/baldrick
 }
+
+gaudit() {
+    docker run --rm -t \
+        -eGITHUB_TOKEN="${GITHUB_TOKEN}" \
+        jess/audit "$@"
+}
 travis() {
     docker run --rm -t \
         -v "$(pwd):/usr/src/repo:ro" \
         --workdir /usr/src/repo \
         -eTRAVIS_TOKEN="${TRAVIS_CI_TOKEN}" \
         jess/travis "$@"
+}
+udict() {
+    docker run --rm -t jess/udict "$@"
+}
+
+
+shellcheck() {
+    docker run --rm \
+        -v "$PWD:/mnt" \
+        koalaman/shellcheck "$@"
 }
