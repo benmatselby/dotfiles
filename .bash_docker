@@ -14,6 +14,17 @@ precis() {
         -eTRAVIS_CI_OWNER \
         ${DOCKER_REPO_PREFIX}/precis "$@"
 }
+frost() {
+    docker run \
+        --rm \
+        -t \
+        -eVSTS_ACCOUNT \
+        -eVSTS_PROJECT \
+        -eVSTS_TOKEN \
+        -eTRAVIS_CI_TOKEN \
+        -eTRAVIS_CI_OWNER \
+        ${DOCKER_REPO_PREFIX}/frost "$@"
+}
 donny() {
     docker run \
         --rm \
