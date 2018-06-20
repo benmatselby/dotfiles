@@ -20,9 +20,13 @@ frost() {
         -t \
         -eVSTS_ACCOUNT \
         -eVSTS_PROJECT \
+        -eVSTS_TEAM \
         -eVSTS_TOKEN \
         -eTRAVIS_CI_TOKEN \
         -eTRAVIS_CI_OWNER \
+        -eJENKINS_URL \
+        -eJENKINS_USERNAME \
+        -eJENKINS_PASSWORD \
         ${DOCKER_REPO_PREFIX}/frost "$@"
 }
 donny() {
