@@ -2,6 +2,17 @@
 
 export DOCKER_REPO_PREFIX=benmatselby
 
+del_stopped(){
+	local name=$1
+	local state
+	state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+
+	if [[ "$state" == "false" ]]; then
+		docker rm "$name"
+	fi
+}
+
+
 precis() {
     docker run \
         --rm \
@@ -90,4 +101,12 @@ shellcheck() {
     docker run --rm \
         -v "$PWD:/mnt" \
         koalaman/shellcheck "$@"
+}
+
+jenkins() {
+    del_stopped jenkins
+    docker run -d -p 8080:8080 \
+        -v $HOME/.jenkins:/var/jenkins_home \
+        --name=jenkins \
+        jenkins/jenkins
 }
