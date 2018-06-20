@@ -106,7 +106,7 @@ shellcheck() {
 jenkins() {
     del_stopped jenkins
     docker run -d -p 8080:8080 \
-        -v $HOME/.jenkins:/var/jenkins_home \
+        -v "$HOME/.jenkins":/var/jenkins_home \
         --name=jenkins \
         jenkins/jenkins
 }
