@@ -99,12 +99,6 @@ udict() {
 }
 
 
-shellcheck() {
-    docker run --rm \
-        -v "$PWD:/mnt" \
-        koalaman/shellcheck "$@"
-}
-
 jenkins() {
     del_stopped jenkins
     docker run -d -p 8080:8080 \
