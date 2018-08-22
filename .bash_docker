@@ -23,6 +23,8 @@ precis() {
         -eVSTS_TOKEN \
         -eTRAVIS_CI_TOKEN \
         -eTRAVIS_CI_OWNER \
+        -eGITHUB_TOKEN \
+        -eGITHUB_OWNER \
         ${DOCKER_REPO_PREFIX}/precis "$@"
 }
 frost() {
