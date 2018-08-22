@@ -23,6 +23,8 @@ precis() {
         -eVSTS_TOKEN \
         -eTRAVIS_CI_TOKEN \
         -eTRAVIS_CI_OWNER \
+        -eGITHUB_TOKEN \
+        -eGITHUB_OWNER \
         ${DOCKER_REPO_PREFIX}/precis "$@"
 }
 frost() {
@@ -96,12 +98,6 @@ udict() {
     docker run --rm -t jess/udict "$@"
 }
 
-
-shellcheck() {
-    docker run --rm \
-        -v "$PWD:/mnt" \
-        koalaman/shellcheck "$@"
-}
 
 jenkins() {
     del_stopped jenkins
