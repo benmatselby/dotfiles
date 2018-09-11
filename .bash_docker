@@ -31,10 +31,10 @@ frost() {
     docker run \
         --rm \
         -t \
-        -eVSTS_ACCOUNT \
-        -eVSTS_PROJECT \
-        -eVSTS_TEAM \
-        -eVSTS_TOKEN \
+        -eAZURE_DEVOPS_ACCOUNT \
+        -eAZURE_DEVOPS_PROJECT \
+        -eAZURE_DEVOPS_TEAM \
+        -eAZURE_DEVOPS_TOKEN \
         -eTRAVIS_CI_TOKEN \
         -eTRAVIS_CI_OWNER \
         -eJENKINS_URL \
@@ -47,10 +47,10 @@ donny() {
     docker run \
         --rm \
         -t \
-        -eVSTS_ACCOUNT \
-        -eVSTS_PROJECT \
-        -eVSTS_TEAM \
-        -eVSTS_TOKEN \
+        -eAZURE_DEVOPS_ACCOUNT \
+        -eAZURE_DEVOPS_PROJECT \
+        -eAZURE_DEVOPS_TEAM \
+        -eAZURE_DEVOPS_TOKEN \
         ${DOCKER_REPO_PREFIX}/donny "$@"
 }
 trello() {
