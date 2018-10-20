@@ -18,3 +18,6 @@ export MANPAGER="less -X";
 
 # Define the folders `cd` will look in
 export CDPATH=${CDPATH}:${GOPATH}/src/github.com:${GOPATH}/src:~/git
+
+# add go path
+export PATH="${GOPATH}/bin:${PATH}"
