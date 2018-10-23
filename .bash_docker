@@ -24,6 +24,10 @@ precis() {
         -eTRAVIS_CI_OWNER \
         -eGITHUB_TOKEN \
         -eGITHUB_OWNER \
+        -eJENKINS_URL \
+        -eJENKINS_USERNAME \
+        -eJENKINS_PASSWORD \
+        -eJENKINS_VIEW \
         -v "${HOME}/.precis":/root/.precis \
         --name precis \
         ${DOCKER_REPO_PREFIX}/precis "$@"
