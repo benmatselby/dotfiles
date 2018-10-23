@@ -12,7 +12,6 @@ del_stopped(){
 	fi
 }
 
-
 precis() {
     docker run \
         --rm \
@@ -25,6 +24,8 @@ precis() {
         -eTRAVIS_CI_OWNER \
         -eGITHUB_TOKEN \
         -eGITHUB_OWNER \
+        -v "${HOME}/.precis":/root/.precis \
+        --name precis \
         ${DOCKER_REPO_PREFIX}/precis "$@"
 }
 frost() {
@@ -80,7 +81,6 @@ baldrick() {
         -eBALDRICK_JENKINS_URL \
         ${DOCKER_REPO_PREFIX}/baldrick
 }
-
 gaudit() {
     docker run --rm -t \
         -eGITHUB_TOKEN="${GITHUB_TOKEN}" \
