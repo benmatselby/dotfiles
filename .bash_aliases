@@ -38,3 +38,6 @@ alias gfo='git f origin'
 alias drai='docker rmi $(docker images -q)'
 alias drac='docker rm $(docker ps -aq)'
 alias dsac='docker stop $(docker ps -aq)'
+
+# Get a clean fresh bash shell
+alias cleanshell='env -i bash'
