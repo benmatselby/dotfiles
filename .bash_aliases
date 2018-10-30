@@ -35,6 +35,7 @@ alias git-top='git rev-parse --show-toplevel'
 alias gfo='git f origin'
 
 # Docker
+alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
 alias drai='docker rmi $(docker images -q)'
 alias drac='docker rm $(docker ps -aq)'
 alias dsac='docker stop $(docker ps -aq)'
