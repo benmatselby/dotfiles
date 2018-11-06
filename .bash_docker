@@ -58,6 +58,16 @@ donny() {
         -eAZURE_DEVOPS_TOKEN \
         ${DOCKER_REPO_PREFIX}/donny "$@"
 }
+walter() {
+     docker run \
+        --rm \
+        -t \
+        -eJIRA_TOKEN \
+        -eJIRA_URL \
+        -eJIRA_USERNAME \
+        -v "${HOME}/.walter":/root/.walter \
+        ${DOCKER_REPO_PREFIX}/walter "$@"
+}
 trello() {
     docker run \
         --rm \
