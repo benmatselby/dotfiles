@@ -33,6 +33,8 @@ alias vprune='vagrant box prune'
 # Git
 alias git-top='git rev-parse --show-toplevel'
 alias gfo='git f origin'
+alias gplm='git pull origin master'
+alias gpsm='git push origin master'
 
 # Docker
 alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
