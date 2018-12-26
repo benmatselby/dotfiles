@@ -13,6 +13,8 @@ del_stopped(){
 }
 
 precis() {
+    del_stopped precis
+
     docker run \
         --rm \
         -t \
