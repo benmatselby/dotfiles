@@ -21,6 +21,7 @@ alias guid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # Go related shortcuts
 alias gbms='cd $GOPATH/src/github.com/benmatselby'
+alias ghbms='cd $HOME/git/github/benmatselby/'
 
 # IP addresses
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
