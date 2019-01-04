@@ -36,9 +36,11 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     cyan=$(tput setaf 37)
     green=$(tput setaf 64)
     orange=$(tput setaf 166)
+    # shellcheck disable=SC2034
     purple=$(tput setaf 125)
     red=$(tput setaf 124)
     white=$(tput setaf 15)
+    violet=$(tput setaf 61);
     yellow=$(tput setaf 136)
 else
     # shellcheck disable=SC2034
@@ -52,20 +54,22 @@ else
     cyan="\\e[1;36m"
     green="\\e[1;32m"
     orange="\\e[1;33m"
+    # shellcheck disable=SC2034
     purple="\\e[1;35m"
     red="\\e[1;31m"
     white="\\e[1;37m"
+    violet="\\e[1;35m";
     # shellcheck disable=SC2034
     yellow="\\e[1;33m"
 fi
 
 PS1="\\n" # newline
 PS1+='$(last_command)'
-PS1+="\\[$purple\\]\\h" # hostname
+PS1+="\\[$orange\\]\\h" # hostname
 PS1+="\\[$white\\] at "
-PS1+="\\[$orange\\]\\D{%T}" # time
+PS1+="\\[$green\\]\\D{%T}" # time
 PS1+="\\[$white\\] in "
-PS1+="\\[$green\\]\\w" # working directory
+PS1+="\\[$violet\\]\\w" # working directory
 PS1+='$(prompt_git)' # git repository details
 PS1+="\\n"
 PS1+="\\[$reset$white\\]\\$ \\[$reset\\]" # $ (and reset color)
