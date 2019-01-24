@@ -12,7 +12,7 @@ del_stopped(){
 	fi
 }
 
-precis() {
+dprecis() {
     del_stopped precis
 
     docker run \
@@ -34,7 +34,7 @@ precis() {
         --name precis \
         ${DOCKER_REPO_PREFIX}/precis "$@"
 }
-frost() {
+dfrost() {
     docker run \
         --rm \
         -t \
@@ -50,7 +50,7 @@ frost() {
         -eJENKINS_VIEW \
         ${DOCKER_REPO_PREFIX}/frost "$@"
 }
-donny() {
+ddonny() {
     docker run \
         --rm \
         -t \
@@ -115,11 +115,3 @@ udict() {
     docker run --rm -t jess/udict "$@"
 }
 
-
-jenkins() {
-    del_stopped jenkins
-    docker run -d -p 8080:8080 \
-        -v "$HOME/.jenkins":/var/jenkins_home \
-        --name=jenkins \
-        jenkins/jenkins
-}
