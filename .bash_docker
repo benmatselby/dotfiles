@@ -60,7 +60,7 @@ donny() {
         -eAZURE_DEVOPS_TOKEN \
         ${DOCKER_REPO_PREFIX}/donny "$@"
 }
-walter() {
+dwalter() {
      docker run \
         --rm \
         -t \

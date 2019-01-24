@@ -6,7 +6,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ls='ls -lh'
 alias la='ls -lah'
-alias env='env | sort'
+alias envs='env | sort'
 
 # Grep colourisation
 alias grep='grep --color'
