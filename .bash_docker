@@ -70,33 +70,6 @@ dwalter() {
         -v "${HOME}/.walter":/root/.walter \
         ${DOCKER_REPO_PREFIX}/walter "$@"
 }
-trello() {
-    docker run \
-        --rm \
-        -t \
-        -eTRELLO_CLI_KEY \
-        -eTRELLO_CLI_SECRET \
-        ${DOCKER_REPO_PREFIX}/trello-cli "$@"
-}
-crime() {
-    docker run --rm ${DOCKER_REPO_PREFIX}/uk-crime "$@"
-}
-clisplattr() {
-    docker run \
-        -t \
-        --sig-proxy \
-        --rm \
-        -v "${HOME}/.clisplattr":/root/.clisplattr \
-        ${DOCKER_REPO_PREFIX}/clisplattr "$@"
-}
-baldrick() {
-    docker run \
-        -d \
-        --rm \
-        -eBALDRICK_SLACK_TOKEN \
-        -eBALDRICK_JENKINS_URL \
-        ${DOCKER_REPO_PREFIX}/baldrick
-}
 gaudit() {
     docker run --rm -t \
         -eGITHUB_TOKEN="${GITHUB_TOKEN}" \
