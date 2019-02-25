@@ -43,3 +43,6 @@ alias dsac='docker stop $(docker ps -aq)'
 
 # Get a clean fresh bash shell
 alias cleanshell='env -i bash'
+
+# Weather
+alias weather='curl wttr.in'
