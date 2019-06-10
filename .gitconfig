@@ -7,6 +7,7 @@
     ui = true
 [alias]
     aliases = config --get-regexp alias
+    annotate = blame
     b = branch -vv
     ba = branch -avv
     ci = commit
