@@ -3,7 +3,7 @@
 ##
 # Sync the codebases for a branch
 #
-function sync-code()
+function code-sync()
 {
     if [ -z "$1" ]
     then
@@ -25,5 +25,18 @@ function sync-code()
             fi
             echo ""
         )
+    done
+}
+
+##
+# What branch is the codebase on
+#
+function code-branch()
+{
+    for dir in */; do
+    (
+         cd "${dir}" || exit
+         echo "${dir} " "$(git rev-parse --abbrev-ref HEAD)"
+    )
     done
 }
