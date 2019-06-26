@@ -1,7 +1,0 @@
-language: generic
-
-notifications:
-  email: true
-
-script:
-  - shellcheck .bash_* .exports
