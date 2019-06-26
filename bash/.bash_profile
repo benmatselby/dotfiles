@@ -14,7 +14,7 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 fi
 
 
-for file in ~/.{bash_aliases,bash_prompt,bash_docker,bash_functions,bash_work_aliases,exports,indeed}; do
+for file in ~/.{aliases,bash_prompt,bash_docker,bash_functions,bash_work_aliases,exports,indeed}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck disable=SC1090
 		source "$file"

@@ -6,7 +6,7 @@ explain: ## Provide the explanation of how to use the Makefile`
 	#
 	### Installation
 	#
-	#  -> $$ make provision
+	#  -> $$ make provision-[bash|zsh]
 	#
 	### Install `code` extension
 	#
@@ -15,30 +15,32 @@ explain: ## Provide the explanation of how to use the Makefile`
 	### Targets
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: provision
-provision: bashfiles setup-git-config ## Provision all the dotfiles
+.PHONY: provision-bash
+provision-bash: commonfiles bashfiles setup-git-config ## Provision all the dotfiles for a bash shell
+
+.PHONY: provision-zsh
+provision-zsh: commonfiles zshfiles setup-git-config ## Provision all the dotfiles for a Z shell
+
+.PHONY: commonfiles
+commonfiles: ## Link all the common files irrelevant of shell
+	ln -sf $(PWD)/common/.exports $(HOME)/.exports
+	ln -sf $(PWD)/git/.gitconfig $(HOME)/.gitconfig
+	ln -sf $(PWD)/git/.gitignore $(HOME)/.gitignore
+	ln -sf $(PWD)/common/.vimrc $(HOME)/.vimrc
+	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc
+	ln -sf $(PWD)/common/.aliases $(HOME)/.aliases
+
+.PHONY: zshfiles
+zshfiles: ## Link all the zsh files into the relevant places
+	ln -sf $(PWD)/zsh/.zshrc $(HOME)/.zshrc
+	ln -sf $(PWD)/zsh/benmatselby.zsh-theme $(HOME)/.oh-my-zsh/themes/
 
 .PHONY: bashfiles
 bashfiles: ## Link all the bash aliases into the relevant places
-	@echo '##'
-	@echo '# Symlink the dot files in'
-	@echo '##'
-	for file in  \
-	.bash_aliases \
-	.bash_functions \
-	.bash_profile \
-	.bash_prompt \
-	.bash_docker \
-	.exports \
-	.gitconfig \
-	.gitignore \
-	.vimrc \
-	.inputrc \
-	; \
-	do \
-		echo $$file; \
-		ln -sf $(PWD)/$$file $(HOME)/$$file; \
-	done
+	ln -sf $(PWD)/bash/.bash_functions $(HOME)/.bash_functions
+	ln -sf $(PWD)/bash/.bash_profile $(HOME)/.bash_profile
+	ln -sf $(PWD)/bash/.bash_prompt $(HOME)/.bash_prompt
+	ln -sf $(PWD)/bash/.bash_docker $(HOME)/.bash_docker
 
 .PHONY: setup-git-config
 setup-git-config: ## Setup the git configuration
