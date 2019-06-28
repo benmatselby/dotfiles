@@ -13,8 +13,9 @@ export ANSIBLE_COW_SELECTION=random
 # Go home
 export GOPATH=$HOME/go
 
-# Keeps the man page on the screne
+# Pagers
 export MANPAGER="less -X";
+export PAGER="less -X";
 
 # Define the folders `cd` will look in
 export CDPATH=${CDPATH}:~/git
