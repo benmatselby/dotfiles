@@ -9,15 +9,12 @@
     aliases = config --get-regexp alias
     annotate = blame
     b = branch -vv
-    ba = branch -avv
     ci = commit
     clean-wd = clean -fd
     clean-wd-sanity = clean -fdn
     co = checkout
     commit-naughty = commit --no-verify
     d = diff --no-ext-diff -w
-    dcache = diff -w --cached
-    dex = diff -w
     dn = diff --name-only
     ds = diff --name-status
     f = fetch -p
