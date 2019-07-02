@@ -12,6 +12,7 @@ export ANSIBLE_COW_SELECTION=random
 
 # Go home
 export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
 
 # Pagers
 export MANPAGER="less -X";
@@ -21,4 +22,5 @@ export PAGER="less -X";
 export CDPATH=${CDPATH}:~/git
 
 # add go path
-export PATH="${GOPATH}/bin:${PATH}"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
