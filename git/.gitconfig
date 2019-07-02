@@ -5,31 +5,5 @@
     editor = vim
 [color]
     ui = true
-[alias]
-    aliases = config --get-regexp alias
-    annotate = blame
-    b = branch -vv
-    ci = commit
-    clean-wd = clean -fd
-    clean-wd-sanity = clean -fdn
-    co = checkout
-    commit-naughty = commit --no-verify
-    d = diff --no-ext-diff -w
-    dn = diff --name-only
-    ds = diff --name-status
-    f = fetch -p
-    ignored = ls-files -o -i --exclude-standard
-    l = log --no-merges
-    last = log -1 HEAD
-    lol = log --graph --decorate --color --date=iso
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    lop = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --no-merges
-    rebasec = rebase --continue
-    rs = remote show
-    sh = show
-    shn = show --name-only
-    st = status
-    stf = !git status --porcelain | awk '{print $2}'
-    t = tag --sort version:refname
 [diff]
     compactionHeuristic = true
