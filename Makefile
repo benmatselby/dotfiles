@@ -16,24 +16,22 @@ explain: ## Provide the explanation of how to use the Makefile`
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: provision-bash
-provision-bash: commonfiles bashfiles setup-git-config ## Provision all the dotfiles for a bash shell
+provision-bash: bashfiles setup-git-config ## Provision all the dotfiles for a bash shell
 
 .PHONY: provision-zsh
-provision-zsh: commonfiles zshfiles setup-git-config ## Provision all the dotfiles for a Z shell
-
-.PHONY: commonfiles
-commonfiles: ## Link all the common files irrelevant of shell
-	ln -sf $(PWD)/common/.exports $(HOME)/.exports
-	ln -sf $(PWD)/git/.gitconfig $(HOME)/.gitconfig
-	ln -sf $(PWD)/git/.gitignore $(HOME)/.gitignore
-	ln -sf $(PWD)/common/.vimrc $(HOME)/.vimrc
-	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc
-	ln -sf $(PWD)/common/.aliases $(HOME)/.aliases
+provision-zsh: zshfiles setup-git-config ## Provision all the dotfiles for a Z shell
 
 .PHONY: zshfiles
 zshfiles: ## Link all the zsh files into the relevant places
 	ln -sf $(PWD)/zsh/.zshrc $(HOME)/.zshrc
 	ln -sf $(PWD)/zsh/benmatselby.zsh-theme $(HOME)/.oh-my-zsh/themes/
+	ln -sf $(PWD)/common/aliases $(HOME)/.oh-my-zsh/custom/aliases.zsh
+	ln -sf $(PWD)/common/exports $(HOME)/.oh-my-zsh/custom/exports.zsh
+	ln -sf $(PWD)/common/functions $(HOME)/.oh-my-zsh/custom/functions.zsh
+	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc
+	ln -sf $(PWD)/common/.vimrc $(HOME)/.vimrc
+	ln -sf $(PWD)/git/.gitconfig $(HOME)/.gitconfig
+	ln -sf $(PWD)/git/.gitignore $(HOME)/.gitignore
 
 .PHONY: bashfiles
 bashfiles: ## Link all the bash aliases into the relevant places

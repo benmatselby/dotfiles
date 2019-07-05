@@ -97,11 +97,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-for file in ~/.{aliases,exports,indeed,zsh_work_aliases}; do
-	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
-		# shellcheck disable=SC1090
-		source "$file"
-	fi
-done
-unset file

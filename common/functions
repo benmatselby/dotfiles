@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ##
 # Sync the codebases for a branch
 #
@@ -15,7 +13,7 @@ function code-sync()
     for dir in */; do
         (
             echo "${dir}"
-            cd "${dir}" || exit
+            cd "${dir}" > /dev/null 2>&1 || exit
 
             if [ -d .git ]; then
                 git fetch -p origin && \
@@ -35,7 +33,7 @@ function code-branch()
 {
     for dir in */; do
     (
-         cd "${dir}" || exit
+         cd "${dir}" > /dev/null 2>&1 || exit
          echo "${dir} " "$(git rev-parse --abbrev-ref HEAD)"
     )
     done
