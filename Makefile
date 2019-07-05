@@ -24,7 +24,7 @@ provision-zsh: zshfiles setup-git-config ## Provision all the dotfiles for a Z s
 .PHONY: zshfiles
 zshfiles: ## Link all the zsh files into the relevant places
 	ln -sf $(PWD)/zsh/.zshrc $(HOME)/.zshrc
-	ln -sf $(PWD)/zsh/benmatselby.zsh-theme $(HOME)/.oh-my-zsh/themes/
+	ln -sf $(PWD)/zsh/benmatselby.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/
 	ln -sf $(PWD)/common/aliases $(HOME)/.oh-my-zsh/custom/aliases.zsh
 	ln -sf $(PWD)/common/exports $(HOME)/.oh-my-zsh/custom/exports.zsh
 	ln -sf $(PWD)/common/functions $(HOME)/.oh-my-zsh/custom/functions.zsh
