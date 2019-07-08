@@ -32,3 +32,6 @@ alias weather='curl wttr.in'
 # Work
 alias eod='cd $HOME/git/github/benmatselby/eod/2019/'
 alias eod-save='git add . && git commit -anm "`date`" && git push origin master'
+
+# Random
+alias whatalias='alias | grep '
