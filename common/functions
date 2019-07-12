@@ -38,3 +38,35 @@ function code-branch()
     )
     done
 }
+
+##
+# Based on a cli config ID set the environment variables
+#
+function set-aws-creds()
+{
+    if [ -z "$1" ]
+    then
+        echo "Please specify a CLI ID from this list"
+        ls -1 ~/.aws/cli/cache
+        return
+    fi
+
+    if ! [ -x "$(command -v jq)" ]; then
+        echo "This requires `jq` to be installed"
+        return
+    fi
+
+    echo export AWS_ACCESS_KEY_ID=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.AccessKeyId'`
+    echo export AWS_SECRET_ACCESS_KEY=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.SecretAccessKey'`
+    echo export AWS_SESSION_TOKEN=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.SessionToken'`
+}
+
+##
+# Clear down the AWS_* environment variables
+#
+function reset-aws-creds()
+{
+    unset AWS_ACCESS_KEY_ID
+    unset AWS_SECRET_ACCESS_KEY
+    unset AWS_SESSION_TOKEN
+}
