@@ -3,13 +3,6 @@
 #
 function code-sync()
 {
-    if [ -z "$1" ]
-    then
-        branch="master"
-    else
-        branch="$1"
-    fi
-
     for dir in */; do
         (
             echo "${dir}"
@@ -17,7 +10,7 @@ function code-sync()
 
             if [ -d .git ]; then
                 git fetch -p origin && \
-                git pull origin "${branch}"
+                git pull origin $(git_current_branch)
             else
                 echo 'Not a git repo, skipping...'
             fi
