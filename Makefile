@@ -35,7 +35,7 @@ zshfiles: ## Link all the zsh files into the relevant places
 
 .PHONY: bashfiles
 bashfiles: ## Link all the bash aliases into the relevant places
-	ln -sf $(PWD)/bash/.bash_functions $(HOME)/.bash_functions
+	ln -sf $(PWD)/common/functions $(HOME)/.bash_functions
 	ln -sf $(PWD)/bash/.bash_profile $(HOME)/.bash_profile
 	ln -sf $(PWD)/bash/.bash_prompt $(HOME)/.bash_prompt
 	ln -sf $(PWD)/bash/.bash_docker $(HOME)/.bash_docker
