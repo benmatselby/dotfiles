@@ -11,6 +11,7 @@ export ANSIBLE_COW_SELECTION=random
 # Go home
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
+export GOPRIVATE='github.com/emisgroup,github.com/benmatselby'
 
 # Pagers
 export MANPAGER="less -X";
