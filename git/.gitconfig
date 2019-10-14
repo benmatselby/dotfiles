@@ -1,9 +1,10 @@
 [include]
-    path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [core]
-    excludesfile = /Users/Ben/.gitignore
-    editor = vim
+	excludesfile = /Users/Ben/.gitignore
+	editor = vim
 [color]
-    ui = true
+	ui = true
 [diff]
-    compactionHeuristic = true
+	compactionHeuristic = true
+	noprefix = true
