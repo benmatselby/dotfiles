@@ -1,7 +1,7 @@
 # benmatselby.zsh-theme
 # Theme is a blend of [af-magic](https://github.com/andyfleming/oh-my-zsh) and [robbyrussell](https://github.com/robbyrussell/oh-my-zsh)
 
-local ret_status="%(?:%{$fg_bold[green]%}✔︎ :%{$fg_bold[red]%}✘ )"
+local ret_status="%(?:%{$fg[green]%}✔︎ :%{$fg[red]%}✘ )"
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # color vars
