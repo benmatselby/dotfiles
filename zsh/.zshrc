@@ -74,6 +74,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+unsetopt share_history
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
