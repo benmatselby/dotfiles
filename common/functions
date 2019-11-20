@@ -37,21 +37,27 @@ function code-branch()
 #
 function set-aws-creds()
 {
+    # Check that the AWS profile parameter has been provided
     if [ -z "$1" ]
     then
-        echo "Please specify a CLI ID from this list"
-        ls -1 ~/.aws/cli/cache
+        echo "usage: $0 [aws_profile]"
         return
     fi
 
-    if ! [ -x "$(command -v jq)" ]; then
-        echo "This requires `jq` to be installed"
-        return
-    fi
+    # Clear the AWS CLI cached credentials
+    rm ~/.aws/cli/cache/*.json
 
-    echo export AWS_ACCESS_KEY_ID=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.AccessKeyId'`
-    echo export AWS_SECRET_ACCESS_KEY=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.SecretAccessKey'`
-    echo export AWS_SESSION_TOKEN=`cat ~/.aws/cli/cache/$1.json | jq '.Credentials.SessionToken'`
+    # Run the 'aws s3 ls' command to allow MFA authentication
+    aws s3 ls --profile $1
+
+    # Get the required AWS credentials from the AWS CLI cache
+    AccessKeyId=$(cat ~/.aws/cli/cache/*.json | jq '.Credentials.AccessKeyId')
+    SecretAccessKey=$(cat ~/.aws/cli/cache/*.json | jq '.Credentials.SecretAccessKey')
+    SessionToken=$(cat ~/.aws/cli/cache/*.json | jq '.Credentials.SessionToken')
+
+    # Echo the export commands required to set the environment variables
+    # to authenticate via MFA when using the CDK CLI
+    echo -e "export AWS_ACCESS_KEY_ID=${AccessKeyId}\nexport AWS_SECRET_ACCESS_KEY=${SecretAccessKey}\nexport AWS_SESSION_TOKEN=${SessionToken}\n" | pbcopy
 }
 
 ##
