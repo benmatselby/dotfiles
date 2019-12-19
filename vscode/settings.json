@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "workbench.editor.enablePreview": false,
+  "go.useLanguageServer": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "window.zoomLevel": 1,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.restoreWindows": "none"
+}

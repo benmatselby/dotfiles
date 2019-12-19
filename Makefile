@@ -16,10 +16,10 @@ explain: ## Provide the explanation of how to use the Makefile`
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: provision-bash
-provision-bash: bashfiles setup-git-config ## Provision all the dotfiles for a bash shell
+provision-bash: bashfiles install-app-config setup-git-config ## Provision all the dotfiles for a bash shell
 
 .PHONY: provision-zsh
-provision-zsh: zshfiles setup-git-config ## Provision all the dotfiles for a Z shell
+provision-zsh: zshfiles install-app-config setup-git-config ## Provision all the dotfiles for a Z shell
 
 .PHONY: zshfiles
 zshfiles: ## Link all the zsh files into the relevant places
@@ -58,6 +58,10 @@ endif
 .PHONY: test
 test: ## Test the shell scripts lint OK
 	shellcheck .bash_* .exports
+
+.PHONY: install-app-config
+install-app-config: ## Install application specific settings
+	ln -sf $(PWD)/vscode/settings.json "$(HOME)/Library/Application Support/Code/User/settings.json"
 
 .PHONY: install-vscode-ext
 install-vscode-ext: ## Install all the vs code plugins I use
