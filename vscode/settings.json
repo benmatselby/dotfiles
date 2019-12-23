@@ -1,9 +1,12 @@
 {
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
   "go.useLanguageServer": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "window.zoomLevel": 1,
   "editor.rulers": [
     80,
@@ -12,5 +15,10 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "window.restoreWindows": "none"
+  "window.restoreWindows": "none",
+  "workbench.statusBar.feedback.visible": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.enablePreview": false
 }
