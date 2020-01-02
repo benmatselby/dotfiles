@@ -73,6 +73,6 @@ install-vscode-ext: ## Install all the vs code plugins I use
 		--install-extension ms-python.python \
 		--install-extension ms-vscode.Go \
 		--install-extension msjsdiag.debugger-for-chrome \
-		--install-extension PeterJausovec.vscode-docker \
+		--install-extension ms-azuretools.vscode-docker \
 		--install-extension streetsidesoftware.code-spell-checker \
 		--install-extension timonwong.shellcheck
