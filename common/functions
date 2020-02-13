@@ -10,7 +10,7 @@ function code-sync()
 
             if [ -d .git ]; then
                 git fetch -p origin && \
-                git pull origin $(git_current_branch)
+                git pull origin "$(git_current_branch)"
             else
                 echo 'Not a git repo, skipping...'
             fi
@@ -20,14 +20,23 @@ function code-sync()
 }
 
 ##
-# What branch is the codebase on
+# What branch is the codebase on and red/green depending if it's dirty or not
 #
 function code-branch()
 {
+    local reset=$'\e[0m'
+    local red=$'\e[1;31m'
+    local green=$'\e[1;32m'
+
     for dir in */; do
     (
-         cd "${dir}" > /dev/null 2>&1 || exit
-         echo "${dir}" $(git diff --quiet || echo '              *')
+        cd "${dir}" > /dev/null 2>&1 || exit
+        if git diff --quiet; then
+            printf "%s" "${green}"
+        else
+            printf "%s" "${red}"
+        fi
+        printf "${dir}%s\\n" "${reset}"
     )
     done
 }
