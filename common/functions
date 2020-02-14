@@ -27,16 +27,16 @@ function code-branch()
     local reset=$'\e[0m'
     local red=$'\e[1;31m'
     local green=$'\e[1;32m'
+    color=${red}
 
     for dir in */; do
     (
         cd "${dir}" > /dev/null 2>&1 || exit
-        if git diff --quiet; then
-            printf "%s" "${green}"
-        else
-            printf "%s" "${red}"
+        cmd=$(git status --short)
+        if [ -z "${cmd}" ] ; then
+            color=${green}
         fi
-        printf "${dir}%s\\n" "${reset}"
+        printf "${dir} %s$(git rev-parse --abbrev-ref HEAD)%s\\n" "${color}" "${reset}"
     )
     done
 }
