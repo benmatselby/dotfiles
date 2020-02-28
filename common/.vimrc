@@ -1,4 +1,4 @@
-" * User Interface
+" User Interface
 set background=dark
 colorscheme desert
 
@@ -7,7 +7,7 @@ if has('syntax') && (&t_Co > 2)
   syntax on
 endif
 
-"show tabs, EOL etc.
+" show tabs, EOL etc.
 set list
 set lcs=tab:».    "show tabs
 set lcs+=trail:· "show trailing spaces
@@ -26,23 +26,19 @@ set wildmode=list:longest,full
 " use "[RO]" for "[readonly]" to save space in the message line:
 set shortmess+=r
 
-" * Text Formatting -- Specific File Formats
-
 " enable filetype detection:
 filetype on
 
 " Standard files
-autocmd FileType css,cucumber,feature,html,human,ihtml,php,python,ruby,sql,xml set smartindent expandtab shiftwidth=4 softtabstop=4
+autocmd FileType css,cucumber,feature,html,human,ihtml,php,python,ruby,sql,sh,xml set smartindent expandtab shiftwidth=4 softtabstop=4
 
 " in makefiles, don't expand tabs to spaces, since actual tab characters are
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
 " (despite the mappings later):
-autocmd FileType make set noexpandtab shiftwidth=8
+autocmd FileType make set noexpandtab shiftwidth=4
 
 " Git files
 au FileType gitcommit setlocal tw=72
-
-" * Search & Replace
 
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
