@@ -1,5 +1,4 @@
 {
-  "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "go.useLanguageServer": true,
@@ -19,6 +18,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Solarized Light",
-  "cSpell.language": "en-GB"
+  "workbench.colorTheme": "Night Owl",
+  "cSpell.language": "en-GB",
+  "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "editor.formatOnSave": true,
 }
