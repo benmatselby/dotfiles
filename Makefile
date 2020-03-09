@@ -26,6 +26,7 @@ zshfiles: ## Link all the zsh files into the relevant places
 	ln -sf $(PWD)/zsh/.zshrc $(HOME)/.zshrc
 	ln -sf $(PWD)/zsh/benmatselby.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/
 	ln -sf $(PWD)/common/aliases $(HOME)/.oh-my-zsh/custom/aliases.zsh
+	ln -sf $(PWD)/common/docker $(HOME)/.oh-my-zsh/custom/docker.zsh
 	ln -sf $(PWD)/common/exports $(HOME)/.oh-my-zsh/custom/exports.zsh
 	ln -sf $(PWD)/common/functions $(HOME)/.oh-my-zsh/custom/functions.zsh
 	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc

@@ -12,28 +12,6 @@ del_stopped(){
 	fi
 }
 
-dprecis() {
-    del_stopped precis
-
-    docker run \
-        --rm \
-        -t \
-        -eVSTS_ACCOUNT \
-        -eVSTS_PROJECT \
-        -eVSTS_TEAM \
-        -eVSTS_TOKEN \
-        -eTRAVIS_CI_TOKEN \
-        -eTRAVIS_CI_OWNER \
-        -eGITHUB_TOKEN \
-        -eGITHUB_OWNER \
-        -eJENKINS_URL \
-        -eJENKINS_USERNAME \
-        -eJENKINS_PASSWORD \
-        -eJENKINS_VIEW \
-        -v "${HOME}/.precis":/root/.precis \
-        --name precis \
-        ${DOCKER_REPO_PREFIX}/precis "$@"
-}
 dfrost() {
     docker run \
         --rm \
@@ -75,16 +53,6 @@ gaudit() {
         -eGITHUB_TOKEN="${GITHUB_TOKEN}" \
         jess/audit "$@"
 }
-travis() {
-    docker run --rm -it \
-        -v "${HOME}/.travis:/root/.travis" \
-        -v "$(pwd):/usr/src/repo" \
-        --workdir /usr/src/repo \
-        --log-driver none \
-        -eTRAVIS_TOKEN="${TRAVIS_CI_TOKEN}" \
-        jess/travis "$@"
-}
 udict() {
     docker run --rm -t jess/udict "$@"
 }
-
