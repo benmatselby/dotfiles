@@ -11,7 +11,15 @@ del_stopped(){
 		docker rm "$name"
 	fi
 }
-
+dhagen() {
+    docker run \
+        --rm \
+        -t \
+        -eGITHUB_OWNER \
+        -eGITHUB_TOKEN \
+        -v "${HOME}/.benmatselby":/root/.benmatselby \
+        ${DOCKER_REPO_PREFIX}/hagen "$@"
+}
 dfrost() {
     docker run \
         --rm \
@@ -45,7 +53,7 @@ dwalter() {
         -eJIRA_TOKEN \
         -eJIRA_URL \
         -eJIRA_USERNAME \
-        -v "${HOME}/.walter":/root/.walter \
+        -v "${HOME}/.benmatselby":/root/.benmatselby \
         ${DOCKER_REPO_PREFIX}/walter "$@"
 }
 gaudit() {
