@@ -3,13 +3,13 @@
 export DOCKER_REPO_PREFIX=benmatselby
 
 del_stopped(){
-	local name=$1
-	local state
-	state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+    local name=$1
+    local state
+    state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
 
-	if [[ "$state" == "false" ]]; then
-		docker rm "$name"
-	fi
+    if [[ "$state" == "false" ]]; then
+    docker rm "$name"
+    fi
 }
 dhagen() {
     docker run \
@@ -56,11 +56,19 @@ dwalter() {
         -v "${HOME}/.benmatselby":/root/.benmatselby \
         ${DOCKER_REPO_PREFIX}/walter "$@"
 }
-gaudit() {
+
+###
+# Jess related tooling
+##
+
+# https://github.com/genuinetools/pepper
+pepper() {
     docker run --rm -t \
-        -eGITHUB_TOKEN="${GITHUB_TOKEN}" \
-        jess/audit "$@"
+        -eGITHUB_TOKEN \
+        jess/pepper "$@"
 }
+
+# https://github.com/genuinetools/udict
 udict() {
     docker run --rm -t jess/udict "$@"
 }
