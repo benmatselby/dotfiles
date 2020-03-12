@@ -18,8 +18,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Night Owl Light",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
+  "workbench.editor.untitled.labelFormat": "name",
 }
