@@ -34,8 +34,8 @@ alias gdns='git diff --name-status'
 alias weather='curl wttr.in'
 
 # Work
-alias eod='cd $HOME/git/github/benmatselby/eod/2020/'
-alias eod-save='git add . && git commit -anm "`date`" && git push origin master'
+alias eod-save='cd $HOME/git/github/benmatselby/eod/2020/ && git add . && git commit -anm "`date`" && git push origin master'
+alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin master'
 
 # Random
 alias whatalias='alias | grep '
