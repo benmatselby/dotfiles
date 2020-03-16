@@ -30,12 +30,12 @@ set shortmess+=r
 filetype on
 
 " Standard files
-autocmd FileType css,cucumber,feature,html,human,ihtml,php,python,ruby,sql,sh,xml set smartindent expandtab shiftwidth=4 softtabstop=4
+autocmd FileType css,cucumber,feature,html,human,ihtml,php,python,ruby,sql,sh,xml,zsh set smartindent expandtab shiftwidth=2 softtabstop=2
 
 " in makefiles, don't expand tabs to spaces, since actual tab characters are
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
 " (despite the mappings later):
-autocmd FileType make set noexpandtab shiftwidth=4
+autocmd FileType make set noexpandtab shiftwidth=2
 
 " Git files
 au FileType gitcommit setlocal tw=72
