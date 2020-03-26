@@ -13,7 +13,7 @@ set lcs=tab:».    "show tabs
 set lcs+=trail:· "show trailing spaces
 
 " Set mouse support off (mouse=a for on)
-set mouse=
+set mouse=a
 
 " have fifty lines of command-line (etc) history:
 set history=50
