@@ -31,6 +31,7 @@ zshfiles: ## Link all the zsh files into the relevant places
 	ln -sf $(PWD)/common/functions $(HOME)/.oh-my-zsh/custom/functions.zsh
 	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc
 	ln -sf $(PWD)/common/.vimrc $(HOME)/.vimrc
+	ln -sf $(PWD)/common/.tmux.conf $(HOME)/.tmux.conf
 	ln -sf $(PWD)/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf $(PWD)/git/.gitignore $(HOME)/.gitignore
 
