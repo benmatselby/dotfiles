@@ -30,6 +30,9 @@ alias dsac='docker stop $(docker ps -aq)'
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
 
+# tmux
+alias mux='tmuxinator'
+
 # Weather
 alias weather='curl wttr.in'
 
