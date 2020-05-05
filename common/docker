@@ -16,6 +16,7 @@ dhagen() {
         --rm \
         -t \
         -eGITHUB_OWNER \
+        -eGITHUB_ORG \
         -eGITHUB_TOKEN \
         -v "${HOME}/.benmatselby":/root/.benmatselby \
         ${DOCKER_REPO_PREFIX}/hagen "$@"
