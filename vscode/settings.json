@@ -23,4 +23,7 @@
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
   "workbench.editor.untitled.labelFormat": "name",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
 }
