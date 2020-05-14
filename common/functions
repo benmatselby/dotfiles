@@ -20,6 +20,26 @@ function code-sync()
 }
 
 ##
+# Run git clean for all the git repos
+#
+function code-clean()
+{
+    for dir in */; do
+    (
+            printf "${dir}\n"
+            cd "${dir}" > /dev/null 2>&1 || exit
+
+            if [ -d .git ]; then
+                git clean -fX
+            else
+                printf "Not a git repo, skipping..."
+            fi
+            printf "\n"
+    )
+    done
+}
+
+##
 # What branch is the codebase on and red/green depending if it's dirty or not
 #
 function code-branch()
