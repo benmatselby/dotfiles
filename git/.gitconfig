@@ -8,3 +8,5 @@
 [diff]
 	compactionHeuristic = true
 	noprefix = true
+[pull]
+	rebase = true
