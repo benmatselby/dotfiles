@@ -6,10 +6,7 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "window.zoomLevel": 0,
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -26,4 +23,14 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  }
 }
