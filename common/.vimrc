@@ -11,6 +11,8 @@ call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()" User Interface
 
 
@@ -46,6 +48,7 @@ set expandtab                       "
 set smartindent                     "
 set autoindent                      "
 set showmatch                       "
+set noshowmode
 
 filetype plugin indent on           " Enable file type detection
 
@@ -93,3 +96,11 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
+
+
+"""
+" Airline
+"""
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
