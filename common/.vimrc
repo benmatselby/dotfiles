@@ -1,4 +1,6 @@
-" Install vim-plug
+"""
+" Plugin management
+"""
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -11,64 +13,80 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 call plug#end()" User Interface
 
+
+"""
 " User interface
-set background=dark
-colorscheme desert
+"""
+colorscheme elflord
 
 " have syntax highlighting in terminals which can display colours:
 if has('syntax') && (&t_Co > 2)
   syntax on
 endif
 
-" show tabs, EOL etc.
-set list
-set lcs=tab:».    "show tabs
-set lcs+=trail:· "show trailing spaces
 
-" Set mouse support off (mouse=a for on)
-set mouse=a
+"""
+" Settings
+"""
+set mouse=a                         " Mouse support
+set history=50                      " History of commands
+set wildmode=list:longest,full      " Command-line completion
+set shortmess+=c                    " Don't pass messages to |ins-completion-menu|
+set ruler                           " Set the ruler at the bottom right hand side of the window
+set incsearch                       " Shows the match whilst typing
+set hlsearch                        " Highlight found searches
+set ignorecase                      " Seaching is case insensitive
+set smartcase                       " ... except when the search includes capitals
+set number                          " Show line numbers
+set backspace=indent,eol,start      " Makes backspace key more powerful
+set wrap                            " It's all about the wrapping
+set softtabstop=2                   " Use 2 spaces
+set shiftwidth=2                    " Use 2 spaces
+set expandtab                       "
+set smartindent                     "
+set autoindent                      "
+set showmatch                       "
 
-" have fifty lines of command-line (etc) history:
-set history=50
+filetype plugin indent on           " Enable file type detection
 
-" have command-line completion <Tab> (for filenames, help topics, option names)
-" first list the available options and complete the longest common part, then
-" have further <Tab>s cycle through the possibilities:
-set wildmode=list:longest,full
 
-" use "[RO]" for "[readonly]" to save space in the message line:
-set shortmess+=r
+"""
+" Mappings
+"""
 
-" enable filetype detection:
-filetype on
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><Left> :tabp<CR>
+nnoremap <leader><Right> :tabn<CR>
+cmap w!! w !sudo tee > /dev/null %  " Allows to save as sudo
 
-" Standard files
-autocmd FileType css,cucumber,feature,html,human,ihtml,php,python,ruby,sql,sh,xml,zsh set smartindent expandtab shiftwidth=2 softtabstop=2
 
-" in makefiles, don't expand tabs to spaces, since actual tab characters are
-" needed, and have indentation at 8 chars to be sure that all indents are tabs
-" (despite the mappings later):
-autocmd FileType make set noexpandtab shiftwidth=2
+"""
+" Language specifics
+"""
 
-" Git files
-au FileType gitcommit setlocal tw=72
+au FileType make set noexpandtab shiftwidth=2
+au FileType gitcommit setlocal tw=72 spell spelllang=en_gb
+au BufNewFile,BufRead *.md setlocal spell spelllang=en_gb
 
-" make searches case-insensitive, unless they contain upper-case letters:
-set ignorecase
-set smartcase
 
-" show the `best match so far' as search strings are typed:
-set incsearch
+"""
+" Plugins
+"""
 
-" Set the ruler at the bottom right hand side of the window
-set ruler
-
+"""
 " Nerdtree
+"""
 map <C-n> :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<cr>
+noremap <Leader>f :NERDTreeFind<cr>
 " If more than one window and previous buffer was NERDTree, go back to it.
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+let NERDTreeShowHidden=1
 
+
+"""
 " fzf
+"""
 nnoremap <c-p> :Files<cr>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
