@@ -67,16 +67,18 @@ install-app-config: ## Install application specific settings
 
 .PHONY: install-vscode-ext
 install-vscode-ext: ## Install all the vs code plugins I use
-	code --install-extension Tyriar.sort-lines \
+	code \
+		--install-extension Tyriar.sort-lines \
 		--install-extension DavidAnson.vscode-markdownlint \
 		--install-extension DotJoshJohnson.xml \
 		--install-extension dbaeumer.vscode-eslint \
 		--install-extension esbenp.prettier-vscode \
 		--install-extension ms-python.python \
-		--install-extension ms-vscode.Go \
+		--install-extension golang.go \
 		--install-extension msjsdiag.debugger-for-chrome \
 		--install-extension ms-azuretools.vscode-docker \
 		--install-extension streetsidesoftware.code-spell-checker \
 		--install-extension timonwong.shellcheck \
 		--install-extension ms-azuretools.vscode-docker \
-		--install-extension sdras.night-owl
+		--install-extension sdras.night-owl \
+		--install-extension hashicorp.terraform
