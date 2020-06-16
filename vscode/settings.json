@@ -23,14 +23,9 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
-    "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
-  },
   "terraform.languageServer": {
-    "enabled": true,
-    "args": []
-  }
+    "external": true,
+    "args": ["serve"]
+  },
+  "workbench.tree.indent": 20
 }
