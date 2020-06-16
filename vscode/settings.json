@@ -25,7 +25,9 @@
   },
   "terraform.languageServer": {
     "external": true,
-    "args": ["serve"]
+    "args": [
+      "serve"
+    ]
   },
   "workbench.tree.indent": 20
 }

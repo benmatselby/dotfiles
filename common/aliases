@@ -1,6 +1,9 @@
-# Filsystem
+# OS
 alias ls='ls -lGh'
 alias envs='env | sort'
+alias sed=gsed
+
+# Filsystem
 alias ghbms='cd $HOME/git/github/benmatselby/'
 alias ghjoe='cd $HOME/git/github/joelrap/'
 alias ghjos='cd $HOME/git/github/minejosh/'
