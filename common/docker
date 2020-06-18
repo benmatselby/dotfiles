@@ -2,7 +2,7 @@
 
 export DOCKER_REPO_PREFIX=benmatselby
 
-del_stopped(){
+function del_stopped(){
     local name=$1
     local state
     state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
@@ -11,7 +11,8 @@ del_stopped(){
     docker rm "$name"
     fi
 }
-dhagen() {
+
+function dhagen() {
     docker run \
         --rm \
         -t \
@@ -21,7 +22,8 @@ dhagen() {
         -v "${HOME}/.benmatselby":/root/.benmatselby \
         ${DOCKER_REPO_PREFIX}/hagen "$@"
 }
-dfrost() {
+
+function dfrost() {
     docker run \
         --rm \
         -t \
@@ -37,7 +39,8 @@ dfrost() {
         -eJENKINS_VIEW \
         ${DOCKER_REPO_PREFIX}/frost "$@"
 }
-ddonny() {
+
+function ddonny() {
     docker run \
         --rm \
         -t \
@@ -47,7 +50,8 @@ ddonny() {
         -eAZURE_DEVOPS_TOKEN \
         ${DOCKER_REPO_PREFIX}/donny "$@"
 }
-dwalter() {
+
+function dwalter() {
      docker run \
         --rm \
         -t \
@@ -58,18 +62,62 @@ dwalter() {
         ${DOCKER_REPO_PREFIX}/walter "$@"
 }
 
-###
-# Jess related tooling
-##
-
 # https://github.com/genuinetools/pepper
-pepper() {
+function pepper() {
     docker run --rm -t \
         -eGITHUB_TOKEN \
         jess/pepper "$@"
 }
 
 # https://github.com/genuinetools/udict
-udict() {
+function udict() {
     docker run --rm -t jess/udict "$@"
+}
+
+# https://github.com/stoplightio/spectral
+function spectral() {
+  docker run \
+    --rm \
+    -it \
+    -v "$(pwd)":/tmp \
+    stoplight/spectral \
+    "$@"
+}
+
+# https://github.com/stoplightio/prism
+function prism() {
+  if [ -z ${1} ]; then
+    printf "Please specify a prism command"
+    return
+  fi
+
+  command="${1}"
+  shift 1
+
+  docker run \
+    --rm \
+    -it \
+    -P \
+    -v "$(pwd)":/tmp \
+    stoplight/prism \
+    "${command}" \
+    -h 0.0.0.0 \
+    "$@"
+}
+
+# https://github.com/Redocly/redoc
+function redoc() {
+   if [ -z ${1} ]; then
+     printf "Please specify an Open API Specification file\n"
+     return
+   fi
+
+   printf "URL: http://localhost:8080\n"
+
+   docker run \
+     --rm \
+     -p 8080:80 \
+     -v "${PWD}/${1}:/usr/share/nginx/html/${1}" \
+     -e SPEC_URL=$(basename ${1}) \
+     redocly/redoc
 }
