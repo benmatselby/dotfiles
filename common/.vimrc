@@ -54,6 +54,8 @@ set noshowmode
 
 filetype plugin indent on           " Enable file type detection
 
+autocmd BufWritePre * %s/\s\+$//e   " Trim whitespace on save
+
 
 """
 " Mappings
