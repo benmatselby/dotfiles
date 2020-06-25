@@ -74,7 +74,7 @@ cmap w!! w !sudo tee > /dev/null %  " Allows to save as sudo
 au FileType make set noexpandtab shiftwidth=2
 au FileType gitcommit setlocal tw=72 spell spelllang=en_gb
 au BufNewFile,BufRead *.md setlocal spell spelllang=en_gb
-
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 """
 " Plugins
