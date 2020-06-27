@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()" User Interface
+call plug#end()
 
 
 """
