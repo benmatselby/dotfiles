@@ -15,7 +15,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Night Owl Light",
+  "workbench.colorTheme": "Monokai Dimmed",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
@@ -25,9 +25,9 @@
   },
   "terraform.languageServer": {
     "external": true,
-    "args": [
-      "serve"
-    ]
+    "args": ["serve"]
   },
-  "workbench.tree.indent": 20
+  "workbench.tree.indent": 20,
+  "cSpell.enableFiletypes": ["terraform"],
+  "editor.suggest.showWords": false
 }
