@@ -29,7 +29,6 @@ zshfiles: ## Link all the zsh files into the relevant places
 	ln -sf $(PWD)/common/docker $(HOME)/.oh-my-zsh/custom/docker.zsh
 	ln -sf $(PWD)/common/exports $(HOME)/.oh-my-zsh/custom/exports.zsh
 	ln -sf $(PWD)/common/functions $(HOME)/.oh-my-zsh/custom/functions.zsh
-	ln -sf $(PWD)/common/.inputrc $(HOME)/.inputrc
 	ln -sf $(PWD)/common/.vimrc $(HOME)/.vimrc
 	ln -sf $(PWD)/common/.tmux.conf $(HOME)/.tmux.conf
 	ln -sf $(PWD)/git/.gitconfig $(HOME)/.gitconfig
