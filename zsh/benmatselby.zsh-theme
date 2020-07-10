@@ -17,7 +17,13 @@ PROMPT='
 ${RETURN_STATUS} $FG[237] %m @ %* %{$reset_color%}% $FG[087]%~ $(git_prompt_info) $FG[105]%(!.#.»)%{$reset_color%}
 '
 PROMPT2='%{$FG[009]%}\ %{$reset_color%}'
-RPROMPT='$(kube_ps1) $(aws_prompt_info)'
+
+# Right prompt
+RPROMPT=''
+if kubectx -c 2>/dev/null; then
+  RPROMPT+='$(kube_ps1)'
+fi
+RPROMPT+='$(aws_prompt_info)'
 
 # Git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[254]($FG[254]"
