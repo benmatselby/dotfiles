@@ -3,7 +3,10 @@
 local RETURN_STATUS="%(?:%{$FG[006]%}✔︎:%{$FG[009]%}✘)"
 
 # Kubernetes settings
-KUBE_PS1_SYMBOL_ENABLE=false
+# See https://github.com/jonmosco/kube-ps1#customization
+KUBE_PS1_SYMBOL_DEFAULT="☸️ "
+KUBE_PS1_SEPARATOR=" "
+KUBE_PS1_SYMBOL_ENABLE=true
 KUBE_PS1_CTX_COLOR=237
 KUBE_PS1_NS_COLOR=237
 KUBE_PS1_PREFIX=""
