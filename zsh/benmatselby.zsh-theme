@@ -20,9 +20,7 @@ PROMPT2='%{$FG[009]%}\ %{$reset_color%}'
 
 # Right prompt
 RPROMPT=''
-if kubectx -c 2>/dev/null; then
-  RPROMPT+='$(kube_ps1)'
-fi
+RPROMPT+='$(kube_ps1)'
 RPROMPT+='$(aws_prompt_info)'
 
 # Git settings
