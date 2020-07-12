@@ -121,3 +121,12 @@ function redoc() {
      -e SPEC_URL=$(basename ${1}) \
      redocly/redoc
 }
+
+# Container checker
+function trivy() {
+  docker run \
+    --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    aquasec/trivy \
+    "$@"
+}
