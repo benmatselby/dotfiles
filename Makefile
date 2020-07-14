@@ -80,4 +80,5 @@ install-vscode-ext: ## Install all the vs code plugins I use
 		--install-extension timonwong.shellcheck \
 		--install-extension ms-azuretools.vscode-docker \
 		--install-extension sdras.night-owl \
-		--install-extension hashicorp.terraform
+		--install-extension hashicorp.terraform \
+		--install-extension felixfbecker.php-intellisense
