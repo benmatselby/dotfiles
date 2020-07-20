@@ -4,7 +4,7 @@ local RETURN_STATUS="%(?:%{$FG[112]%}✔︎:%{$FG[124]%}✘)"
 
 # Primary prompt
 PROMPT='
-${RETURN_STATUS} $FG[039]%~ $(git_prompt_info) $(aws_prompt_info) $(kube_ps1)
+${RETURN_STATUS} $FG[178]%~ $(git_prompt_info) $(aws_prompt_info) $(kube_ps1)
 $FG[246]%(!.#.❯)%{$reset_color%} '
 PROMPT2='%{$FG[054]%}\ %{$reset_color%}'
 
@@ -13,7 +13,7 @@ RPROMPT=''
 # Git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[246]git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="$FG[214]*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="$FG[207]*%{$reset_color%}"
 
 # AWS prompt env vars
 ZSH_THEME_AWS_PREFIX="$FG[246]☁️ :"
