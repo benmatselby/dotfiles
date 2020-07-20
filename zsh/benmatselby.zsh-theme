@@ -4,8 +4,8 @@ local RETURN_STATUS="%(?:%{$FG[112]%}✔︎:%{$FG[124]%}✘)"
 
 # Primary prompt
 PROMPT='
-${RETURN_STATUS} $FG[075]%~ $(git_prompt_info) $(aws_prompt_info) $(kube_ps1)
-$FG[054]%(!.#.❯)%{$reset_color%} '
+${RETURN_STATUS} $FG[039]%~ $(git_prompt_info) $(aws_prompt_info) $(kube_ps1)
+$FG[246]%(!.#.❯)%{$reset_color%} '
 PROMPT2='%{$FG[054]%}\ %{$reset_color%}'
 
 RPROMPT=''
