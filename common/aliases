@@ -27,6 +27,9 @@ alias drai='docker rmi $(docker images -q)'
 alias drac='docker rm $(docker ps -aq)'
 alias dsac='docker stop $(docker ps -aq)'
 
+# Terraform
+alias tf='terraform'
+
 # Git
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
