@@ -27,7 +27,7 @@
     "external": true,
     "args": ["serve"]
   },
-  "workbench.tree.indent": 20,
+  "workbench.tree.indent": 12,
   "cSpell.enableFiletypes": ["terraform"],
   "editor.suggest.showWords": false
 }
