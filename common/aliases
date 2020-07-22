@@ -29,6 +29,7 @@ alias dsac='docker stop $(docker ps -aq)'
 
 # Terraform
 alias tf='terraform'
+alias tg='terragrunt'
 
 # Git
 alias gdn='git diff --name-only'
