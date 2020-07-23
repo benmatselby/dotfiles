@@ -69,7 +69,6 @@ install-vscode-ext: ## Install all the vs code plugins I use
 	code \
 		--install-extension Tyriar.sort-lines \
 		--install-extension DavidAnson.vscode-markdownlint \
-		--install-extension DotJoshJohnson.xml \
 		--install-extension dbaeumer.vscode-eslint \
 		--install-extension esbenp.prettier-vscode \
 		--install-extension ms-python.python \
