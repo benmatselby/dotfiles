@@ -23,34 +23,6 @@ function dhagen() {
         ${DOCKER_REPO_PREFIX}/hagen "$@"
 }
 
-function dfrost() {
-    docker run \
-        --rm \
-        -t \
-        -eAZURE_DEVOPS_ACCOUNT \
-        -eAZURE_DEVOPS_PROJECT \
-        -eAZURE_DEVOPS_TEAM \
-        -eAZURE_DEVOPS_TOKEN \
-        -eTRAVIS_CI_TOKEN \
-        -eTRAVIS_CI_OWNER \
-        -eJENKINS_URL \
-        -eJENKINS_USERNAME \
-        -eJENKINS_PASSWORD \
-        -eJENKINS_VIEW \
-        ${DOCKER_REPO_PREFIX}/frost "$@"
-}
-
-function ddonny() {
-    docker run \
-        --rm \
-        -t \
-        -eAZURE_DEVOPS_ACCOUNT \
-        -eAZURE_DEVOPS_PROJECT \
-        -eAZURE_DEVOPS_TEAM \
-        -eAZURE_DEVOPS_TOKEN \
-        ${DOCKER_REPO_PREFIX}/donny "$@"
-}
-
 function dwalter() {
      docker run \
         --rm \
