@@ -29,5 +29,7 @@
   },
   "workbench.tree.indent": 12,
   "cSpell.enableFiletypes": ["terraform"],
-  "editor.suggest.showWords": false
+  "editor.suggest.showWords": false,
+  "php.suggest.basic": false,
+  "php.validate.enable": false
 }
