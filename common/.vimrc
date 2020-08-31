@@ -41,7 +41,6 @@ set incsearch                       " Shows the match whilst typing
 set hlsearch                        " Highlight found searches
 set ignorecase                      " Seaching is case insensitive
 set smartcase                       " ... except when the search includes capitals
-set number                          " Show line numbers
 set backspace=indent,eol,start      " Makes backspace key more powerful
 set wrap                            " It's all about the wrapping
 set softtabstop=2                   " Use 2 spaces
