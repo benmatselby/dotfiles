@@ -31,5 +31,8 @@
   "cSpell.enableFiletypes": ["terraform"],
   "editor.suggest.showWords": false,
   "php.suggest.basic": false,
-  "php.validate.enable": false
+  "php.validate.enable": false,
+  "gitlens.codeLens.scopes": [
+    "document"
+  ]
 }
