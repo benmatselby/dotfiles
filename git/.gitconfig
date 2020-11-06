@@ -9,4 +9,4 @@
 	compactionHeuristic = true
 	noprefix = true
 [pull]
-	rebase = true
+	ff = only

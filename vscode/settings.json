@@ -15,7 +15,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Winter is Coming (Light)",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
