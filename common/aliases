@@ -1,6 +1,7 @@
 # OS
 alias ls='ls -lGh'
 alias envs='env | sort'
+alias envg='env | grep -i'
 alias sed=gsed
 
 # Filsystem
