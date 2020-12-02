@@ -30,7 +30,7 @@ if [ "$(arch)" = "arm64" ]; then
     ${ABREW} upgrade
   else
     sudo mkdir -p /opt/homebrew
-    sudo chown -R ben:wheel /opt/homebrew
+    sudo chown -R "$(whoami)":wheel /opt/homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /opt/homebrew
   fi
 
@@ -55,17 +55,51 @@ printf "\n🚀 Installing brew packages\n"
 printf "See https://github.com/Homebrew/brew/issues/7857 for the apple silicon support\n"
 # Arm
 ABREW_PACKAGES=(
+  # amazon-ecs-cli
+  # ansible
+  # awscli
+  # aws/tap/copilot-cli
+  # bash
+  # curl
+  # fzf
   git
+  # github/gh/gh
+  # glow
+  # go
+  # htop
+  # httpie
+  # hugo
   jq
+  # k9s
+  # kind
+  # kubectl
+  # kubectx
+  # kube-ps1
+  # nmap
+  # node
+  # reattach-to-user-namespace
+  # shellcheck
+  # terraform
+  # terragrunt
+  # tflint
+  # tmux
+  # tmuxinator
+  # wget
 )
-for pkg in "${ABREW_PACKAGES[@]}"; do ${ABREW} install "${pkg}"; done
-for pkg in "${ABREW_PACKAGES[@]}"; do echo "${pkg}" && lipo -archs "$(which "${pkg}")"; done
+for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${ABREW} install "${pkg}"; done
+for pkg in "${ABREW_PACKAGES[@]}"; do printf "%s" "${pkg}" && lipo -archs "$(which "${pkg}")"; done
 
 # Intel
 IBREW_PACKAGES=(
 )
-for pkg in "${IBREW_PACKAGES[@]}"; do ${IBREW} install "${pkg}"; done
-for pkg in "${IBREW_PACKAGES[@]}"; do echo "${pkg}" && lipo -archs "$(which "${pkg}")"; done
+for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
+for pkg in "${IBREW_PACKAGES[@]}"; do printf "%s" "${pkg}" && lipo -archs "$(which "${pkg}")"; done
+
+# Some tidying up
+# ${ABREW} autoremove
+# ${IBREW} autoremove
+# ${ABREW} cleanup
+# ${IBREW} cleanup
 
 
 ###
