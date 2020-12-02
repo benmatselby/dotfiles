@@ -48,4 +48,8 @@ alias eod-save='cd $HOME/git/github/benmatselby/eod/2020/ && git add . && git co
 alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin main'
 
 # Random
-alias whatalias='alias | grep '
+alias aliasg='alias | grep '
+
+# Brew
+alias abrew="/opt/homebrew/bin/brew"
+alias ibrew="arch -x86_64 /usr/local/Homebrew/bin/brew"
