@@ -23,6 +23,9 @@ export PAGER="less -X";
 export CDPATH=${CDPATH}:~/git
 
 # Path
-export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/opt/node@14/bin:$PATH
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+# Intel brew
+export PATH=/usr/local/bin:$PATH
+# Apple Silicon/Arm brew
+export PATH=/opt/homebrew/bin:$PATH

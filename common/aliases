@@ -4,7 +4,7 @@ alias envs='env | sort'
 alias envg='env | grep -i'
 alias sed=gsed
 
-# Filsystem
+# Filesystem
 alias ghbms='cd $HOME/git/github/benmatselby/'
 alias ghjoe='cd $HOME/git/github/joelrap/'
 alias ghjos='cd $HOME/git/github/minejosh/'
