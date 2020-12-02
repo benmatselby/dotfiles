@@ -56,6 +56,7 @@ printf "See https://github.com/Homebrew/brew/issues/7857 for the apple silicon s
 # Arm
 ABREW_PACKAGES=(
   git
+  jq
 )
 for pkg in "${ABREW_PACKAGES[@]}"; do ${ABREW} install "${pkg}"; done
 for pkg in "${ABREW_PACKAGES[@]}"; do echo "${pkg}" && lipo -archs "$(which "${pkg}")"; done
