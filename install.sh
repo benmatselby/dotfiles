@@ -56,15 +56,12 @@ printf "See https://github.com/Homebrew/brew/issues/7857 for the apple silicon s
 # Arm
 ABREW_PACKAGES=(
   # amazon-ecs-cli
-  # ansible
   # awscli
   # aws/tap/copilot-cli
   # bash
   # curl
   # fzf
   git
-  # github/gh/gh
-  # glow
   # go
   # htop
   # httpie
@@ -76,7 +73,7 @@ ABREW_PACKAGES=(
   # kubectx
   # kube-ps1
   # nmap
-  # node
+  node
   # reattach-to-user-namespace
   # shellcheck
   # terraform
@@ -87,13 +84,17 @@ ABREW_PACKAGES=(
   # wget
 )
 for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${ABREW} install "${pkg}"; done
-for pkg in "${ABREW_PACKAGES[@]}"; do printf "%s" "${pkg}" && lipo -archs "$(which "${pkg}")"; done
 
 # Intel
 IBREW_PACKAGES=(
+  gh
+  glow
 )
 for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
-for pkg in "${IBREW_PACKAGES[@]}"; do printf "%s" "${pkg}" && lipo -archs "$(which "${pkg}")"; done
+
+printf "\nArchitectures for the brew installed applications:\n"
+ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
+for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(which "${pkg}")"; done
 
 # Some tidying up
 # ${ABREW} autoremove
