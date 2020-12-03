@@ -7,5 +7,4 @@ All the dotfiles needed to make the world a better place. This also aims to setu
 ```shell
 git clone https://github.com/benmatselby/dotfiles.git
 ./install.sh
-make
 ```

@@ -3,23 +3,56 @@
 set -e
 set -f
 
-printf "This will ask you for your admin password\n"
+printf "Configuration:\n"
+IGNORE_OMZ=${IGNORE_OMZ:-false}
+IGNORE_DOTFILES=${IGNORE_DOTFILES:-false}
+IGNORE_BREW=${IGNORE_BREW:-false}
+IGNORE_CODE=${IGNORE_CODE:-false}
+IGNORE_GIT=${IGNORE_GIT:-false}
+printf " - IGNORE_OMZ      = %s\n" "${IGNORE_OMZ}"
+printf " - IGNORE_DOTFILES = %s\n" "${IGNORE_DOTFILES}"
+printf " - IGNORE_BREW     = %s\n" "${IGNORE_BREW}"
+printf " - IGNORE_CODE     = %s\n" "${IGNORE_CODE}"
+printf " - IGNORE_GIT      = %s\n" "${IGNORE_GIT}"
+
+printf "\nThis will ask you for your admin password\n"
 
 
 ###
 # Install oh my zsh
 ###
+if ! ${IGNORE_OMZ} ; then
 printf "\n🚀 Installing oh-my-zsh\n"
 if [ -d "${HOME}/.oh-my-zsh" ]; then
   printf "oh-my-zsh is already installed\n"
 else
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
+fi
+
+
+###
+# Installing dotfiles
+###
+if ! ${IGNORE_DOTFILES} ; then
+printf "\n🚀 Installing dotfiles\n"
+ln -sf "$(PWD)/zsh/.zshrc" "${HOME}/.zshrc"
+ln -sf "$(PWD)/zsh/benmatselby.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/"
+ln -sf "$(PWD)/common/aliases" "${HOME}/.oh-my-zsh/custom/aliases.zsh"
+ln -sf "$(PWD)/common/docker" "${HOME}/.oh-my-zsh/custom/docker.zsh"
+ln -sf "$(PWD)/common/exports" "${HOME}/.oh-my-zsh/custom/exports.zsh"
+ln -sf "$(PWD)/common/functions" "${HOME}/.oh-my-zsh/custom/functions.zsh"
+ln -sf "$(PWD)/common/.vimrc" "${HOME}/.vimrc"
+ln -sf "$(PWD)/common/.tmux.conf" "${HOME}/.tmux.conf"
+ln -sf "$(PWD)/git/.gitconfig" "${HOME}/.gitconfig"
+ln -sf "$(PWD)/git/.gitignore" "${HOME}/.gitignore"
+fi
 
 
 ###
 # Install brew to start with
 ###
+if ! ${IGNORE_BREW} ; then
 printf "\n🚀 Installing brew\n"
 ABREW="/opt/homebrew/bin/brew"
 IBREW="arch -x86_64 /usr/local/Homebrew/bin/brew"
@@ -101,11 +134,49 @@ for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(wh
 # ${IBREW} autoremove
 # ${ABREW} cleanup
 # ${IBREW} cleanup
+fi
 
 
 ###
 # Configure Code
 ###
-printf "\n🚀 Installing code shell command\n"
+if ! ${IGNORE_CODE} ; then
+printf "\n🚀 Installing code configuration\n"
 ln -sf "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
-make install-vscode-ext
+ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+
+code \
+		--install-extension Tyriar.sort-lines \
+		--install-extension DavidAnson.vscode-markdownlint \
+		--install-extension dbaeumer.vscode-eslint \
+		--install-extension esbenp.prettier-vscode \
+		--install-extension ms-python.python \
+		--install-extension golang.go \
+		--install-extension msjsdiag.debugger-for-chrome \
+		--install-extension ms-azuretools.vscode-docker \
+		--install-extension streetsidesoftware.code-spell-checker \
+		--install-extension timonwong.shellcheck \
+		--install-extension ms-azuretools.vscode-docker \
+		--install-extension sdras.night-owl \
+		--install-extension hashicorp.terraform \
+		--install-extension felixfbecker.php-intellisense
+fi
+
+
+###
+# Installing git configuration
+###
+if ! ${IGNORE_GIT} ; then
+printf "\n🚀 Installing git configuration\n"
+if [ ! -f "${HOME}/.gitconfig.local" ] ; then
+  cp git/.gitconfig.local "${HOME}/.gitconfig.local"
+
+  echo "Enter your full name";
+  read -re var
+  sed -i '' "s/GITNAME/${var}/" "${HOME}/.gitconfig.local"
+
+  echo "Enter your email address";
+  read -re var
+  sed -i '' "s/GITEMAIL/${var}/" "${HOME}/.gitconfig.local"
+fi
+fi
