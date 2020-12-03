@@ -29,3 +29,7 @@ KUBE_PS1_CTX_COLOR=37
 KUBE_PS1_NS_COLOR=37
 KUBE_PS1_PREFIX=""
 KUBE_PS1_SUFFIX=""
+
+if ! $(which kubernetes > /dev/null 2>&1); then
+  kubeoff
+fi
