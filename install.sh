@@ -77,9 +77,13 @@ if [ "$(arch)" = "arm64" ]; then
 else
   if ! brew --version ; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  else
+    # Running on an intel machine, so ABREW and IBREW should be the same
+    ABREW="${IBREW}"
+    ${IBREW} update
+    ${IBREW} upgrade
   fi
 fi
-
 
 ###
 # Install brew packages
