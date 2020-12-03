@@ -145,21 +145,20 @@ printf "\n🚀 Installing code configuration\n"
 ln -sf "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
 ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 
-code \
-		--install-extension Tyriar.sort-lines \
-		--install-extension DavidAnson.vscode-markdownlint \
-		--install-extension dbaeumer.vscode-eslint \
-		--install-extension esbenp.prettier-vscode \
-		--install-extension ms-python.python \
-		--install-extension golang.go \
-		--install-extension msjsdiag.debugger-for-chrome \
-		--install-extension ms-azuretools.vscode-docker \
-		--install-extension streetsidesoftware.code-spell-checker \
-		--install-extension timonwong.shellcheck \
-		--install-extension ms-azuretools.vscode-docker \
-		--install-extension sdras.night-owl \
-		--install-extension hashicorp.terraform \
-		--install-extension felixfbecker.php-intellisense
+code --install-extension Tyriar.sort-lines
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+# code --install-extension ms-python.python
+# code --install-extension golang.go
+# code --install-extension msjsdiag.debugger-for-chrome
+# code --install-extension ms-azuretools.vscode-docker
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension timonwong.shellcheck
+code --install-extension sdras.night-owl
+# code --install-extension hashicorp.terraform
+# code --install-extension felixfbecker.php-intellisense
+
 fi
 
 
