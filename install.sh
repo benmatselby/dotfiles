@@ -99,7 +99,6 @@ ABREW_PACKAGES=(
   # curl
   # fzf
   git
-  # go
   # htop
   # httpie
   # hugo
@@ -126,6 +125,7 @@ for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${ABR
 IBREW_PACKAGES=(
   gh
   glow
+  go
 )
 for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
 
@@ -154,7 +154,7 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 # code --install-extension ms-python.python
-# code --install-extension golang.go
+code --install-extension golang.go
 # code --install-extension msjsdiag.debugger-for-chrome
 # code --install-extension ms-azuretools.vscode-docker
 code --install-extension streetsidesoftware.code-spell-checker
