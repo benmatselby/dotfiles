@@ -99,7 +99,7 @@ ABREW_PACKAGES=(
   # curl
   # fzf
   git
-  # htop
+  htop
   # httpie
   # hugo
   jq
