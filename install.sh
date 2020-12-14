@@ -15,8 +15,6 @@ printf " - IGNORE_BREW     = %s\n" "${IGNORE_BREW}"
 printf " - IGNORE_CODE     = %s\n" "${IGNORE_CODE}"
 printf " - IGNORE_GIT      = %s\n" "${IGNORE_GIT}"
 
-printf "\nThis will ask you for your admin password\n"
-
 
 ###
 # Install oh my zsh
