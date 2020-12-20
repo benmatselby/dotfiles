@@ -99,7 +99,6 @@ ABREW_PACKAGES=(
   git
   htop
   # httpie
-  # hugo
   jq
   # k9s
   # kind
@@ -124,6 +123,7 @@ IBREW_PACKAGES=(
   gh
   glow
   go
+  hugo
 )
 for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
 
