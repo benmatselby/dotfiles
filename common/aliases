@@ -43,8 +43,8 @@ alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.P
 function weather() { curl "https://wttr.in/$1" }
 
 # Work
-alias eod='cd $HOME/git/github/benmatselby/eod/2020/'
-alias eod-save='cd $HOME/git/github/benmatselby/eod/2020/ && git add . && git commit -anm "`date`" && git push origin main'
+alias eod='cd $HOME/git/github/benmatselby/eod/2021/'
+alias eod-save='cd $HOME/git/github/benmatselby/eod/2021/ && git add . && git commit -anm "`date`" && git push origin main'
 alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin main'
 
 # Random
