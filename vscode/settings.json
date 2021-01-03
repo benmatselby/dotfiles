@@ -34,5 +34,8 @@
   "php.validate.enable": false,
   "gitlens.codeLens.scopes": [
     "document"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
