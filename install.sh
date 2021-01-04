@@ -147,20 +147,22 @@ printf "\n🚀 Installing code configuration\n"
 ln -sf "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
 ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 
-code --install-extension Tyriar.sort-lines
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension esbenp.prettier-vscode
-# code --install-extension ms-python.python
-code --install-extension golang.go
-# code --install-extension msjsdiag.debugger-for-chrome
-# code --install-extension ms-azuretools.vscode-docker
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension timonwong.shellcheck
-code --install-extension sdras.night-owl
-# code --install-extension hashicorp.terraform
-# code --install-extension felixfbecker.php-intellisense
-
+CODE_EXTENSIONS=(
+  DavidAnson.vscode-markdownlint
+  dbaeumer.vscode-eslint
+  esbenp.prettier-vscode
+  # felixfbecker.php-intellisense
+  golang.go
+  # hashicorp.terraform
+  # ms-azuretools.vscode-docker
+  # ms-python.python
+  # msjsdiag.debugger-for-chrome
+  sdras.night-owl
+  streetsidesoftware.code-spell-checker
+  timonwong.shellcheck
+  Tyriar.sort-lines
+)
+for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done
 fi
 
 
