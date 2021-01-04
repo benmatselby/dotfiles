@@ -96,8 +96,12 @@ ABREW_PACKAGES=(
   # bash
   # curl
   # fzf
+  gh
   git
+  go
+  glow
   htop
+  hugo
   # httpie
   jq
   # k9s
@@ -120,10 +124,6 @@ for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${ABR
 
 # Intel
 IBREW_PACKAGES=(
-  gh
-  glow
-  go
-  hugo
 )
 for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
 
@@ -132,10 +132,10 @@ ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
 for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(which "${pkg}")"; done
 
 # Some tidying up
-# ${ABREW} autoremove
-# ${IBREW} autoremove
-# ${ABREW} cleanup
-# ${IBREW} cleanup
+${ABREW} autoremove
+${IBREW} autoremove
+${ABREW} cleanup
+${IBREW} cleanup
 fi
 
 
