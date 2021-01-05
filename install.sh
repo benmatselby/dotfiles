@@ -91,11 +91,11 @@ printf "See https://github.com/Homebrew/brew/issues/7857 for the apple silicon s
 # Arm
 ABREW_PACKAGES=(
   # amazon-ecs-cli
-  # awscli
+  awscli
   # aws/tap/copilot-cli
-  # bash
+  bash
   # curl
-  # fzf
+  fzf
   gh
   git
   go
@@ -129,7 +129,7 @@ for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBR
 
 printf "\nArchitectures for the brew installed applications:\n"
 ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
-for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(which "${pkg}")"; done
+for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(which "${pkg}")" || true; done
 
 # Some tidying up
 ${ABREW} autoremove
