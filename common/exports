@@ -9,8 +9,10 @@ export GREP_COLOR="1;35"
 export ANSIBLE_COW_SELECTION=random
 
 # Go
-export GOPATH=$HOME/go
+if [ "$(arch)" != "arm64" ]; then
 export GOROOT=/usr/local/opt/go/libexec
+fi
+export GOPATH=$HOME/go
 export GOPRIVATE='github.com/emisgroup,github.com/benmatselby'
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -23,9 +25,10 @@ export PAGER="less -X";
 export CDPATH=${CDPATH}:~/git
 
 # Path
-export PATH=/usr/local/opt/node@14/bin:$PATH
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-# Intel brew
-export PATH=/usr/local/bin:$PATH
-# Apple Silicon/Arm brew
+if [ "$(arch)" = "arm64" ]; then
 export PATH=/opt/homebrew/bin:$PATH
+else
+export PATH=/usr/local/bin:$PATH
+fi
+export PATH=/usr/local/opt/node@14/bin:$PATH
