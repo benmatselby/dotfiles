@@ -20,6 +20,7 @@ export PATH=$PATH:$GOROOT/bin
 # Pagers
 export MANPAGER="less -X";
 export PAGER="less -X";
+export AWS_PAGER=
 
 # Define the folders `cd` will look in
 export CDPATH=${CDPATH}:~/git
