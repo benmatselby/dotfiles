@@ -5,7 +5,7 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.rulers": [80, 120],
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -15,7 +15,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Winter is Coming (Dark Black)",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
