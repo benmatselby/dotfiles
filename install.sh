@@ -9,11 +9,13 @@ IGNORE_DOTFILES=${IGNORE_DOTFILES:-false}
 IGNORE_BREW=${IGNORE_BREW:-false}
 IGNORE_CODE=${IGNORE_CODE:-false}
 IGNORE_GIT=${IGNORE_GIT:-false}
+IGNORE_NODE=${IGNORE_NODE:-false}
 printf " - IGNORE_OMZ      = %s\n" "${IGNORE_OMZ}"
 printf " - IGNORE_DOTFILES = %s\n" "${IGNORE_DOTFILES}"
 printf " - IGNORE_BREW     = %s\n" "${IGNORE_BREW}"
 printf " - IGNORE_CODE     = %s\n" "${IGNORE_CODE}"
 printf " - IGNORE_GIT      = %s\n" "${IGNORE_GIT}"
+printf " - IGNORE_NODE     = %s\n" "${IGNORE_NODE}"
 
 
 ###
@@ -182,4 +184,18 @@ if [ ! -f "${HOME}/.gitconfig.local" ] ; then
   read -re var
   sed -i '' "s/GITEMAIL/${var}/" "${HOME}/.gitconfig.local"
 fi
+fi
+
+
+###
+# Install/Update global node packages
+###
+if ! ${IGNORE_NODE} ; then
+printf "\n🚀 Install node packages\n"
+NODE_PACKAGES=(
+  aws-cdk
+  http-server
+  less
+)
+for pkg in "${NODE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && npm install -g "${pkg}"; done
 fi
