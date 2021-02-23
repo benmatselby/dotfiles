@@ -32,4 +32,3 @@ export PATH=/opt/homebrew/bin:$PATH
 else
 export PATH=/usr/local/bin:$PATH
 fi
-export PATH=/usr/local/opt/node@14/bin:$PATH
