@@ -5,7 +5,6 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
-  "window.zoomLevel": 1,
   "editor.rulers": [80, 120],
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -37,5 +36,9 @@
   ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 2,
+  "files.associations": {
+    "*.hcl": "terraform"
   }
 }
