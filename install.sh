@@ -155,7 +155,7 @@ CODE_EXTENSIONS=(
   esbenp.prettier-vscode
   # felixfbecker.php-intellisense
   golang.go
-  # hashicorp.terraform
+  hashicorp.terraform
   # ms-azuretools.vscode-docker
   # ms-python.python
   # msjsdiag.debugger-for-chrome
