@@ -3,20 +3,20 @@
 #
 function code-sync()
 {
-    for dir in */; do
-        (
-            echo "${dir}"
-            cd "${dir}" > /dev/null 2>&1 || exit
+  for dir in */; do
+    (
+      echo "${dir}"
+      cd "${dir}" > /dev/null 2>&1 || exit
 
-            if [ -d .git ]; then
-                git fetch -p origin && \
-                git pull origin "$(git_current_branch)"
-            else
-                echo 'Not a git repo, skipping...'
-            fi
-            echo ""
-        )
-    done
+      if [ -d .git ]; then
+        git fetch -p origin && \
+        git pull origin "$(git_current_branch)"
+      else
+        echo 'Not a git repo, skipping...'
+      fi
+      echo ""
+    )
+  done
 }
 
 ##
@@ -24,19 +24,19 @@ function code-sync()
 #
 function code-clean()
 {
-    for dir in */; do
-    (
-            printf "${dir}\n"
-            cd "${dir}" > /dev/null 2>&1 || exit
+  for dir in */; do
+  (
+    printf "${dir}\n"
+    cd "${dir}" > /dev/null 2>&1 || exit
 
-            if [ -d .git ]; then
-                git clean -fX
-            else
-                printf "Not a git repo, skipping..."
-            fi
-            printf "\n"
-    )
-    done
+    if [ -d .git ]; then
+      git clean -fX
+    else
+      printf "Not a git repo, skipping..."
+    fi
+    printf "\n"
+  )
+  done
 }
 
 ##
@@ -44,19 +44,33 @@ function code-clean()
 #
 function code-branch()
 {
-    local reset=$'\e[0m'
-    local red=$'\e[1;31m'
-    local green=$'\e[1;32m'
-    color=${red}
+  local reset=$'\e[0m'
+  local red=$'\e[1;31m'
+  local green=$'\e[1;32m'
+  color=${red}
 
-    for dir in */; do
-    (
-        cd "${dir}" > /dev/null 2>&1 || exit
-        cmd=$(git status --short)
-        if [ -z "${cmd}" ] ; then
-            color=${green}
-        fi
-        printf "${dir} %s$(git rev-parse --abbrev-ref HEAD)%s\\n" "${color}" "${reset}"
-    )
-    done
+  for dir in */; do
+  (
+    cd "${dir}" > /dev/null 2>&1 || exit
+    cmd=$(git status --short)
+    if [ -z "${cmd}" ] ; then
+      color=${green}
+    fi
+    printf "${dir} %s$(git rev-parse --abbrev-ref HEAD)%s\\n" "${color}" "${reset}"
+  )
+  done
+}
+
+##
+# Connect to a vscode dev container
+##
+vscode-dev-connect() {
+  local project=$1
+
+  if [ -z "${project}" ]; then
+    printf "Please specify a project\n"
+    return
+  fi
+
+  docker exec -it "${project}" zsh
 }
