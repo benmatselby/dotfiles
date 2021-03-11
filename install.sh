@@ -10,6 +10,15 @@ IGNORE_BREW=${IGNORE_BREW:-false}
 IGNORE_CODE=${IGNORE_CODE:-false}
 IGNORE_GIT=${IGNORE_GIT:-false}
 IGNORE_NODE=${IGNORE_NODE:-false}
+
+if [[ ${REMOTE_CONTAINERS} ]] ; then
+  IGNORE_OMZ=true
+  IGNORE_BREW=true
+  IGNORE_CODE=true
+  IGNORE_GIT=true
+  IGNORE_NODE=true
+fi
+
 printf " - IGNORE_OMZ      = %s\n" "${IGNORE_OMZ}"
 printf " - IGNORE_DOTFILES = %s\n" "${IGNORE_DOTFILES}"
 printf " - IGNORE_BREW     = %s\n" "${IGNORE_BREW}"
