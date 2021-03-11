@@ -148,6 +148,7 @@ if ! ${IGNORE_CODE} ; then
 printf "\n🚀 Installing code configuration\n"
 ln -sf "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
 ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+ln -sf "$(pwd)/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 CODE_EXTENSIONS=(
   DavidAnson.vscode-markdownlint
