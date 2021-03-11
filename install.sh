@@ -36,16 +36,16 @@ fi
 ###
 if ! ${IGNORE_DOTFILES} ; then
 printf "\n🚀 Installing dotfiles\n"
-ln -sf "$(PWD)/zsh/.zshrc" "${HOME}/.zshrc"
-ln -sf "$(PWD)/zsh/benmatselby.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/"
-ln -sf "$(PWD)/common/aliases" "${HOME}/.oh-my-zsh/custom/aliases.zsh"
-ln -sf "$(PWD)/common/docker" "${HOME}/.oh-my-zsh/custom/docker.zsh"
-ln -sf "$(PWD)/common/exports" "${HOME}/.oh-my-zsh/custom/exports.zsh"
-ln -sf "$(PWD)/common/functions" "${HOME}/.oh-my-zsh/custom/functions.zsh"
-ln -sf "$(PWD)/common/.vimrc" "${HOME}/.vimrc"
-ln -sf "$(PWD)/common/.tmux.conf" "${HOME}/.tmux.conf"
-ln -sf "$(PWD)/git/.gitconfig" "${HOME}/.gitconfig"
-ln -sf "$(PWD)/git/.gitignore" "${HOME}/.gitignore"
+ln -sf "$(pwd)/zsh/.zshrc" "${HOME}/.zshrc"
+ln -sf "$(pwd)/zsh/benmatselby.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/"
+ln -sf "$(pwd)/common/aliases" "${HOME}/.oh-my-zsh/custom/aliases.zsh"
+ln -sf "$(pwd)/common/docker" "${HOME}/.oh-my-zsh/custom/docker.zsh"
+ln -sf "$(pwd)/common/exports" "${HOME}/.oh-my-zsh/custom/exports.zsh"
+ln -sf "$(pwd)/common/functions" "${HOME}/.oh-my-zsh/custom/functions.zsh"
+ln -sf "$(pwd)/common/.vimrc" "${HOME}/.vimrc"
+ln -sf "$(pwd)/common/.tmux.conf" "${HOME}/.tmux.conf"
+ln -sf "$(pwd)/git/.gitconfig" "${HOME}/.gitconfig"
+ln -sf "$(pwd)/git/.gitignore" "${HOME}/.gitignore"
 fi
 
 
