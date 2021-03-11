@@ -40,5 +40,6 @@
   "window.zoomLevel": 1,
   "files.associations": {
     "*.hcl": "terraform"
-  }
+  },
+  "dotfiles.repository": "https://github.com/benmatselby/dotfiles"
 }
