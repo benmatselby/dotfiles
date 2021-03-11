@@ -1,7 +1,7 @@
 [include]
 	path = ~/.gitconfig.local
 [core]
-	excludesfile = /Users/Ben/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 [color]
 	ui = true
