@@ -3,42 +3,42 @@
 export DOCKER_REPO_PREFIX=benmatselby
 
 function del_stopped(){
-    local name=$1
-    local state
-    state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+  local name=$1
+  local state
+  state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
 
-    if [[ "$state" == "false" ]]; then
+  if [[ "$state" == "false" ]]; then
     docker rm "$name"
-    fi
+  fi
 }
 
 function dhagen() {
-    docker run \
-        --rm \
-        -t \
-        -eGITHUB_OWNER \
-        -eGITHUB_ORG \
-        -eGITHUB_TOKEN \
-        -v "${HOME}/.benmatselby":/root/.benmatselby \
-        ${DOCKER_REPO_PREFIX}/hagen "$@"
+  docker run \
+    --rm \
+    -t \
+    -eGITHUB_OWNER \
+    -eGITHUB_ORG \
+    -eGITHUB_TOKEN \
+    -v "${HOME}/.benmatselby":/root/.benmatselby \
+    ${DOCKER_REPO_PREFIX}/hagen "$@"
 }
 
 function dwalter() {
-     docker run \
-        --rm \
-        -t \
-        -eJIRA_TOKEN \
-        -eJIRA_URL \
-        -eJIRA_USERNAME \
-        -v "${HOME}/.benmatselby":/root/.benmatselby \
-        ${DOCKER_REPO_PREFIX}/walter "$@"
+  docker run \
+    --rm \
+    -t \
+    -eJIRA_TOKEN \
+    -eJIRA_URL \
+    -eJIRA_USERNAME \
+    -v "${HOME}/.benmatselby":/root/.benmatselby \
+    ${DOCKER_REPO_PREFIX}/walter "$@"
 }
 
 # https://github.com/genuinetools/pepper
 function pepper() {
-    docker run --rm -t \
-        -eGITHUB_TOKEN \
-        jess/pepper "$@"
+  docker run --rm -t \
+    -eGITHUB_TOKEN \
+    jess/pepper "$@"
 }
 
 # https://github.com/genuinetools/udict
@@ -79,19 +79,19 @@ function prism() {
 
 # https://github.com/Redocly/redoc
 function redoc() {
-   if [ -z ${1} ]; then
-     printf "Please specify an Open API Specification file\n"
-     return
-   fi
+  if [ -z ${1} ]; then
+    printf "Please specify an Open API Specification file\n"
+    return
+  fi
 
-   printf "URL: http://localhost:8080\n"
+  printf "URL: http://localhost:8080\n"
 
-   docker run \
-     --rm \
-     -p 8080:80 \
-     -v "${PWD}/${1}:/usr/share/nginx/html/${1}" \
-     -e SPEC_URL=$(basename ${1}) \
-     redocly/redoc
+  docker run \
+    --rm \
+    -p 8080:80 \
+    -v "${PWD}/${1}:/usr/share/nginx/html/${1}" \
+    -e SPEC_URL=$(basename ${1}) \
+    redocly/redoc
 }
 
 # Container checker
