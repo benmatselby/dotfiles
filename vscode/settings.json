@@ -14,7 +14,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Winter is Coming (Dark Black)",
+  "workbench.colorTheme": "Tomorrow Night Blue",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
@@ -37,7 +37,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "files.associations": {
     "*.hcl": "terraform"
   }
