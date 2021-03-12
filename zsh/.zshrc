@@ -70,10 +70,16 @@ ZSH_DISABLE_COMPFIX=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# Apple Silicon
 if [ $(arch) = "arm64" ]; then
   plugins=(aws docker git kube-ps1 golang terraform vagrant)
 else
-  plugins=(aws docker git fzf kube-ps1 kubectl golang terraform tmux tmuxinator vagrant)
+  # VS Code Containers
+  if [[ ${REMOTE_CONTAINERS} ]] ; then
+    plugins=(aws docker git fzf kube-ps1 golang terraform)
+  else
+    plugins=(aws docker git fzf kube-ps1 kubectl golang terraform tmux tmuxinator vagrant)
+  fi
 fi
 
 source $ZSH/oh-my-zsh.sh
