@@ -9,9 +9,6 @@ export GREP_COLOR="1;35"
 export ANSIBLE_COW_SELECTION=random
 
 # Go
-if [ "$(arch)" != "arm64" ]; then
-export GOROOT=/usr/local/opt/go/libexec
-fi
 export GOPATH=$HOME/go
 export GOPRIVATE='github.com/emisgroup,github.com/benmatselby'
 export PATH=$PATH:$GOPATH/bin
