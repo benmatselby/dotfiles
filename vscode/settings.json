@@ -41,5 +41,8 @@
   "files.associations": {
     "*.hcl": "terraform"
   },
-  "dotfiles.repository": "https://github.com/benmatselby/dotfiles"
+  "dotfiles.repository": "https://github.com/benmatselby/dotfiles",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
