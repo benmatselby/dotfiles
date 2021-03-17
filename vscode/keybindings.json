@@ -7,5 +7,14 @@
   {
     "key": "ctrl+shift+[",
     "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   }
 ]
