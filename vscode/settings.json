@@ -44,5 +44,6 @@
   "dotfiles.repository": "https://github.com/benmatselby/dotfiles",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "terminal.integrated.scrollback": 10000
 }
