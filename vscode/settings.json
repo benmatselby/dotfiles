@@ -14,7 +14,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Tomorrow Night Blue",
   "cSpell.language": "en-GB",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "editor.formatOnSave": true,
@@ -45,5 +44,8 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace"
 }
