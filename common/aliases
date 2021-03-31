@@ -5,9 +5,10 @@ alias envg='env | grep -i'
 alias sed=gsed
 
 # Filesystem
-alias ghbms='cd $HOME/git/github/benmatselby/'
-alias ghjoe='cd $HOME/git/github/joelrap/'
-alias ghjos='cd $HOME/git/github/minejosh/'
+alias ghbms='cd ${HOME}/git/github/benmatselby/'
+alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
+alias ghjoe='cd ${HOME}/git/github/joelrap/'
+alias ghjos='cd ${HOME}/git/github/minejosh/'
 
 # Helper to open stuff in Chrome
 alias open-chrome='open -a "Google Chrome"'
