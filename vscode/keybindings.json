@@ -24,5 +24,13 @@
   {
     "key": "cmd+k z",
     "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "cmd+k cmd+m",
+    "command": "-workbench.extensions.action.showRecommendedKeymapExtensions"
+  },
+  {
+    "key": "cmd+k cmd+m",
+    "command": "workbench.action.toggleMaximizedPanel"
   }
 ]
