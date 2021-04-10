@@ -161,12 +161,14 @@ ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/U
 ln -sf "$(pwd)/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 CODE_EXTENSIONS=(
+  coenraads.bracket-pair-colorizer-2
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
   # felixfbecker.php-intellisense
   golang.go
   hashicorp.terraform
+  johnpapa.vscode-peacock
   # ms-azuretools.vscode-docker
   # ms-python.python
   # msjsdiag.debugger-for-chrome
