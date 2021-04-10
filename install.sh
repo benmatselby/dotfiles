@@ -206,7 +206,6 @@ fi
 if ! ${IGNORE_NODE} ; then
 printf "\n🚀 Install node packages\n"
 NODE_PACKAGES=(
-  aws-cdk
   http-server
   less
 )
