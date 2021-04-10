@@ -106,7 +106,6 @@ ABREW_PACKAGES=(
   awscli
   # aws/tap/copilot-cli
   bash
-  # curl
   fzf
   gh
   git
@@ -114,7 +113,6 @@ ABREW_PACKAGES=(
   glow
   htop
   hugo
-  # httpie
   jq
   # k9s
   # kind
@@ -125,7 +123,7 @@ ABREW_PACKAGES=(
   node
   # reattach-to-user-namespace
   # shellcheck
-  # terraform
+  terraform
   # terragrunt
   # tflint
   # tmux
