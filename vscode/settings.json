@@ -45,8 +45,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.linux": "/bin/zsh",
   "workbench.colorTheme": "Monokai Dimmed",
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
