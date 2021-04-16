@@ -1,0 +1,7 @@
+language: generic
+
+notifications:
+  email: true
+
+script:
+  - shellcheck install.sh
