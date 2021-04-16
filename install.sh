@@ -64,34 +64,23 @@ fi
 ###
 if ! ${IGNORE_BREW} ; then
 printf "\n🚀 Installing brew\n"
-ABREW="/opt/homebrew/bin/brew"
-IBREW="arch -x86_64 /usr/local/Homebrew/bin/brew"
 if [ "$(arch)" = "arm64" ]; then
-  printf "\nChecking the arm64 installation\n"
-  if [ -d "/opt/homebrew" ] ; then
-    ${ABREW} update
-    ${ABREW} upgrade
-  else
+  printf "\nRunning on arm64\n"
+  if ! brew --version ; then
     sudo mkdir -p /opt/homebrew
     sudo chown -R "$(whoami)":wheel /opt/homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /opt/homebrew
-  fi
-
-  printf "\nChecking the intel installation\n"
-  if ! arch -x86_64 brew --version; then
-    arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   else
-    ${IBREW} update
-    ${IBREW} upgrade
+    brew update
+    brew upgrade
   fi
 else
+  printf "\nRunning on intel\n"
   if ! brew --version ; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   else
-    # Running on an intel machine, so ABREW and IBREW should be the same
-    ABREW="${IBREW}"
-    ${IBREW} update
-    ${IBREW} upgrade
+    brew update
+    brew upgrade
   fi
 fi
 
@@ -99,9 +88,8 @@ fi
 # Install brew packages
 ###
 printf "\n🚀 Installing brew packages\n"
-printf "See https://github.com/Homebrew/brew/issues/7857 for the apple silicon support\n"
 # Arm
-ABREW_PACKAGES=(
+BREW_PACKAGES=(
   # amazon-ecs-cli
   awscli
   # aws/tap/copilot-cli
@@ -130,22 +118,15 @@ ABREW_PACKAGES=(
   # tmuxinator
   # wget
 )
-for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${ABREW} install "${pkg}"; done
-
-# Intel
-IBREW_PACKAGES=(
-)
-for pkg in "${IBREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && ${IBREW} install "${pkg}"; done
+for pkg in "${BREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
 printf "\nArchitectures for the brew installed applications:\n"
 ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
 for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && lipo -archs "$(which "${pkg}")" || true; done
 
 # Some tidying up
-${ABREW} autoremove
-${IBREW} autoremove
-${ABREW} cleanup
-${IBREW} cleanup
+brew autoremove
+brew cleanup
 fi
 
 

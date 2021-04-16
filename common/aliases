@@ -50,7 +50,3 @@ alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit 
 
 # Random
 alias aliasg='alias | grep '
-
-# Brew
-alias abrew="/opt/homebrew/bin/brew"
-alias ibrew="arch -x86_64 /usr/local/Homebrew/bin/brew"
