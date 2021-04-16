@@ -122,7 +122,7 @@ for pkg in "${BREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew i
 
 printf "\nArchitectures for the brew installed applications:\n"
 ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
-for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && (lipo -archs "$(which "${pkg}")" || true); done
+for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && (lipo -archs "$(command -v "${pkg}")" || true); done
 
 # Some tidying up
 brew autoremove
