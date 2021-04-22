@@ -1,59 +1,52 @@
 {
-  "editor.tabSize": 2,
-  "editor.minimap.enabled": false,
-  "go.useLanguageServer": true,
-  "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
-  "files.insertFinalNewline": true,
-  "editor.rulers": [80, 120],
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "window.restoreWindows": "none",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.editor.enablePreview": false,
+  "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
-  "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "dotfiles.repository": "https://github.com/benmatselby/dotfiles",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80, 120],
+  "editor.suggest.showWords": false,
+  "editor.tabSize": 2,
+  "files.associations": { "*.hcl": "terraform" },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "gitlens.codeLens.scopes": ["document"],
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terraform.languageServer": { "external": true, "args": ["serve"] },
+  "window.restoreWindows": "none",
+  "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
+  "workbench.tree.indent": 12,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terraform.languageServer": {
-    "external": true,
-    "args": ["serve"]
-  },
-  "workbench.tree.indent": 12,
-  "cSpell.enableFiletypes": ["terraform"],
-  "editor.suggest.showWords": false,
-  "php.suggest.basic": false,
-  "php.validate.enable": false,
-  "gitlens.codeLens.scopes": [
-    "document"
-  ],
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "window.zoomLevel": 1,
-  "files.associations": {
-    "*.hcl": "terraform"
-  },
-  "dotfiles.repository": "https://github.com/benmatselby/dotfiles",
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.integrated.scrollback": 10000,
-  "terminal.integrated.shell.linux": "/bin/zsh",
-  "workbench.colorTheme": "Monokai Dimmed",
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "go.toolsManagement.autoUpdate": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
