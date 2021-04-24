@@ -148,7 +148,8 @@ CODE_EXTENSIONS=(
   golang.go
   hashicorp.terraform
   johnpapa.vscode-peacock
-  # ms-azuretools.vscode-docker
+  ms-azuretools.vscode-docker
+  ms-vscode-remote.remote-containers
   # ms-python.python
   # msjsdiag.debugger-for-chrome
   sdras.night-owl
