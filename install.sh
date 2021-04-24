@@ -102,11 +102,11 @@ BREW_PACKAGES=(
   htop
   hugo
   jq
-  # k9s
+  k9s
   # kind
-  # kubectl
-  # kubectx
-  # kube-ps1
+  kubectl
+  kubectx
+  kube-ps1
   # nmap
   node
   # reattach-to-user-namespace
