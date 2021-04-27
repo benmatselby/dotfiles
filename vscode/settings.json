@@ -9,6 +9,8 @@
   "editor.rulers": [80, 120],
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
+  "errorLens.addAnnotationTextPrefixes": true,
+  "errorLens.delay": 1000,
   "files.associations": { "*.hcl": "terraform" },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
