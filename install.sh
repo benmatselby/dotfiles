@@ -108,7 +108,7 @@ BREW_PACKAGES=(
   kubectx
   kube-ps1
   # nmap
-  node
+  nvm
   # reattach-to-user-namespace
   # shellcheck
   terraform
