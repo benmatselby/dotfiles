@@ -20,6 +20,7 @@
   "go.useLanguageServer": true,
   "php.suggest.basic": false,
   "php.validate.enable": false,
+  "prettier.printWidth": 120,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shell.linux": "/bin/zsh",
   "terraform.languageServer": { "external": true, "args": ["serve"] },
