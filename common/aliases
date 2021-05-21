@@ -7,6 +7,7 @@ alias sed=gsed
 # Filesystem
 alias ghbms='cd ${HOME}/git/github/benmatselby/'
 alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
+alias adow='cd ${HOME}/git/ado/${GITHUB_ORG}/'
 alias ghjoe='cd ${HOME}/git/github/joelrap/'
 alias ghjos='cd ${HOME}/git/github/minejosh/'
 
