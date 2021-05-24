@@ -74,3 +74,16 @@ vscode-dev-connect() {
 
   docker exec -it "${project}" zsh
 }
+
+##
+# Open the applications I use
+##
+start-coding() {
+  open -a Mail
+  open -a Safari
+  open -a Slack
+  open -a Obsidian
+  open -a "Visual Studio Code"
+  open -a Music
+  open -a Twitter
+}
