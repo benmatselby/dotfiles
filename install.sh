@@ -145,6 +145,7 @@ CODE_EXTENSIONS=(
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
   # felixfbecker.php-intellisense
+  github.remotehub
   golang.go
   hashicorp.terraform
   johnpapa.vscode-peacock
