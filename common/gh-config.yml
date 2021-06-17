@@ -1,2 +1,3 @@
 aliases:
     prc: pr create
+    rv: repo view -w
