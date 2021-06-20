@@ -189,7 +189,7 @@ if ! ${IGNORE_NODE} ; then
 printf "\n🚀 Install node packages\n"
 NODE_PACKAGES=(
   http-server
-  less
+  netlify-cli
 )
 for pkg in "${NODE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && npm install -g "${pkg}"; done
 fi
