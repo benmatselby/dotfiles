@@ -90,9 +90,7 @@ fi
 printf "\n🚀 Installing brew packages\n"
 # Arm
 BREW_PACKAGES=(
-  # amazon-ecs-cli
   awscli
-  # aws/tap/copilot-cli
   bash
   fzf
   gh
