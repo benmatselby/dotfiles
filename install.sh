@@ -111,6 +111,7 @@ BREW_PACKAGES=(
   nvm
   # reattach-to-user-namespace
   # shellcheck
+  starship
   terraform
   # terragrunt
   # tflint
