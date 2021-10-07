@@ -2,6 +2,9 @@
 
 export DOCKER_REPO_PREFIX=benmatselby
 
+# Setup Docker to Minikube
+eval $(minikube -p minikube docker-env)
+
 function del_stopped(){
   local name=$1
   local state
