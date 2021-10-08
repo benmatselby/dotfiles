@@ -140,7 +140,6 @@ ln -sf "$(pwd)/vscode/settings.json" "${HOME}/Library/Application Support/Code/U
 ln -sf "$(pwd)/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 CODE_EXTENSIONS=(
-  coenraads.bracket-pair-colorizer-2
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
