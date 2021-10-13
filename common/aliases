@@ -30,6 +30,10 @@ alias drai='docker rmi $(docker images -q)'
 alias drac='docker rm $(docker ps -aq)'
 alias dsac='docker stop $(docker ps -aq)'
 
+# Minikube
+alias mkmount='minikube mount "$(pwd)":"$(pwd)"'
+alias mkssh='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
+
 # Terraform
 alias tf='terraform'
 alias tg='terragrunt'
@@ -52,5 +56,3 @@ alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit 
 # Random
 alias aliasg='alias | grep '
 
-# SSH
-alias sshmk='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
