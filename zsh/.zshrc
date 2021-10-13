@@ -114,7 +114,7 @@ unsetopt share_history
 
 # Auto completion
 autoload -U compinit; compinit
-if [[ !${REMOTE_CONTAINERS} ]] ; then
+if [[ ! ${REMOTE_CONTAINERS} ]] ; then
   eval "$(starship init zsh)"
 fi
 
