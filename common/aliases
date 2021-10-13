@@ -51,3 +51,6 @@ alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit 
 
 # Random
 alias aliasg='alias | grep '
+
+# SSH
+alias sshmk='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'

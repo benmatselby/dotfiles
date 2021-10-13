@@ -114,8 +114,9 @@ unsetopt share_history
 
 # Auto completion
 autoload -U compinit; compinit
-
-eval "$(starship init zsh)"
+if [[ !${REMOTE_CONTAINERS} ]] ; then
+  eval "$(starship init zsh)"
+fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
