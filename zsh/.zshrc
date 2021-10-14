@@ -76,7 +76,7 @@ if [ $(arch) = "arm64" ]; then
 else
   # VS Code Containers
   if [[ ${REMOTE_CONTAINERS} ]] ; then
-    plugins=(aws docker git fzf kube-ps1 golang terraform)
+    plugins=(aws docker git kube-ps1 golang terraform)
   else
     plugins=(aws docker git fzf kube-ps1 kubectl golang terraform tmux tmuxinator vagrant)
   fi
@@ -114,6 +114,7 @@ unsetopt share_history
 
 # Auto completion
 autoload -U compinit; compinit
+
 if [[ ! ${REMOTE_CONTAINERS} ]] ; then
   eval "$(starship init zsh)"
 fi
@@ -127,3 +128,5 @@ else
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
