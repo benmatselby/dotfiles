@@ -10,6 +10,7 @@ alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
 alias adow='cd ${HOME}/git/ado/${GITHUB_ORG}/'
 alias ghjoe='cd ${HOME}/git/github/joelrap/'
 alias ghjos='cd ${HOME}/git/github/minejosh/'
+alias gic='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
 # Helper to open stuff in Chrome
 alias open-chrome='open -a "Google Chrome"'
@@ -48,10 +49,11 @@ alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.P
 # Weather
 function weather() { curl "https://wttr.in/$1" }
 
-# Work
+# Note taking
 alias eod='cd $HOME/git/github/benmatselby/eod'
 alias eod-save='cd $HOME/git/github/benmatselby/eod && git add . && git commit -anm "`date`" && git push origin main'
 alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin main'
+alias eod-journal='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Ben/journal && git add . && git commit -anm "`date`"'
 
 # Random
 alias aliasg='alias | grep '
