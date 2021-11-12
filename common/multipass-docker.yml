@@ -1,0 +1,21 @@
+---
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzhPnhK05nPNlz65CHWrmfvuQfEcibC9mI27ieCXNBOZnxGhwaBBnUX6eQYIS+upfYGUDajKeAcmd+3FPExN84u3dRj1QiT9C+XLXXiShdun3QKWbAysAccQqjOepEIUK+GvCI7JgmpqMC8KfnR6aX+wtSBHQnttpGAICkMKcJySroMrrMSRcaL4LQLdhAMRq7AYEntGQ5PzvUlqEUf6qc5GlP1SryEdUs8ykAJ8jHeEZo3vuGAFuKHQVjI7kd6I3Mmo5gra7Qza/wb9q99BJaQg+61vGMQ4eiHrkBW10Eqla9kMLi3Kwm6Da5QTYLVu+JzbH3hrlrbtYVGJqGkgG9UMtxSVGbYCtuWHuS0qcqa88QvxOEOy4lnBCa3B1gWuZ4mf2SgrqVjOmzRWLTD0yBG8p+62rSulowqLQo5ZpL4MAqGOuZSkfli9umC6/ib6Qvu8A5RqrV5of8YL8qa37HIBEsBUMLxl0TT6FlzicIX+cae6CSJLOd7sEuenLLD+jBWT/MsW9KRgR70sIBP0Dqs6BrGsrz2JJLz1UucSdFrLZ3FFYtR+ZpZAyIPj8f9CJNcP2X33U4Z7xzfY4NaKY2RL1+e8QRXjWeC5tgBIQt5Jpx08AJM6YWtAwWhkJ71UKPSKLxv/RF/YhIVTSi7nnIMu2Xly/nvMvDstg/UqOHrw== ben.selby@emishealth.com
+package_update: true
+packages:
+  - docker
+  - avahi-daemon
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
+  - lsb-release
+runcmd:
+  - sudo curl -fsSL https://get.docker.com | sudo bash
+  - sudo systemctl enable docker
+  - sudo systemctl enable -s HUP ssh
+  - sudo groupadd docker
+  - sudo usermod -aG docker ubuntu

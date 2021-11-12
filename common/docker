@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Environment variables
 export DOCKER_REPO_PREFIX=benmatselby
 
-# Setup Docker to Minikube
-if [[ `command -v minikube` ]]; then
-  eval $(minikube -p minikube docker-env)
-fi
+# Aliases
+alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
+alias drai='docker rmi $(docker images -q)'
+alias drac='docker rm $(docker ps -aq)'
+alias dsac='docker stop $(docker ps -aq)'
 
+# Functions
 function del_stopped(){
   local name=$1
   local state
@@ -15,28 +18,6 @@ function del_stopped(){
   if [[ "$state" == "false" ]]; then
     docker rm "$name"
   fi
-}
-
-function dhagen() {
-  docker run \
-    --rm \
-    -t \
-    -eGITHUB_OWNER \
-    -eGITHUB_ORG \
-    -eGITHUB_TOKEN \
-    -v "${HOME}/.benmatselby":/root/.benmatselby \
-    ${DOCKER_REPO_PREFIX}/hagen "$@"
-}
-
-function dwalter() {
-  docker run \
-    --rm \
-    -t \
-    -eJIRA_TOKEN \
-    -eJIRA_URL \
-    -eJIRA_USERNAME \
-    -v "${HOME}/.benmatselby":/root/.benmatselby \
-    ${DOCKER_REPO_PREFIX}/walter "$@"
 }
 
 # https://github.com/genuinetools/pepper
