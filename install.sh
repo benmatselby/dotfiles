@@ -106,6 +106,7 @@ BREW_PACKAGES=(
   kubectl
   kubectx
   kube-ps1
+  multipass
   # nmap
   nvm
   # reattach-to-user-namespace
