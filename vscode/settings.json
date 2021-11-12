@@ -26,7 +26,7 @@
   "terraform.languageServer": { "external": true, "args": ["serve"] },
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Winter is Coming (Light)",
+  "workbench.colorTheme": "GitHub Light",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.tree.indent": 12,
