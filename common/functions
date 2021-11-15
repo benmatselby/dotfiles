@@ -78,7 +78,7 @@ vscode-dev-connect() {
 ##
 # Open the applications I use
 ##
-start-coding() {
+start-day() {
   open -a Mail
   open -a Safari
   open -a Slack
