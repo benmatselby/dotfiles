@@ -21,8 +21,7 @@ alias mp='multipass'
 alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker 20.04 --cloud-init ${HOME}/git/github/${GITHUB_USER}/dotfiles/common/multipass-docker.yml'
 
 # Note taking
-alias eod='cd $HOME/git/github/benmatselby/eod'
-alias eod-save='cd $HOME/git/github/benmatselby/eod && git add . && git commit -anm "`date`" && git push origin main'
+alias work='cd $HOME/git/github/benmatselby/work'
 alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin main'
 alias eod-journal='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Ben/journal && git add . && git commit -anm "`date`"'
 
