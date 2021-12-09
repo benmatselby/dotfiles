@@ -65,6 +65,11 @@ ZSH_DISABLE_COMPFIX=true
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# omz plugin for nvm
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
+# This will load the correct node version for us.
+export NVM_AUTOLOAD=1
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -72,13 +77,13 @@ ZSH_DISABLE_COMPFIX=true
 # Add wisely, as too many plugins slow down shell startup.
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(aws docker git kube-ps1 golang terraform vagrant)
+  plugins=(aws docker git kube-ps1 golang nvm terraform vagrant)
 else
   # VS Code Containers
   if [[ ${REMOTE_CONTAINERS} ]] ; then
     plugins=(aws docker git kube-ps1 golang terraform)
   else
-    plugins=(aws docker git fzf kube-ps1 kubectl golang terraform tmux tmuxinator vagrant)
+    plugins=(aws docker git fzf kube-ps1 kubectl golang nvm terraform tmux tmuxinator vagrant)
   fi
 fi
 
