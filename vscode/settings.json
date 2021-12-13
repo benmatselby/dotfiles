@@ -53,5 +53,7 @@
   },
   "redhat.telemetry.enabled": false,
   "yaml.validate": false,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "editor.accessibilitySupport": "off",
+  "svelte.enable-ts-plugin": true
 }
