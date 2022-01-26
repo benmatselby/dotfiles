@@ -26,7 +26,7 @@
   "terraform.languageServer": { "external": true, "args": ["serve"] },
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "GitHub Light Default",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.tree.indent": 12,
@@ -58,5 +58,7 @@
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.views.fileHistory.files.compact": false
 }

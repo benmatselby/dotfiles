@@ -30,7 +30,8 @@
     "command": "-workbench.extensions.action.showRecommendedKeymapExtensions"
   },
   {
-    "key": "cmd+k cmd+m",
-    "command": "workbench.action.toggleMaximizedPanel"
+    "key": "shift+cmd+enter",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
   }
 ]
