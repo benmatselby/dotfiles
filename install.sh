@@ -109,6 +109,7 @@ BREW_PACKAGES=(
   multipass
   # nmap
   nvm
+  pyenv
   # reattach-to-user-namespace
   # shellcheck
   starship
@@ -150,7 +151,7 @@ CODE_EXTENSIONS=(
   hashicorp.terraform
   ms-azuretools.vscode-docker
   ms-vscode-remote.remote-containers
-  # ms-python.python
+  ms-python.python
   sdras.night-owl
   streetsidesoftware.code-spell-checker
   timonwong.shellcheck

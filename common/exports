@@ -28,3 +28,6 @@ else
   export PATH=/usr/local/bin:$PATH
 fi
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
+
+# Python
+export PATH=$PATH:$HOME/.local/bin

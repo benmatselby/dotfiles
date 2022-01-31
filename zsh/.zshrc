@@ -134,4 +134,10 @@ else
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
+# Python
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
+
+# FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
