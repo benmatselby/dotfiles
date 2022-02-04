@@ -31,3 +31,6 @@ export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # Python
 export PATH=$PATH:$HOME/.local/bin
+
+# tmux
+export ZSH_TMUX_ITERM2=true
