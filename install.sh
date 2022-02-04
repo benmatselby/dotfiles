@@ -91,7 +91,7 @@ fi
 printf "\n🚀 Installing brew packages\n"
 # Arm
 BREW_PACKAGES=(
-  awscli
+  # awscli
   bash
   fzf
   gh
@@ -103,10 +103,10 @@ BREW_PACKAGES=(
   jq
   k9s
   # kind
-  kubectl
-  kubectx
-  kube-ps1
-  multipass
+  # kubectl
+  # kubectx
+  # kube-ps1
+  # multipass
   # nmap
   nvm
   pyenv
