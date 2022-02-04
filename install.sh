@@ -101,7 +101,7 @@ BREW_PACKAGES=(
   htop
   hugo
   jq
-  k9s
+  # k9s
   # kind
   # kubectl
   # kubectx
@@ -110,14 +110,14 @@ BREW_PACKAGES=(
   # nmap
   nvm
   pyenv
-  # reattach-to-user-namespace
+  reattach-to-user-namespace
   # shellcheck
   starship
   terraform
   # terragrunt
   # tflint
-  # tmux
-  # tmuxinator
+  tmux
+  tmuxinator
   # wget
 )
 for pkg in "${BREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done

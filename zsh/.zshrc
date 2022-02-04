@@ -77,13 +77,13 @@ export NVM_AUTOLOAD=1
 # Add wisely, as too many plugins slow down shell startup.
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(aws docker git kube-ps1 golang terraform vagrant)
+  plugins=(aws docker git golang terraform tmux tmuxinator)
 else
   # VS Code Containers
   if [[ ${REMOTE_CONTAINERS} ]] ; then
-    plugins=(aws docker git kube-ps1 golang terraform)
+    plugins=(aws docker git golang terraform)
   else
-    plugins=(aws docker git fzf kube-ps1 kubectl golang terraform tmux tmuxinator vagrant)
+    plugins=(aws docker git golang terraform tmux tmuxinator)
   fi
 fi
 
