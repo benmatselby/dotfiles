@@ -1,7 +1,7 @@
 # Warning: This config does not include keys that have an unset value
 format = '$all'
 scan_timeout = 30
-command_timeout = 500
+command_timeout = 700
 add_newline = true
 
 [aws]
