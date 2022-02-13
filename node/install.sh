@@ -2,7 +2,6 @@
 
 set -e
 
-printf "\n🚀 Install node packages\n"
 NODE_PACKAGES=(
   http-server
   netlify-cli
