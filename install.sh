@@ -127,8 +127,8 @@ ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
 for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && (lipo -archs "$(command -v "${pkg}")" || true); done
 
 # Some tidying up
-brew autoremove
-brew cleanup
+brew autoremove -v
+brew cleanup --prune=all
 fi
 
 
