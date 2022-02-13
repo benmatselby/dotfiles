@@ -9,6 +9,12 @@ alias gic='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
 
+# Docker
+alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
+alias drai='docker rmi $(docker images -q)'
+alias drac='docker rm $(docker ps -aq)'
+alias dsac='docker stop $(docker ps -aq)'
+
 # Go
 alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.Path}}: {{.Version}} -> {{.Update.Version}}{{end}}" -m all 2> /dev/null'
 
