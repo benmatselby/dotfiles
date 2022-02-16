@@ -679,14 +679,22 @@
           }
         }
       }
+    },
+    "cask": {
+      "postman": {
+        "version": "9.13.0",
+        "options": {
+          "full_name": "postman"
+        }
+      }
     }
   },
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.3.14",
+        "HOMEBREW_VERSION": "3.3.15",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "b935d04cfda3e494499e4135b43a8b8c6d6b84b2",
+        "Homebrew/homebrew-core": "923b03bb8ab623bfd709669a3d496e5c9c7f2fb5",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.2.1",
         "macOS": "12.2.1"

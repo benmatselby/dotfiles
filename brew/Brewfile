@@ -26,3 +26,5 @@ brew 'terraform'
 brew 'tmux'
 brew 'tmuxinator'
 # brew 'wget'
+
+cask 'postman'
