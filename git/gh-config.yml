@@ -1,3 +1,4 @@
 aliases:
     prc: pr create
+    prcf: pr create --fill
     rv: repo view -w
