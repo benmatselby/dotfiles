@@ -38,7 +38,6 @@ alias eod-journal='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Ben/
 alias ls='ls -lGh'
 alias envs='env | sort'
 alias envg='env | grep -i'
-alias sed=gsed
 
 # Random
 alias aliasg='alias | grep '
