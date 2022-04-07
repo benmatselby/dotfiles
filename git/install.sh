@@ -3,7 +3,7 @@
 set -e
 
 if [ ! -f "${HOME}/.gitconfig.local" ] ; then
-  cp git/.gitconfig.local "${HOME}/.gitconfig.local"
+  cp "${DOTFILES_LOCATION}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
 
   echo "Enter your full name";
   read -re var
@@ -16,4 +16,5 @@ fi
 
 ln -sf "${DOTFILES_LOCATION}/git/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_LOCATION}/git/.gitignore" "${HOME}/.gitignore"
+mkdir -p "${HOME}/.config/gh/"
 ln -sf "${DOTFILES_LOCATION}/git/gh-config.yml" "${HOME}/.config/gh/config.yml"
