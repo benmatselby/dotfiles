@@ -27,4 +27,5 @@ brew 'tmux'
 brew 'tmuxinator'
 # brew 'wget'
 
-cask 'postman'
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code'
