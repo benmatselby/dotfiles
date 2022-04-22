@@ -31,9 +31,12 @@ ABREW_PACKAGES=(
   # multipass
   # nmap
   nvm
+  openssl # Pyenv build dep
   pyenv
   reattach-to-user-namespace
+  readline # Pyenv build dep
   # shellcheck
+  sqlite3 # Pyenv build dep
   starship
   terraform
   # terragrunt
@@ -41,6 +44,8 @@ ABREW_PACKAGES=(
   tmux
   tmuxinator
   # wget
+  xz # Pyenv build dep
+  zlib # Pyenv build dep
 )
 for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
