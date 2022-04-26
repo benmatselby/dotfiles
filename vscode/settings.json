@@ -60,7 +60,7 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.views.fileHistory.files.compact": false,
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Default Light+",
   "window.zoomLevel": 1,
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "workbench.colorTheme": "Default Light+"
 }
