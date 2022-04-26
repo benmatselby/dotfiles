@@ -15,7 +15,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.codeLens.scopes": ["document"],
+  "gitlens.codeLens.scopes": ["containers", "blocks", "document"],
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "php.suggest.basic": false,
@@ -57,10 +57,9 @@
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "gitlens.currentLine.enabled": false,
   "gitlens.views.fileHistory.files.compact": false,
   "window.autoDetectColorScheme": true,
   "window.zoomLevel": 1,
   "python.formatting.provider": "black",
-  "workbench.colorTheme": "Default Light+"
+  "gitlens.hovers.currentLine.over": "line"
 }
