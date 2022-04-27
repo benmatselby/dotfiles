@@ -48,6 +48,10 @@ printf "\nArchitectures for the brew installed applications:\n"
 ALL_PACKAGES=("${IBREW_PACKAGES[@]}" "${ABREW_PACKAGES[@]}")
 for pkg in "${ALL_PACKAGES[@]}"; do printf "%s - " "${pkg}" && (lipo -archs "$(command -v "${pkg}")" || true); done
 
+# Casks
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+
 # Some tidying up
 brew autoremove -v
 brew cleanup --prune=all
