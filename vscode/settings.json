@@ -44,22 +44,25 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[python]": {
+    "gitlens.codeLens.symbolScopes": ["!Module"],
+    "editor.wordBasedSuggestions": false,
+    "editor.tabSize": 4
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "redhat.telemetry.enabled": false,
-  "yaml.validate": false,
   "editor.accessibilitySupport": "off",
-  "svelte.enable-ts-plugin": true,
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "gitlens.views.fileHistory.files.compact": false,
-  "window.autoDetectColorScheme": true,
   "window.zoomLevel": 1,
   "python.formatting.provider": "black",
-  "gitlens.hovers.currentLine.over": "line"
+  "gitlens.hovers.currentLine.over": "line",
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Default Light+"
 }

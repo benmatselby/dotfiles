@@ -33,5 +33,9 @@
     "key": "shift+cmd+enter",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
+  },
+  {
+    "key": "shift+alt+o",
+    "command": "python.sortImports"
   }
 ]
