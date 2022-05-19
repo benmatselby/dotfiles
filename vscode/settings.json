@@ -64,5 +64,6 @@
   "python.formatting.provider": "black",
   "gitlens.hovers.currentLine.over": "line",
   "window.autoDetectColorScheme": true,
+  "cSpell.diagnosticLevel": "Hint",
   "workbench.colorTheme": "Default Light+"
 }
