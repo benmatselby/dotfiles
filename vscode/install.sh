@@ -22,6 +22,5 @@ CODE_EXTENSIONS=(
   streetsidesoftware.code-spell-checker
   # timonwong.shellcheck
   Tyriar.sort-lines
-  usernamehw.errorlens
 )
 for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done

@@ -65,5 +65,13 @@
   "gitlens.hovers.currentLine.over": "line",
   "window.autoDetectColorScheme": true,
   "cSpell.diagnosticLevel": "Hint",
-  "workbench.colorTheme": "Default Light+"
+  "workbench.colorTheme": "Default Light+",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock"
+  }
 }
