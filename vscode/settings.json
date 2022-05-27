@@ -1,7 +1,7 @@
 {
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
-  "dotfiles.repository": "https://github.com/benmatselby/dotfiles",
+  "dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
   "editor.guides.bracketPairs": true,
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -10,7 +10,6 @@
   "editor.rulers": [80, 100, 120],
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
-  "errorLens.delay": 1000,
   "files.associations": { "*.hcl": "terraform" },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -47,7 +46,13 @@
   "[python]": {
     "gitlens.codeLens.symbolScopes": ["!Module"],
     "editor.wordBasedSuggestions": false,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -56,16 +61,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.accessibilitySupport": "off",
-  "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "gitlens.views.fileHistory.files.compact": false,
   "window.zoomLevel": 1,
   "python.formatting.provider": "black",
   "gitlens.hovers.currentLine.over": "line",
   "window.autoDetectColorScheme": true,
   "cSpell.diagnosticLevel": "Hint",
-  "workbench.colorTheme": "Default Light+",
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -73,5 +74,7 @@
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*.json",
     "package.json": "package-lock.json, yarn.lock"
-  }
+  },
+  "workbench.colorTheme": "Default Light+",
+  "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git"
 }
