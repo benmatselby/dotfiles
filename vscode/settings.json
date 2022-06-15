@@ -62,7 +62,6 @@
   },
   "editor.accessibilitySupport": "off",
   "gitlens.views.fileHistory.files.compact": false,
-  "window.zoomLevel": 1,
   "python.formatting.provider": "black",
   "gitlens.hovers.currentLine.over": "line",
   "window.autoDetectColorScheme": true,
@@ -75,6 +74,11 @@
     "tsconfig.json": "tsconfig.*.json",
     "package.json": "package-lock.json, yarn.lock"
   },
-  "workbench.colorTheme": "Default Light+",
-  "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git"
+  "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
+  "window.zoomLevel": 1,
+  "search.exclude": {
+    "**/.mypy_cache": true,
+    "bandit_baseline": true
+  },
+  "workbench.colorTheme": "Default Light+"
 }
