@@ -87,3 +87,64 @@ start-day() {
   open -a Music
   open -a Twitter
 }
+
+
+##
+# Sync dependabot config from repo to all repos
+##
+function sync-dependabot()
+{
+  local from=$1
+  local dependabot=".github/dependabot.yml"
+  local branch="dependabot-sync"
+  local msg="Sync dependabot configuration"
+
+  if [ -z "${from}" ]; then
+    printf "Please specify a a repo to sync from\n"
+    return
+  fi
+
+  for dir in */; do
+  (
+    repo="${dir/\//}"
+    if [[ "${repo}" == "${from}" ]]; then
+      return
+    fi
+
+    echo "\n\n${repo}"
+    echo "Synching ${from}/${dependabot} to ${repo}/${dependabot}"
+
+    cp "${from}/${dependabot}" "${repo}/${dependabot}" || exit
+
+    cd "${repo}" > /dev/null 2>&1 || exit
+
+    if ! $(git --no-pager diff); then
+
+      git checkout -b "${branch}" || exit
+      git add "${dependabot}"
+
+      if git commit -am "${msg}"; then
+        gh pr create --body "${msg}" --title "${msg}"
+      else
+        echo "Failed to raise PR for ${repo}"
+      fi
+
+      if ! git checkout main; then
+        echo "Failed to checkout main"
+      fi
+
+      if ! git branch -D "${branch}"; then
+        echo "Failed to remove branch: ${branch}"
+      fi
+    else
+      echo "Nothing to sync 👏🏻"
+    fi
+
+    echo ""
+  )
+  done
+}
+
+ben() {
+  docker
+}

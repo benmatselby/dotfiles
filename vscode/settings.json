@@ -14,7 +14,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.codeLens.scopes": ["containers", "blocks", "document"],
+  "gitlens.codeLens.scopes": ["blocks", "document", "containers"],
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "php.suggest.basic": false,
@@ -80,5 +80,7 @@
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
+  "redhat.telemetry.enabled": false,
+  "zenMode.hideLineNumbers": false,
   "workbench.colorTheme": "Default Light+"
 }
