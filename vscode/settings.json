@@ -1,33 +1,58 @@
 {
+  "cSpell.diagnosticLevel": "Hint",
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
   "dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
-  "editor.guides.bracketPairs": true,
+  "editor.accessibilitySupport": "off",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
   "editor.minimap.enabled": false,
   "editor.rulers": [80, 100, 120],
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock"
+  },
   "files.associations": { "*.hcl": "terraform" },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "gitlens.codeLens.scopes": ["blocks", "document", "containers"],
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.views.fileHistory.files.compact": false,
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
+  "python.formatting.provider": "black",
+  "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
+  "search.exclude": {
+    "**/.mypy_cache": true,
+    "bandit_baseline": true
+  },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.scrollback": 10000,
   "terraform.languageServer": { "external": true, "args": ["serve"] },
+  "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Default Light+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.tree.indent": 12,
+  "zenMode.hideLineNumbers": false,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -59,28 +84,5 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.accessibilitySupport": "off",
-  "gitlens.views.fileHistory.files.compact": false,
-  "python.formatting.provider": "black",
-  "gitlens.hovers.currentLine.over": "line",
-  "window.autoDetectColorScheme": true,
-  "cSpell.diagnosticLevel": "Hint",
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.js",
-    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-    "*.jsx": "${capture}.js",
-    "*.tsx": "${capture}.ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock"
-  },
-  "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
-  "window.zoomLevel": 1,
-  "search.exclude": {
-    "**/.mypy_cache": true,
-    "bandit_baseline": true
-  },
-  "redhat.telemetry.enabled": false,
-  "zenMode.hideLineNumbers": false,
-  "workbench.colorTheme": "Default Light+"
+  }
 }
