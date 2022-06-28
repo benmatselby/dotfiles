@@ -45,7 +45,6 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Default Light+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.tree.indent": 12,

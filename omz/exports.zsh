@@ -27,10 +27,9 @@ if [ "$(arch)" = "arm64" ]; then
 else
   export PATH=/usr/local/bin:$PATH
 fi
-export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
-# Python
-export PATH=$PATH:$HOME/.local/bin
+# MySQL
+export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # tmux
 export ZSH_TMUX_ITERM2=true
