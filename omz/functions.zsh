@@ -144,7 +144,3 @@ function sync-dependabot()
   )
   done
 }
-
-ben() {
-  docker
-}

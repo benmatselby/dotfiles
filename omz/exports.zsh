@@ -3,7 +3,7 @@ export ANSIBLE_COW_SELECTION=random
 
 # Go
 export GOPATH=$HOME/go
-export GOPRIVATE='github.com/emisgroup,github.com/benmatselby'
+export GOPRIVATE='github.com/benmatselby'
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -21,7 +21,6 @@ export PAGER="less -X";
 export AWS_PAGER=
 
 # Path
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 if [ "$(arch)" = "arm64" ]; then
   export PATH=/opt/homebrew/bin:$PATH
 else
