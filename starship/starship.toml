@@ -484,7 +484,7 @@ detect_files = ['spago.dhall']
 detect_folders = []
 
 [python]
-pyenv_version_name = false
+pyenv_version_name = true
 pyenv_prefix = 'pyenv '
 python_binary = [
     'python',
