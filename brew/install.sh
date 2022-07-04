@@ -19,6 +19,7 @@ ABREW_PACKAGES=(
   gh
   git
   go
+  golangci-lint
   glow
   htop
   hugo
