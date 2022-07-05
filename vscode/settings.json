@@ -29,6 +29,8 @@
   "gitlens.views.fileHistory.files.compact": false,
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
@@ -40,13 +42,18 @@
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.scrollback": 10000,
-  "terraform.languageServer": { "external": true, "args": ["serve"] },
+  "terraform.languageServer": {
+    "external": true,
+    "args": ["serve"]
+  },
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
   "workbench.tree.indent": 12,
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
@@ -84,9 +91,5 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.lintTool": "golangci-lint",
-  "go.lintFlags": [
-    "--fast"
-  ],
-  "workbench.colorTheme": "Default Light+"
+  "workbench.colorTheme": "Solarized Light"
 }
