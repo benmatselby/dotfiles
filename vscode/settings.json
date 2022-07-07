@@ -42,6 +42,7 @@
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shellIntegration.enabled": true,
   "terraform.languageServer": {
     "external": true,
     "args": ["serve"]
