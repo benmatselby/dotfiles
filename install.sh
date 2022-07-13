@@ -18,6 +18,7 @@ export DOTFILES_LOCATION;
 ./bin/dotfiles install git
 ./bin/dotfiles install github
 ./bin/dotfiles install node
+./bin/dotfiles install mongodb
 ./bin/dotfiles install starship
 ./bin/dotfiles install tmux
 ./bin/dotfiles install vim
