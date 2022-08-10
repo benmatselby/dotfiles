@@ -92,7 +92,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Solarized Light",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.experimental.stickyScroll.enabled": true
 }
