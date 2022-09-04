@@ -13,6 +13,7 @@ fi
 printf "\n🚀 Installing brew packages\n"
 # Arm
 ABREW_PACKAGES=(
+  ag
   # awscli
   bash
   fzf
