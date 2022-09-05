@@ -32,6 +32,8 @@ alias nvmu='nvm use'
 # Note taking
 alias work='cd $HOME/git/github/benmatselby/work'
 alias eod-work='cd $HOME/git/github/benmatselby/work && git add . && git commit -anm "`date`" && git push origin main'
+alias gjournal='gic && cd Ben/journal'
+alias eod-journal='gjournal && git add . && git commit -anm "Journal update: `date`"'
 
 # OS
 alias ls='ls -lGh'
