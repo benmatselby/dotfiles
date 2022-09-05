@@ -93,5 +93,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "editor.experimental.stickyScroll.enabled": true
+  "editor.stickyScroll.enabled": true
 }
