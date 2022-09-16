@@ -39,6 +39,7 @@ alias eod-journal='gjournal && git add . && git commit -anm "Journal update: `da
 alias ls='ls -lGh'
 alias envs='env | sort'
 alias envg='env | grep -i'
+alias dmChange="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 
 # Random
 alias aliasg='alias | grep '
