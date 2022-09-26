@@ -1,4 +1,5 @@
 {
+  "audioCues.onDebugBreak": "on",
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
@@ -10,6 +11,7 @@
   "editor.guides.bracketPairs": true,
   "editor.minimap.enabled": false,
   "editor.rulers": [80, 100, 120],
+  "editor.stickyScroll.enabled": true,
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
   "explorer.fileNesting.patterns": {
@@ -35,12 +37,14 @@
   "php.validate.enable": false,
   "prettier.printWidth": 120,
   "python.formatting.provider": "black",
+  "redhat.telemetry.enabled": false,
   "remote.containers.dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
   "search.exclude": {
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
   "terraform.languageServer": {
@@ -50,11 +54,11 @@
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredLightColorTheme": "Solarized Light",
-  "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
+  "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.tree.indent": 12,
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
@@ -91,7 +95,5 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "editor.stickyScroll.enabled": true
+  }
 }
