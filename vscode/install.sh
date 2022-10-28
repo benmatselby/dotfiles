@@ -8,7 +8,7 @@ ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${HOME}/Library/Applicati
 CODE_EXTENSIONS=(
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
-  eamodio.gitlens
+  # eamodio.gitlens
   esbenp.prettier-vscode
   # felixfbecker.php-intellisense
   github.remotehub
