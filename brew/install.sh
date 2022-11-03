@@ -16,6 +16,7 @@ ABREW_PACKAGES=(
   ag
   # awscli
   bash
+  composer
   fzf
   gh
   git
@@ -33,6 +34,7 @@ ABREW_PACKAGES=(
   # multipass
   # nmap
   nvm
+  php
   pyenv
   reattach-to-user-namespace
   # shellcheck
