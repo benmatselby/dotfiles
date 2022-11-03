@@ -54,7 +54,7 @@
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
@@ -96,5 +96,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.commandCenter": true,
-  "outline.collapseItems": "alwaysCollapse"
+  "outline.collapseItems": "alwaysCollapse",
+  "githubPullRequests.pullBranch": "never"
 }
