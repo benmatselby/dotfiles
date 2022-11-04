@@ -54,6 +54,9 @@ alias week='date +%V'
 alias tf='terraform'
 alias tg='terragrunt'
 
+# Trello
+alias trello='~/git/github/benmatselby/trello-cli/bin/trello.php'
+
 # Weather
 function weather() {
   curl "https://wttr.in/$1"
