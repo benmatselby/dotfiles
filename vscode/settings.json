@@ -51,10 +51,9 @@
     "external": true,
     "args": ["serve"]
   },
-  "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
@@ -97,5 +96,6 @@
   },
   "window.commandCenter": true,
   "outline.collapseItems": "alwaysCollapse",
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "window.autoDetectColorScheme": true
 }
