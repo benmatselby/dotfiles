@@ -1,3 +1,7 @@
+# benmatselby apps
+alias trello='~/git/github/benmatselby/trello-cli/bin/trello.php'
+alias ringli='~/git/github/benmatselby/ringli/bin/ringli'
+
 # Filesystem
 alias ghbms='cd ${HOME}/git/github/benmatselby/'
 alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
@@ -53,9 +57,6 @@ alias week='date +%V'
 # Terraform
 alias tf='terraform'
 alias tg='terragrunt'
-
-# Trello
-alias trello='~/git/github/benmatselby/trello-cli/bin/trello.php'
 
 # Weather
 function weather() {
