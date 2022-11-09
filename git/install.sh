@@ -16,5 +16,3 @@ fi
 
 ln -sf "${DOTFILES_LOCATION}/git/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_LOCATION}/git/.gitignore" "${HOME}/.gitignore"
-mkdir -p "${HOME}/.config/gh/"
-ln -sf "${DOTFILES_LOCATION}/git/gh-config.yml" "${HOME}/.config/gh/config.yml"
