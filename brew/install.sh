@@ -13,6 +13,7 @@ fi
 printf "\n🚀 Installing brew packages\n"
 # Arm
 ABREW_PACKAGES=(
+  ansible
   ag
   # awscli
   bash
@@ -40,10 +41,11 @@ ABREW_PACKAGES=(
   # shellcheck
   starship
   terraform
+  toot
   # terragrunt
   # tflint
-  tmux
-  tmuxinator
+  # tmux
+  # tmuxinator
   # wget
 )
 for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
