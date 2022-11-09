@@ -51,9 +51,11 @@
     "external": true,
     "args": ["serve"]
   },
+  "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
+  "workbench.editor.enablePreview": false,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
