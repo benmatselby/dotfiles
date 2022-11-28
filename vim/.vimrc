@@ -32,6 +32,7 @@ endif
 """
 " Settings
 """
+let mapleader=","
 set mouse=a                         " Mouse support
 set history=50                      " History of commands
 set wildmode=list:longest,full      " Command-line completion
