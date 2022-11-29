@@ -97,6 +97,5 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "python.defaultInterpreterPath": "/Users/ben/.pyenv/versions/3.10.4/bin/python"
+  }
 }
