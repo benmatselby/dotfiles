@@ -181,9 +181,9 @@ disabled = false
 [gcloud.region_aliases]
 
 [git_branch]
-format = 'on [$symbol$branch]($style)(:[$remote]($style)) '
+format = "on [$symbol$branch(:$remote_branch)]($style) "
 symbol = ' '
-style = '#FFA500'
+style = '117'
 truncation_length = 9223372036854775807
 truncation_symbol = '…'
 only_attached = false
@@ -334,7 +334,7 @@ detect_folders = []
 symbol = '☸ '
 format = '[$symbol$context( \($namespace\))]($style) in '
 style = 'cyan'
-disabled = true
+disabled = false
 
 [kubernetes.context_aliases]
 
