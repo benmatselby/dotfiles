@@ -39,6 +39,7 @@
   "php.validate.enable": false,
   "prettier.printWidth": 120,
   "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
   "redhat.telemetry.enabled": false,
   "search.exclude": {
