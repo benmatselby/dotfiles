@@ -32,6 +32,7 @@ ABREW_PACKAGES=(
   kubectl
   kubectx
   kube-ps1
+  mongosh
   # multipass
   # nmap
   nvm
