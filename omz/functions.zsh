@@ -86,6 +86,7 @@ start-day() {
   open -a "Visual Studio Code"
   open -a Music
   open -a Twitter
+  open -a Stickies
 }
 
 
