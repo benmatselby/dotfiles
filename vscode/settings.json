@@ -34,12 +34,11 @@
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
+  "openapi.defaultPreviewRenderer": "redoc",
   "outline.collapseItems": "alwaysCollapse",
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
   "redhat.telemetry.enabled": false,
   "search.exclude": {
