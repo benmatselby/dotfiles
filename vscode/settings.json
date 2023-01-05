@@ -49,10 +49,6 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
-  "terraform.languageServer": {
-    "external": true,
-    "args": ["serve"]
-  },
   "window.commandCenter": true,
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
@@ -98,5 +94,7 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "terraform.languageServer.enable": true,
+  "window.zoomLevel": 1
 }
