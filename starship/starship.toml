@@ -176,9 +176,9 @@ detect_folders = []
 format = 'on [$symbol$account(@$domain)(\($region\)) on $project]($style) '
 symbol = '☁️  '
 style = 'blue'
-disabled = false
+disabled = true
 
-[gcloud.region_aliases]
+[gcloud.project_aliases]
 
 [git_branch]
 format = "on [$symbol$branch(:$remote_branch)]($style) "
