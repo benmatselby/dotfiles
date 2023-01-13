@@ -54,6 +54,7 @@ for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew 
 # Casks
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
+brew install --cask font-hack-nerd-font
 
 # Some tidying up
 brew autoremove -v
