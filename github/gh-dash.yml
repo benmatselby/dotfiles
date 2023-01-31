@@ -1,6 +1,10 @@
 prSections:
   - title: My Pull Requests
     filters: is:open author:@me
+  - title: Assigned
+    filters: is:open is:pr assignee:benmatselby archived:false
+  - title: Mentioned
+    filters: is:open is:pr mentions:benmatselby archived:false
   - title: Needs My Review
     filters: is:open review-requested:@me
 issuesSections:
@@ -8,6 +12,8 @@ issuesSections:
     filters: is:open author:@me archived:false
   - title: Assigned
     filters: is:open assignee:@me archived:false
+  - title: Mentioned
+    filters: is:open is:issue mentions:benmatselby archived:false
 defaults:
   preview:
     open: true
