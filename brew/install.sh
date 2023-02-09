@@ -42,7 +42,6 @@ ABREW_PACKAGES=(
   # shellcheck
   starship
   terraform
-  toot
   # terragrunt
   # tflint
   # tmux
