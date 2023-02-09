@@ -47,5 +47,9 @@
     "key": "cmd+k",
     "command": "-workbench.action.terminal.clear",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+o",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]

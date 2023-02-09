@@ -53,7 +53,6 @@
   "window.autoDetectColorScheme": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredLightColorTheme": "Solarized Light",
@@ -96,5 +95,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terraform.languageServer.enable": true,
-  "window.zoomLevel": 1
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Default Light+ Experimental",
+  "githubPullRequests.fileListLayout": "tree"
 }
