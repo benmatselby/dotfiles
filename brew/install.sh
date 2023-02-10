@@ -33,6 +33,7 @@ ABREW_PACKAGES=(
   kubectx
   kube-ps1
   mongosh
+  mysql-client
   # multipass
   # nmap
   nvm
