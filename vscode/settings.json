@@ -96,6 +96,6 @@
   },
   "terraform.languageServer.enable": true,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Default Light+ Experimental",
+  "workbench.colorTheme": "Default Light+",
   "githubPullRequests.fileListLayout": "tree"
 }
