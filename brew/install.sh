@@ -38,6 +38,7 @@ ABREW_PACKAGES=(
   # nmap
   nvm
   php
+  planetscale/tap/pscale
   pyenv
   reattach-to-user-namespace
   # shellcheck
