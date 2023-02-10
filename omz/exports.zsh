@@ -28,6 +28,7 @@ else
 fi
 
 # MySQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # tmux
