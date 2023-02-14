@@ -9,6 +9,10 @@ alias ghjoe='cd ${HOME}/git/github/joelrap/'
 alias ghjos='cd ${HOME}/git/github/minejosh/'
 alias gic='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
+# gcloud
+alias gcloud-proj-list='gcloud config configurations list'
+alias gcloud-proj-use='gcloud config configurations activate'
+
 # Git
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
