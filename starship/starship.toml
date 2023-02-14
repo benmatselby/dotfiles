@@ -173,10 +173,11 @@ detect_files = [
 detect_folders = []
 
 [gcloud]
-format = 'on [$symbol$account(@$domain)(\($region\)) on $project]($style) '
+#format = 'on [$symbol$account(@$domain)(\($region\)) on $project]($style) '
+format = 'on [$symbol$project]($style) '
 symbol = '☁️  '
 style = 'blue'
-disabled = true
+disabled = false
 
 [gcloud.project_aliases]
 
