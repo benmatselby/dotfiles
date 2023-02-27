@@ -9,8 +9,8 @@ CODE_EXTENSIONS=(
   bmewburn.vscode-intelephense-client
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
-  # eamodio.gitlens
   esbenp.prettier-vscode
+  firsttris.vscode-jest-runner
   # felixfbecker.php-intellisense
   github.remotehub
   github.vscode-pull-request-github
@@ -18,7 +18,12 @@ CODE_EXTENSIONS=(
   hashicorp.terraform
   ms-azuretools.vscode-docker
   ms-vscode-remote.remote-containers
+  ms-python.isort
   ms-python.python
+  ms-python.vscode-pylance
+  ms-vscode-remote.remote-containers
+  ms-vscode.remote-repositories
+  rangav.vscode-thunder-client
   sdras.night-owl
   streetsidesoftware.code-spell-checker
   # timonwong.shellcheck
