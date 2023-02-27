@@ -2,6 +2,9 @@
 alias trello='~/git/github/benmatselby/trello-cli/bin/trello.php'
 alias ringli='~/git/github/benmatselby/ringli/bin/ringli'
 
+# Brew
+alias brew-uninstall-packages='brew remove --force $(brew list --formula) && brew remove --cask --force $(brew list)'
+
 # Filesystem
 alias ghbms='cd ${HOME}/git/github/benmatselby/'
 alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
