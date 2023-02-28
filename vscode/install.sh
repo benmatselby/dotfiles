@@ -17,7 +17,6 @@ CODE_EXTENSIONS=(
   golang.go
   hashicorp.terraform
   ms-azuretools.vscode-docker
-  ms-vscode-remote.remote-containers
   ms-python.isort
   ms-python.python
   ms-python.vscode-pylance
