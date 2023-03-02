@@ -26,6 +26,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
   "gitlens.codeLens.scopes": ["blocks", "document", "containers"],
   "gitlens.hovers.currentLine.over": "line",
@@ -49,14 +50,18 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
-  "window.commandCenter": true,
+  "terraform.languageServer.enable": true,
   "window.autoDetectColorScheme": true,
+  "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
@@ -83,7 +88,8 @@
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    }
+    },
+    "editor.formatOnType": true
   },
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -94,8 +100,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terraform.languageServer.enable": true,
-  "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Default Light+",
-  "githubPullRequests.fileListLayout": "tree"
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
