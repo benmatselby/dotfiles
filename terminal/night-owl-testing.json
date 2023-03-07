@@ -1,5 +1,11 @@
 {
-  "Use Non-ASCII Font" : false,
+  "Ansi 5 Color" : {
+    "Red Component" : 0.78125470876693726,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.91963744163513184,
+    "Alpha Component" : 1,
+    "Green Component" : 0.57218360900878906
+  },
   "Tags" : [
 
   ],
@@ -10,18 +16,19 @@
     "Alpha Component" : 1,
     "Green Component" : 0.66772562265396118
   },
-  "Ansi 7 Color" : {
-    "Red Component" : 0.99990183115005493,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.99987977743148804,
-    "Alpha Component" : 1,
-    "Green Component" : 1
-  },
+  "Use Non-ASCII Font" : false,
   "Draw Powerline Glyphs" : false,
   "Bold Color" : {
     "Red Component" : 0.99990183115005493,
     "Color Space" : "sRGB",
     "Blue Component" : 0.99987989664077759,
+    "Alpha Component" : 1,
+    "Green Component" : 1
+  },
+  "Ansi 7 Color" : {
+    "Red Component" : 0.99990183115005493,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.99987977743148804,
     "Alpha Component" : 1,
     "Green Component" : 1
   },
@@ -39,6 +46,8 @@
     "Alpha Component" : 1,
     "Green Component" : 0.32594269514083862
   },
+  "Rows" : 25,
+  "Default Bookmark" : "No",
   "Ansi 0 Color" : {
     "Red Component" : 0.0022901047486811876,
     "Color Space" : "sRGB",
@@ -46,10 +55,8 @@
     "Alpha Component" : 1,
     "Green Component" : 0.086675845086574554
   },
-  "Rows" : 25,
-  "Default Bookmark" : "No",
-  "Guid" : "BC108CE5-C706-4D76-9518-E767311E40E8",
   "Blend" : 0.50258152173913051,
+  "Guid" : "39DCDDA9-1880-400C-A6C6-04BF4682C3AC",
   "Non-ASCII Anti Aliased" : true,
   "Use Bright Bold" : true,
   "Ansi 10 Color" : {
@@ -81,6 +88,9 @@
     "Alpha Component" : 1,
     "Green Component" : 1
   },
+  "Bound Hosts" : [
+
+  ],
   "Working Directory" : "\/Users\/ben",
   "Blinking Cursor" : false,
   "Disable Window Resizing" : true,
@@ -121,11 +131,11 @@
     "Blue Component" : 0
   },
   "Background Color" : {
-    "Red Component" : 0,
+    "Red Component" : 0.15868014097213745,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.15868014097213745,
+    "Blue Component" : 0.14598786040915002,
     "Alpha Component" : 1,
-    "Green Component" : 0.086916692554950714
+    "Green Component" : 0
   },
   "Character Encoding" : 4,
   "Ansi 11 Color" : {
@@ -409,7 +419,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.85677486658096313
   },
-  "Name" : "Night owl",
+  "Name" : "Night owl - Testing",
   "Cursor Text Color" : {
     "Green Component" : 1,
     "Red Component" : 1,
@@ -447,6 +457,7 @@
     "Green Component" : 0.85629004240036011
   },
   "Right Option Key Sends" : 0,
+  "Has Hotkey" : false,
   "Ansi 6 Color" : {
     "Red Component" : 0.12059486657381058,
     "Color Space" : "sRGB",
@@ -454,21 +465,14 @@
     "Alpha Component" : 1,
     "Green Component" : 0.78167134523391724
   },
-  "Horizontal Spacing" : 1,
   "Normal Font" : "HackNerdFontCompleteM-Regular 11",
+  "Horizontal Spacing" : 1,
   "Ansi 4 Color" : {
     "Red Component" : 0.51150631904602051,
     "Color Space" : "sRGB",
     "Blue Component" : 1,
     "Alpha Component" : 1,
     "Green Component" : 0.66772562265396118
-  },
-  "Ansi 5 Color" : {
-    "Red Component" : 0.78125470876693726,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.91963744163513184,
-    "Alpha Component" : 1,
-    "Green Component" : 0.57218360900878906
   },
   "Allow Title Reporting" : true
 }
