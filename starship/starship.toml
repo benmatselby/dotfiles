@@ -337,8 +337,6 @@ format = '[$symbol$context( \($namespace\))]($style) in '
 style = 'cyan'
 disabled = false
 
-[kubernetes.context_aliases]
-
 [lua]
 format = 'via [$symbol($version )]($style)'
 version_format = 'v${raw}'
@@ -687,4 +685,3 @@ detect_files = []
 detect_folders = []
 
 [custom]
-
