@@ -20,6 +20,7 @@ export DOTFILES_LOCATION;
 ./bin/dotfiles install node
 ./bin/dotfiles install mongodb
 ./bin/dotfiles install php
+./bin/dotfiles install k9s
 ./bin/dotfiles install starship
 ./bin/dotfiles install tmux
 ./bin/dotfiles install vim
