@@ -332,7 +332,7 @@ detect_files = []
 detect_folders = []
 
 [kubernetes]
-symbol = '☸ '
+symbol = '🛳️  '
 format = '[$symbol$context( \($namespace\))]($style) in '
 style = 'cyan'
 disabled = false
@@ -611,7 +611,7 @@ signal_symbol = '⚡'
 style = 'red'
 map_symbol = false
 recognize_signal_code = true
-disabled = true
+disabled = false
 
 [swift]
 format = 'via [$symbol($version )]($style)'
