@@ -15,7 +15,7 @@ printf "\n🚀 Installing brew packages\n"
 ABREW_PACKAGES=(
   ansible
   ag
-  # awscli
+  awscli
   bash
   composer
   fzf
