@@ -55,7 +55,6 @@
   "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
