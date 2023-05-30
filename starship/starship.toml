@@ -7,7 +7,7 @@ add_newline = true
 [aws]
 format = 'on [$symbol($profile )(\($region\) )(\[$duration\])]($style)'
 symbol = '☁️  '
-style = '#ff9600'
+style = '#FF9900'
 disabled = false
 expiration_symbol = 'X'
 force_display = true
