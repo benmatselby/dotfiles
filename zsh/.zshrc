@@ -72,13 +72,13 @@ ZSH_DISABLE_COMPFIX=true
 # Add wisely, as too many plugins slow down shell startup.
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(docker git golang jira macos pyenv pylint python terraform)
+  plugins=(aws docker git golang jira macos pyenv pylint python terraform)
 else
   # VS Code Containers
   if [[ ${REMOTE_CONTAINERS} ]] ; then
     plugins=(docker git golang terraform)
   else
-    plugins=(docker git golang jira macos pyenv pylint python terraform)
+    plugins=(aws docker git golang jira macos pyenv pylint python terraform)
   fi
 fi
 
@@ -136,3 +136,7 @@ fi
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# AWS - This should be done in the `aws` plugin, but it cannot find
+# aws_completer at that point, so loading this here. Less than ideal
+complete -C aws_completer aws
