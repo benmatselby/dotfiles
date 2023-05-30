@@ -10,6 +10,7 @@ symbol = '☁️  '
 style = 'yellow'
 disabled = false
 expiration_symbol = 'X'
+force_display = true
 
 [aws.region_aliases]
 
@@ -177,7 +178,7 @@ detect_folders = []
 format = 'on [$symbol$project]($style) '
 symbol = '☁️  '
 style = 'blue'
-disabled = false
+disabled = true
 
 [gcloud.project_aliases]
 
