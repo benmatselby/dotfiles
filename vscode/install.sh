@@ -12,6 +12,7 @@ CODE_EXTENSIONS=(
   esbenp.prettier-vscode
   firsttris.vscode-jest-runner
   # felixfbecker.php-intellisense
+  github.copilot
   github.remotehub
   github.vscode-github-actions
   github.vscode-pull-request-github
