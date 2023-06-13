@@ -1,3 +1,7 @@
+# AWS
+alias aws-loggs='aws logs describe-log-groups --query "logGroups[*].logGroupName" --output table'
+alias aws-dellgg='aws logs delete-log-group --log-group-name'
+
 # benmatselby apps
 alias trello='~/git/github/benmatselby/trello-cli/bin/trello.php'
 alias ringli='~/git/github/benmatselby/ringli/bin/ringli'
