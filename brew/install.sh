@@ -27,6 +27,7 @@ ABREW_PACKAGES=(
   htop
   hugo
   jq
+  k6
   k9s
   # kind
   kubectl
