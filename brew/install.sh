@@ -18,6 +18,7 @@ ABREW_PACKAGES=(
   awscli
   bash
   composer
+  cowsay
   fzf
   gh
   git
