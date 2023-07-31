@@ -14,6 +14,7 @@ printf "\n🚀 Installing brew packages\n"
 # Arm
 ABREW_PACKAGES=(
   ansible
+  ansible-lint
   ag
   awscli
   bash
