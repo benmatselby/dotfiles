@@ -73,14 +73,12 @@ ZSH_DISABLE_COMPFIX=true
 
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(aws docker git golang macos pyenv pylint python)
-else
-  # VS Code Containers
-  if [[ ${REMOTE_CONTAINERS} ]] ; then
-    plugins=(docker git golang)
-  else
-    plugins=(aws docker git golang macos pyenv pylint python)
-  fi
+  plugins=(aws docker git golang macos pyenv pylint python tmux tmuxinator)
+fi
+
+# VS Code Containers
+if [[ ${REMOTE_CONTAINERS} ]] ; then
+  plugins=(docker git golang)
 fi
 
 source $ZSH/oh-my-zsh.sh
