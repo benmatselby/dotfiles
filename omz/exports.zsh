@@ -32,6 +32,6 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # tmux
-export ZSH_TMUX_ITERM2=true
+# export ZSH_TMUX_ITERM2=true
 # Loading here, otherwise omz cannot find it in the paths we have
 omz plugin load tmux
