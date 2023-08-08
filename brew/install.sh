@@ -49,8 +49,8 @@ ABREW_PACKAGES=(
   terraform
   # terragrunt
   # tflint
-  # tmux
-  # tmuxinator
+  tmux
+  tmuxinator
   # wget
 )
 for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
