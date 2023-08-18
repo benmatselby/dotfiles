@@ -28,20 +28,14 @@
   "files.trimTrailingWhitespace": true,
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
-  "gitlens.codeLens.scopes": ["blocks", "document", "containers"],
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.views.fileHistory.files.compact": false,
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
-  "openapi.defaultPreviewRenderer": "redoc",
   "outline.collapseItems": "alwaysCollapse",
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
-  "python.formatting.provider": "black",
-  "redhat.telemetry.enabled": false,
   "search.exclude": {
     "**/.mypy_cache": true,
     "bandit_baseline": true
@@ -82,7 +76,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "gitlens.codeLens.symbolScopes": ["!Module"],
     "editor.wordBasedSuggestions": false,
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
@@ -102,5 +95,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 2
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.osx": "tmux-shell"
 }
