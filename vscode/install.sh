@@ -13,6 +13,7 @@ CODE_EXTENSIONS=(
   firsttris.vscode-jest-runner
   # felixfbecker.php-intellisense
   github.copilot
+  github.copilot-chat
   github.remotehub
   github.vscode-github-actions
   github.vscode-pull-request-github
