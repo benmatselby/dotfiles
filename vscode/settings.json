@@ -95,6 +95,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.defaultProfile.osx": "tmux-shell"
+  "terminal.integrated.defaultProfile.osx": "tmux",
+  "window.zoomLevel": 2
 }
