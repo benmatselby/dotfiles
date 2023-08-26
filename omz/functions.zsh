@@ -96,12 +96,20 @@ start-day() {
 function sync-dependabot()
 {
   local from=$1
+  local msg=$2
   local dependabot=".github/dependabot.yml"
   local branch="dependabot-sync"
-  local msg="Sync dependabot configuration"
+  local usage="Usage: sync-dependabot <from> <msg>"
 
   if [ -z "${from}" ]; then
-    printf "Please specify a a repo to sync from\n"
+    printf "Please specify a repo to sync from\n"
+    printf "${usage}\n"
+    return
+  fi
+
+  if [ -z "${msg}" ]; then
+    printf "Please specify a commit message\n"
+    printf "${usage}\n"
     return
   fi
 
@@ -119,7 +127,7 @@ function sync-dependabot()
 
     cd "${repo}" > /dev/null 2>&1 || exit
 
-    if ! $(git --no-pager diff); then
+    if ! $(git status --porcelain); then
 
       git checkout -b "${branch}" || exit
       git add "${dependabot}"
