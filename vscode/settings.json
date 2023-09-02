@@ -41,6 +41,14 @@
     "bandit_baseline": true
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.profiles.osx": {
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux",
+      "args": ["-u", "new-session", "-A", "-s", "${workspaceFolderBasename}"]
+    }
+  },
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
@@ -95,6 +103,8 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.defaultProfile.osx": "tmux",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "window.zoomLevel": 2
 }
