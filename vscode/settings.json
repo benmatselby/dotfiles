@@ -58,12 +58,16 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "workbench.colorTheme": "Solarized Light",
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#2b2b2b"
+  },
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
