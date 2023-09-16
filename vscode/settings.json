@@ -22,6 +22,7 @@
     "tsconfig.json": "tsconfig.*.json",
     "package.json": "package-lock.json, yarn.lock"
   },
+  "extensions.ignoreRecommendations": true,
   "files.associations": { "*.hcl": "terraform" },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -32,16 +33,17 @@
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
+  "openapi.defaultPreviewRenderer": "redoc",
   "outline.collapseItems": "alwaysCollapse",
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
+  "redhat.telemetry.enabled": false,
   "search.exclude": {
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
     "tmux": {
       "path": "tmux",
@@ -52,12 +54,13 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
-  "terraform.languageServer.enable": true,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
   "window.restoreWindows": "none",
+  "window.zoomLevel": 2,
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#2b2b2b"
   },
@@ -109,6 +112,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "window.zoomLevel": 2
+  }
 }
