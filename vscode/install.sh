@@ -6,6 +6,7 @@ ln -sf "${DOTFILES_LOCATION}/vscode/settings.json" "${HOME}/Library/Application 
 ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 CODE_EXTENSIONS=(
+  42crunch.vscode-openapi
   # bmewburn.vscode-intelephense-client
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
