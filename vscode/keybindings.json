@@ -50,6 +50,10 @@
   },
   {
     "key": "alt+cmd+o",
-    "command": "workbench.action.toggleAuxiliaryBar"
+    "command": "-workbench.action.remote.showMenu"
+  },
+  {
+    "key": "alt+cmd+o",
+    "command": "outline.focus"
   }
 ]

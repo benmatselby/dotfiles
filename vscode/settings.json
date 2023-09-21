@@ -58,9 +58,8 @@
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
   "window.restoreWindows": "none",
-  "window.zoomLevel": 2,
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#2b2b2b"
   },
@@ -68,6 +67,7 @@
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
