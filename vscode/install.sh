@@ -26,7 +26,6 @@ CODE_EXTENSIONS=(
   ms-python.vscode-pylance
   ms-vscode-remote.remote-containers
   ms-vscode.remote-repositories
-  rangav.vscode-thunder-client
   sdras.night-owl
   streetsidesoftware.code-spell-checker
   # timonwong.shellcheck

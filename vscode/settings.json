@@ -59,7 +59,7 @@
   "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#2b2b2b"
   },
@@ -113,5 +113,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "terminal.integrated.defaultProfile.linux": "zsh"
 }
