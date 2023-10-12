@@ -1,0 +1,79 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$nodejs\
+$python\
+$rust\
+$kubernetes\
+$aws\
+$gcloud\
+$time
+$character
+"""
+
+[directory]
+style = "fg:#cb4b16"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[character]
+format = ' $symbol '
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+vicmd_symbol = '[❮](bold green)'
+disabled = false
+
+[aws]
+symbol = "󰸏"
+style = "fg:#82aaff"
+format = '[ $symbol $region ]($style)'
+force_display = true
+
+[gcloud]
+symbol = "󱇶"
+style = "fg:#c791ea"
+format = "[ $symbol ($project) ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:#b58900"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:#b58900"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#acda66"
+format = '[ $symbol ($version) ]($style)'
+
+[kubernetes]
+symbol="󱃾"
+style="fg:#acda66"
+format='[ $symbol $context( \($namespace\)) ]($style)'
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "fg:#acda66"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style="fg:#acda66"
+format = '[ $symbol ($version) \(($virtualenv)\) ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:#acda66"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#a0a9cb"
+format = '[  $time ]($style)'

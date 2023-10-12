@@ -31,6 +31,9 @@ fi
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
+# Startship
+export STARSHIP_CONFIG="${HOME}/.config/starship-pastel.toml"
+
 # tmux
 # export ZSH_TMUX_ITERM2=true
 # Loading here, otherwise omz cannot find it in the paths we have

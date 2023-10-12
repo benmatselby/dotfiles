@@ -59,7 +59,7 @@
   "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#2b2b2b"
   },
