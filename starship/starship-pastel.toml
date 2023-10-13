@@ -9,7 +9,6 @@ $golang\
 $nodejs\
 $python\
 [](fg:#86BBD8 bg:#06969A)\
-$aws\
 $kubernetes\
 [](fg:#06969A bg:#33658A)\
 $time\
@@ -19,12 +18,6 @@ $character
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
-
-[aws]
-symbol = "󰸏"
-style = "bg:#06969A fg:#000000"
-format = '[ $symbol $region ]($style)'
-force_display = true
 
 [character]
 format = ' $symbol '
