@@ -1,0 +1,6 @@
+[
+	{ "keys": ["super+alt+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["super+alt+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["shift+alt+down"], "command": "duplicate_line" },
+	{ "keys": ["shift+alt+up"], "command": "duplicate_line" },
+]
