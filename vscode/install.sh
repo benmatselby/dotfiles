@@ -15,7 +15,6 @@ CODE_EXTENSIONS=(
   # felixfbecker.php-intellisense
   github.copilot
   github.copilot-chat
-  github.remotehub
   github.vscode-github-actions
   github.vscode-pull-request-github
   golang.go
@@ -26,7 +25,6 @@ CODE_EXTENSIONS=(
   ms-python.vscode-pylance
   ms-vscode-remote.remote-containers
   ms-vscode.remote-repositories
-  sdras.night-owl
   streetsidesoftware.code-spell-checker
   # timonwong.shellcheck
   Tyriar.sort-lines
