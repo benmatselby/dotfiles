@@ -3,6 +3,7 @@
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
+  "diffEditor.codeLens": true,
   "dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
@@ -43,6 +44,7 @@
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
     "tmux": {
@@ -59,6 +61,7 @@
   "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Solarized Light",
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#2b2b2b"
@@ -112,7 +115,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "window.zoomLevel": 1,
-  "terminal.integrated.defaultProfile.linux": "zsh"
+  }
 }
