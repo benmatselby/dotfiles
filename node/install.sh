@@ -14,7 +14,7 @@ else
 fi
 
 # The version of node mainly used
-ACTIVE_NODE_VERSION=18
+ACTIVE_NODE_VERSION=20
 
 echo "Installing ${ACTIVE_NODE_VERSION} version of node"
 nvm install ${ACTIVE_NODE_VERSION}
