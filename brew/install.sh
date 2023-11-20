@@ -13,8 +13,8 @@ fi
 printf "\n🚀 Installing brew packages\n"
 # Arm
 ABREW_PACKAGES=(
-  ansible
-  ansible-lint
+  # ansible
+  # ansible-lint
   ag
   awscli
   bash
@@ -44,6 +44,7 @@ ABREW_PACKAGES=(
   planetscale/tap/pscale
   pyenv
   reattach-to-user-namespace
+  remotemobprogramming/brew/mob
   # shellcheck
   starship
   terraform
