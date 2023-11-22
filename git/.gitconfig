@@ -1,16 +1,20 @@
 [include]
-	path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
+  excludesfile = ~/.gitignore
+  editor = vim
 [color]
-	ui = true
+  ui = true
 [diff]
-	compactionHeuristic = true
-	noprefix = true
+  compactionHeuristic = true
+  noprefix = true
 [pull]
-	ff = only
+  ff = only
 [init]
   defaultBranch = main
 [user]
   name = Ben Selby
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
