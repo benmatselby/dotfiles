@@ -16,5 +16,3 @@
   name = Ben Selby
 [commit]
   gpgsign = true
-[gpg]
-  format = ssh
