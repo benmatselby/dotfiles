@@ -1,6 +1,9 @@
 # Ansible
 export ANSIBLE_COW_SELECTION=random
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Go
 export GOPATH=$HOME/go
 export GOPRIVATE='github.com/benmatselby'

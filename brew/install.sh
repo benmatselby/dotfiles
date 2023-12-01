@@ -23,9 +23,10 @@ ABREW_PACKAGES=(
   fzf
   gh
   git
+  glow
+  gnupg
   go
   golangci-lint
-  glow
   htop
   hugo
   jq
@@ -61,7 +62,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 brew install --cask font-hack-nerd-font
 brew install --cask session-manager-plugin
-brew install --cask gpg-suite
+#brew install --cask gpg-suite
 
 # Some tidying up
 brew autoremove -v
