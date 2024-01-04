@@ -46,11 +46,13 @@ ABREW_PACKAGES=(
   pyenv
   reattach-to-user-namespace
   remotemobprogramming/brew/mob
+  scc
   # shellcheck
   starship
   terraform
   # terragrunt
   # tflint
+  tldr
   tmux
   tmuxinator
   # wget
