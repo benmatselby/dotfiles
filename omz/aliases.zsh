@@ -74,3 +74,6 @@ alias tg='terragrunt'
 function weather() {
   curl "https://wttr.in/$1"
 }
+function wslim() {
+  curl "https://wttr.in/$1?format=%cWeather+in+%l:+%C+%t,+%p+%w"
+}
