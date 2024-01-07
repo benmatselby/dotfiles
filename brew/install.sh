@@ -61,6 +61,7 @@ for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew 
 
 # Casks
 brew tap homebrew/cask-fonts
+brew install --cask caffeine
 brew install --cask font-fira-code
 brew install --cask font-hack-nerd-font
 brew install --cask session-manager-plugin
