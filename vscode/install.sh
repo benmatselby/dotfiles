@@ -8,6 +8,7 @@ ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${HOME}/Library/Applicati
 CODE_EXTENSIONS=(
   42crunch.vscode-openapi
   # bmewburn.vscode-intelephense-client
+  CircleCI.circleci
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode

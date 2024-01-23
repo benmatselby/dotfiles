@@ -115,5 +115,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.colorTheme": "Solarized Dark",
-  "window.zoomLevel": 2
+  "circleci.hostUrl": "",
+  "window.zoomLevel": -1
 }
