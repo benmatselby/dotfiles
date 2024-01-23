@@ -55,5 +55,10 @@
   {
     "key": "alt+cmd+o",
     "command": "outline.focus"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.createTerminalEditor",
+    "when": "editorFocus"
   }
 ]
