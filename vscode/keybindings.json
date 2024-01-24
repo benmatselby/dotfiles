@@ -57,7 +57,7 @@
     "command": "outline.focus"
   },
   {
-    "key": "ctrl+shift+`",
+    "key": "ctrl+cmd+`",
     "command": "workbench.action.createTerminalEditor",
     "when": "editorFocus"
   }
