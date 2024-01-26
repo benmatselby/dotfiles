@@ -58,7 +58,6 @@
   },
   {
     "key": "ctrl+cmd+`",
-    "command": "workbench.action.createTerminalEditor",
-    "when": "editorFocus"
+    "command": "workbench.action.createTerminalEditor"
   }
 ]
