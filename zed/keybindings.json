@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-cmd-t": "workspace::NewCenterTerminal"
+    }
+  }
+]
