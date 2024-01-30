@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
-  "theme": "Atelier Sulphurpool Dark",
+  "theme": "Solarized Light",
   "telemetry": {
     "metrics": false
   },
@@ -17,5 +17,7 @@
   "terminal": {
     "font_family": "Hack Nerd Font Mono",
     "font_size": 16
-  }
+  },
+  "wrap_guides": [80, 120],
+  "show_wrap_guides": true
 }
