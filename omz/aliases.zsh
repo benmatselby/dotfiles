@@ -23,6 +23,7 @@ alias gcloud-proj-use='gcloud config configurations activate'
 # Git
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
+alias gcs='git commit --gpg-sign -v' # Override omz to provide -v flag
 
 # Docker
 alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
