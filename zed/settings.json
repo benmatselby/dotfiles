@@ -8,8 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
-  "theme": "Solarized Light",
+  "theme": "Atelier Sulphurpool Dark",
   "telemetry": {
+    "diagnostics": false,
     "metrics": false
   },
   "ui_font_size": 16,
@@ -19,5 +20,6 @@
     "font_size": 16
   },
   "wrap_guides": [80, 120],
-  "show_wrap_guides": true
+  "show_wrap_guides": true,
+  "soft_wrap": "editor_width"
 }

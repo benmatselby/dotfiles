@@ -68,7 +68,6 @@
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.preferredLightColorTheme": "Solarized Light",
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
@@ -114,7 +113,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "circleci.hostUrl": "",
-  "window.zoomLevel": -1
+  "window.zoomLevel": 1
 }
