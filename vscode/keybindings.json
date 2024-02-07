@@ -57,7 +57,15 @@
     "command": "outline.focus"
   },
   {
-    "key": "ctrl+cmd+`",
+    "key": "ctrl+cmd+t",
     "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "cmd+k cmd+f",
+    "command": "editor.foldAll"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.unfoldAll"
   }
 ]

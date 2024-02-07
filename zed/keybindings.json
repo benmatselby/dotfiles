@@ -2,7 +2,9 @@
   {
     "context": "Editor",
     "bindings": {
-      "cmd-alt-c": "editor::CopyRelativePath"
+      "cmd-alt-c": "editor::CopyRelativePath",
+      "cmd-k cmd-f": "editor::FoldSelectedRanges",
+      "cmd-k cmd-u": "editor::UnfoldLines"
     }
   },
   {
