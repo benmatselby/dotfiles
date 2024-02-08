@@ -54,7 +54,10 @@
   },
   {
     "key": "alt+cmd+o",
-    "command": "outline.focus"
+    "command": "runCommands",
+    "args": {
+      "commands": ["outline.toggleVisibility", "workbench.action.toggleAuxiliaryBar"]
+    }
   },
   {
     "key": "ctrl+cmd+t",
