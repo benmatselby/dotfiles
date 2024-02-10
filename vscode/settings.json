@@ -70,6 +70,7 @@
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
+  "workbench.tree.enableStickyScroll": true,
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
