@@ -16,3 +16,5 @@
   name = Ben Selby
 [commit]
   gpgsign = true
+[safe]
+  directory = *
