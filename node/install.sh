@@ -25,9 +25,9 @@ nvm alias default ${ACTIVE_NODE_VERSION}
 echo "Installing node packages"
 NODE_PACKAGES=(
   http-server
-  netlify-cli
+  # netlify-cli
   @redocly/openapi-cli
-  @thunderclient/cli
+  # @thunderclient/cli
   ttab
   yarn
 )
