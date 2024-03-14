@@ -21,9 +21,6 @@ CODE_EXTENSIONS=(
   golang.go
   # hashicorp.terraform
   ms-azuretools.vscode-docker
-  ms-python.isort
-  ms-python.python
-  ms-python.vscode-pylance
   ms-vscode-remote.remote-containers
   ms-vscode.remote-repositories
   streetsidesoftware.code-spell-checker

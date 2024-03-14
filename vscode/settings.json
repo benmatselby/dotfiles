@@ -121,5 +121,6 @@
   "snyk.trustedFolders": ["/Users/ben/git/github/prolific-oss/prolific"],
   "accessibility.signals.onDebugBreak": {
     "sound": "on"
-  }
+  },
+  "circleci.notifications.areActive": "no"
 }
