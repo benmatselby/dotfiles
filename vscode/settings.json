@@ -1,4 +1,9 @@
 {
+  "accessibility.signals.onDebugBreak": {
+    "sound": "on"
+  },
+  "circleci.hostUrl": "",
+  "circleci.notifications.areActive": "no",
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
@@ -14,6 +19,7 @@
   "editor.stickyScroll.enabled": true,
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
+  "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -43,6 +49,8 @@
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
+  "snyk.yesWelcomeNotification": false,
+  "snyk.advanced.cliPath": "/Users/ben/Library/Application Support/snyk-ls/snyk-macos",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
@@ -60,13 +68,12 @@
   "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-  "workbench.colorCustomizations": {
-    "tree.indentGuidesStroke": "#2b2b2b"
-  },
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Ayu Mirage",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.preferredDarkColorTheme": "Solarized Dark",
-  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.preferredDarkColorTheme": "Ayu Mirage",
+  "workbench.preferredLightColorTheme": "Ayu Light",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -112,15 +119,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.colorTheme": "Solarized Light",
-  "circleci.hostUrl": "",
-  "window.zoomLevel": 1,
-  "snyk.yesWelcomeNotification": false,
-  "snyk.advanced.cliPath": "/Users/ben/Library/Application Support/snyk-ls/snyk-macos",
-  "snyk.trustedFolders": ["/Users/ben/git/github/prolific-oss/prolific"],
-  "accessibility.signals.onDebugBreak": {
-    "sound": "on"
-  },
-  "circleci.notifications.areActive": "no"
+  }
 }
