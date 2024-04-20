@@ -11,6 +11,11 @@ fi
 # Install brew packages
 ###
 printf "\n🚀 Installing brew packages\n"
+
+# Taps
+brew tap hashicorp/tap
+brew tap homebrew/cask-fonts
+
 # Arm
 ABREW_PACKAGES=(
   # ansible
@@ -49,7 +54,7 @@ ABREW_PACKAGES=(
   scc
   # shellcheck
   starship
-  terraform
+  hashicorp/tap/terraform
   terragrunt
   tflint
   tldr
@@ -60,7 +65,6 @@ ABREW_PACKAGES=(
 for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
 # Casks
-brew tap homebrew/cask-fonts
 brew install --cask caffeine
 brew install --cask font-fira-code
 brew install --cask font-hack-nerd-font
