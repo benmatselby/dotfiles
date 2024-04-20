@@ -14,7 +14,6 @@
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
-  "editor.minimap.enabled": false,
   "editor.rulers": [80, 100, 120],
   "editor.stickyScroll.enabled": true,
   "editor.suggest.showWords": false,
@@ -69,11 +68,22 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.colorTheme": "Ayu Light Bordered",
+  "workbench.colorCustomizations": {
+    "[Ayu Light]": {
+      "tab.activeBackground": "#FEE3BA"
+    },
+    "[Ayu Light Bordered]": {
+      "tab.activeBackground": "#FEE3BA"
+    },
+    "[Ayu Mirage]": {
+      "tab.activeBackground": "#1B1B1B"
+    }
+  },
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Ayu Mirage",
-  "workbench.preferredLightColorTheme": "Ayu Light",
+  "workbench.preferredLightColorTheme": "Ayu Light Bordered",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -119,5 +129,9 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "snyk.trustedFolders": ["/Users/ben/git/github/benmatselby/obsidian-multi-cursor"],
+  "editor.minimap.autohide": true,
+  "editor.minimap.scale": 3,
+  "editor.minimap.sectionHeaderFontSize": 10
 }
