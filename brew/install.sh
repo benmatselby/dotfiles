@@ -50,8 +50,8 @@ ABREW_PACKAGES=(
   # shellcheck
   starship
   terraform
-  # terragrunt
-  # tflint
+  terragrunt
+  tflint
   tldr
   tmux
   tmuxinator
