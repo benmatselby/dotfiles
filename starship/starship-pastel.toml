@@ -8,6 +8,7 @@ $git_status\
 $golang\
 $nodejs\
 $python\
+$terraform\
 [](fg:#86BBD8 bg:#06969A)\
 $kubernetes\
 [](fg:#06969A bg:#33658A)\
@@ -66,3 +67,16 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[  $time ]($style)'
+
+[terraform]
+style = "bg:#86BBD8 fg:#000000"
+format = '[ $symbol ($version) ($workspace) ]($style)'
+version_format = 'v${raw}'
+symbol = '💠 '
+disabled = false
+detect_extensions = [
+    'tf',
+    'hcl',
+]
+detect_files = []
+detect_folders = ['.terraform']
