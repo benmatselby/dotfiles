@@ -24,6 +24,8 @@ alias gcloud-proj-use='gcloud config configurations activate'
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
 alias gcs='git commit --gpg-sign -v' # Override omz to provide -v flag
+alias gnignore='git update-index --no-assume-unchanged'
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
 # Docker
 alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
