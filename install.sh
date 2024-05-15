@@ -29,8 +29,6 @@ export DOTFILES_LOCATION;
 
 echo "🚀 Manual installation/updates"
 echo "Omz      omz update"
-echo "Vim      :PlugUpgrade"
-echo "Vim      :PlugUpdate"
 
 echo "🚀 Suggestions to tidy"
 echo "- Old node versions: nvm list"
