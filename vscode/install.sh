@@ -13,7 +13,6 @@ CODE_EXTENSIONS=(
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
   firsttris.vscode-jest-runner
-  # felixfbecker.php-intellisense
   github.copilot
   github.copilot-chat
   github.vscode-github-actions
