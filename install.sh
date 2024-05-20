@@ -15,8 +15,8 @@ export DOTFILES_LOCATION;
 ./bin/dotfiles install zsh
 ./bin/dotfiles install brew
 ./bin/dotfiles install vscode
-# ./bin/dotfiles install zed
-#./bin/dotfiles install sublime-text
+./bin/dotfiles install zed
+# ./bin/dotfiles install sublime-text
 ./bin/dotfiles install git
 ./bin/dotfiles install github
 ./bin/dotfiles install node
@@ -29,6 +29,7 @@ export DOTFILES_LOCATION;
 
 echo "🚀 Manual installation/updates"
 echo "Omz      omz update"
+echo ""
 
 echo "🚀 Suggestions to tidy"
 echo "- Old node versions: nvm list"
