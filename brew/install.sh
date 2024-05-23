@@ -14,7 +14,6 @@ printf "\n🚀 Installing brew packages\n"
 
 # Taps
 brew tap hashicorp/tap
-brew tap homebrew/cask-fonts
 
 # Arm
 ABREW_PACKAGES=(
