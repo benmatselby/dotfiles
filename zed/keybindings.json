@@ -10,8 +10,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-cmd-t": "workspace::NewCenterTerminal",
-      "ctrl-r": "projects::OpenRecent"
+      "ctrl-cmd-t": "workspace::NewCenterTerminal"
     }
   }
 ]

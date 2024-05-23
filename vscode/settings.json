@@ -83,7 +83,7 @@
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Ayu Mirage Bordered",
-  "workbench.preferredLightColorTheme": "Ayu Light Bordered",
+  "workbench.preferredLightColorTheme": "Solarized Dark",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
