@@ -1,3 +1,4 @@
 [user]
     name = GITNAME
     email = GITEMAIL
+    signingkey = GITSIGNKEY
