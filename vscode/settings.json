@@ -131,7 +131,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "snyk.trustedFolders": ["/Users/ben/git/github/"],
-  "editor.minimap.autohide": true,
+  // "editor.minimap.autohide": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.scale": 3,
-  "editor.minimap.sectionHeaderFontSize": 10
+  "editor.minimap.sectionHeaderFontSize": 10,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.activityBar.location": "hidden"
 }

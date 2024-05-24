@@ -70,5 +70,14 @@
   {
     "key": "cmd+k cmd+u",
     "command": "editor.unfoldAll"
+  },
+  {
+    "key": "cmd+k cmd+a",
+    "command": "-keybindings.editor.addKeybinding",
+    "when": "inKeybindings && keybindingFocus"
+  },
+  {
+    "key": "cmd+k cmd+a",
+    "command": "workbench.action.toggleActivityBarVisibility"
   }
 ]
