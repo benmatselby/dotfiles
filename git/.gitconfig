@@ -14,9 +14,9 @@
   defaultBranch = main
 [user]
   name = Ben Selby
-[commit]
-  gpgsign = true
 [safe]
   directory = *
 [alias]
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+[gpg]
+  format = ssh
