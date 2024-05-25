@@ -7,7 +7,7 @@ if [ ! -f "${HOME}/.gitconfig.local" ] ; then
 
   echo "Enter your full name";
   read -r var
-  sed -i '.orig' "s|GITNAME|${var}|" "${HOME}/.gitconfig.local"
+  sed -i '' "s|GITNAME|${var}|" "${HOME}/.gitconfig.local"
 
   echo "Enter your email address";
   read -r var

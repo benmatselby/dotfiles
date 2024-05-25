@@ -136,6 +136,5 @@
   "editor.minimap.scale": 3,
   "editor.minimap.sectionHeaderFontSize": 10,
   "workbench.editor.editorActionsLocation": "hidden",
-  "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.activityBar.location": "hidden"
+  "github.copilot.editor.enableAutoCompletions": true
 }

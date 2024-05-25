@@ -15,10 +15,7 @@ printf "\n🚀 Installing brew packages\n"
 # Taps
 brew tap hashicorp/tap
 
-# Arm
-ABREW_PACKAGES=(
-  # ansible
-  # ansible-lint
+BASE_PACKAGES=(
   ag
   awscli
   bash
@@ -36,38 +33,38 @@ ABREW_PACKAGES=(
   jq
   k6
   k9s
-  # kind
   kubectl
   kubectx
   kube-ps1
   mongosh
   mysql-client
-  # multipass
-  # nmap
   nvm
   php
-  planetscale/tap/pscale
-  pyenv
-  reattach-to-user-namespace
-  remotemobprogramming/brew/mob
-  scc
-  # shellcheck
+  shellcheck
   starship
-  hashicorp/tap/terraform
-  terragrunt
-  tflint
   tldr
   tmux
   tmuxinator
-  # wget
 )
-for pkg in "${ABREW_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
-# Casks
-brew install --cask font-fira-code
-brew install --cask font-hack-nerd-font
-brew install --cask session-manager-plugin
-#brew install --cask gpg-suite
+if [ $(arch) = "arm64" ]; then
+  BASE_PACKAGES+=(
+    pyenv
+    reattach-to-user-namespace
+    hashicorp/tap/terraform
+    terragrunt
+    tflint
+  )
+fi
+
+for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
+
+# Casks (only on Mac)
+if [ $(arch) = "arm64" ]; then
+  brew install --cask font-fira-code
+  brew install --cask font-hack-nerd-font
+  brew install --cask session-manager-plugin
+fi
 
 # Some tidying up
 brew autoremove -v

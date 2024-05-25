@@ -71,9 +71,18 @@ ZSH_DISABLE_COMPFIX=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+if [[ "$(uname -s)" == "Linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
   plugins=(aws docker git golang macos pyenv pylint python tmuxinator)
+fi
+
+# Ubuntu
+if [[ "$(uname -s)" == "Linux" ]]; then
+  plugins=(aws docker git golang tmuxinator)
 fi
 
 # VS Code Containers
