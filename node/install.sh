@@ -28,7 +28,6 @@ NODE_PACKAGES=(
   http-server
   # netlify-cli
   @redocly/openapi-cli
-  # @thunderclient/cli
   ttab
   yarn
 )

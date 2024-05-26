@@ -2,13 +2,15 @@
 
 set -e
 
+PATH_TO_VSCODE_SETTINGS="${HOME}/Library/Application Support/Code/User"
+
 if [[ "$(uname -s)" == "Linux" ]]; then
-  ln -sf "${DOTFILES_LOCATION}/vscode/settings.json" "${HOME}/.config/Code/User/settings.json"
-  ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${HOME}/.config/Code/User/keybindings.json"
-else
-  ln -sf "${DOTFILES_LOCATION}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
-  ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
+  PATH_TO_VSCODE_SETTINGS="${HOME}/.config/Code/User"
+  mkdir -p "${PATH_TO_VSCODE_SETTINGS}"
 fi
+
+ln -sf "${DOTFILES_LOCATION}/vscode/settings.json" "${PATH_TO_VSCODE_SETTINGS}/settings.json"
+ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.json"
 
 CODE_EXTENSIONS=(
   42crunch.vscode-openapi
