@@ -1,57 +1,12 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "ctrl+shift+]",
-    "command": "workbench.action.terminal.focusNext"
+    "key": "cmd+b",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.action.toggleActivityBarVisibility"]
+    }
   },
-  {
-    "key": "ctrl+shift+[",
-    "command": "workbench.action.terminal.focusPrevious"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "cmd+k cmd+z",
-    "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "cmd+k z",
-    "command": "-workbench.action.toggleZenMode"
-  },
-  {
-    "key": "cmd+k cmd+m",
-    "command": "-workbench.extensions.action.showRecommendedKeymapExtensions"
-  },
-  {
-    "key": "shift+cmd+enter",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "shift+alt+o",
-    "command": "python.sortImports"
-  },
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "cmd+k",
-    "command": "-workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+cmd+o",
-    "command": "-workbench.action.remote.showMenu"
-  },
+  { "key": "shift+alt+o", "command": "python.sortImports" },
   {
     "key": "alt+cmd+o",
     "command": "runCommands",
@@ -59,25 +14,7 @@
       "commands": ["outline.toggleVisibility", "workbench.action.toggleAuxiliaryBar"]
     }
   },
-  {
-    "key": "ctrl+cmd+t",
-    "command": "workbench.action.createTerminalEditor"
-  },
-  {
-    "key": "cmd+k cmd+f",
-    "command": "editor.foldAll"
-  },
-  {
-    "key": "cmd+k cmd+u",
-    "command": "editor.unfoldAll"
-  },
-  {
-    "key": "cmd+k cmd+a",
-    "command": "-keybindings.editor.addKeybinding",
-    "when": "inKeybindings && keybindingFocus"
-  },
-  {
-    "key": "cmd+k cmd+a",
-    "command": "workbench.action.toggleActivityBarVisibility"
-  }
+  { "key": "ctrl+cmd+t", "command": "workbench.action.createTerminalEditor" },
+  { "key": "cmd+k cmd+f", "command": "editor.foldAll" },
+  { "key": "cmd+k cmd+u", "command": "editor.unfoldAll" }
 ]
