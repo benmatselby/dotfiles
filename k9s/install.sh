@@ -2,16 +2,14 @@
 
 set -e
 
-PATH_TO_K9S="${HOME}/Library/Application Support/k9s"
+PATH_TO_K9S="${HOME}/Library/Application Support/k9s/skins"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
   PATH_TO_K9S="${HOME}/.config/k9s/skins"
   mkdir -p "${PATH_TO_K9S}"
 fi
 
-ln -sf "${DOTFILES_LOCATION}/k9s/monokai.yml" "${PATH_TO_K9S}/skin.yml"
-ln -sf "${DOTFILES_LOCATION}/k9s/prod_skin.yml" "${PATH_TO_K9S}/prod_skin.yml"
-ln -sf "${DOTFILES_LOCATION}/k9s/testing_skin.yml" "${PATH_TO_K9S}/inc_skin.yml"
-ln -sf "${DOTFILES_LOCATION}/k9s/testing_skin.yml" "${PATH_TO_K9S}/rp_skin.yml"
-ln -sf "${DOTFILES_LOCATION}/k9s/testing_skin.yml" "${PATH_TO_K9S}/test_skin.yml"
-ln -sf "${DOTFILES_LOCATION}/k9s/testing_skin.yml" "${PATH_TO_K9S}/staging_skin.yml"
+ln -sf "${DOTFILES_LOCATION}/k9s/monokai.yaml" "${PATH_TO_K9S}/monokai.yaml"
+ln -sf "${DOTFILES_LOCATION}/k9s/dracula.yaml" "${PATH_TO_K9S}/dracula.yaml"
+ln -sf "${DOTFILES_LOCATION}/k9s/prod.yaml" "${PATH_TO_K9S}/prod.yaml"
+ln -sf "${DOTFILES_LOCATION}/k9s/test.yaml" "${PATH_TO_K9S}/test.yaml"
