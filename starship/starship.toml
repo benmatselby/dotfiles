@@ -1,8 +1,25 @@
-# Warning: This config does not include keys that have an unset value
-format = '$all'
 scan_timeout = 30
 command_timeout = 700
 add_newline = true
+
+format = """
+(fg:#9A348E)\
+$directory\
+(fg:#DA627D)\
+$git_branch\
+$git_status\
+(fg:#FCA17D)\
+$golang\
+$nodejs\
+$python\
+$terraform\
+(fg:#86BBD8)\
+$kubernetes\
+(fg:#06969A)\
+$time\
+(fg:#33658A)
+$character
+"""
 
 [aws]
 format = 'on [$symbol($profile )(\($region\) )(\[$duration\])]($style)'
@@ -336,7 +353,7 @@ detect_folders = []
 symbol = '🛳️  '
 format = '[$symbol$context( \($namespace\))]($style) in '
 style = 'cyan'
-disabled = false
+disabled = true
 
 [lua]
 format = 'via [$symbol($version )]($style)'

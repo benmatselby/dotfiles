@@ -50,7 +50,7 @@ format = '[ $symbol ($version) ]($style)'
 symbol="󱃾"
 style="bg:#06969A fg:#000000"
 format='[ $symbol $context( \($namespace\)) ]($style)'
-disabled = false
+disabled = true
 
 [nodejs]
 symbol = ""

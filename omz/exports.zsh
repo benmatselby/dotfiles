@@ -35,7 +35,7 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # Startship
-export STARSHIP_CONFIG="${HOME}/.config/starship-pastel.toml"
+export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
 
 # tmux
 # export ZSH_TMUX_ITERM2=true
