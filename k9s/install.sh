@@ -6,8 +6,8 @@ PATH_TO_K9S="${HOME}/Library/Application Support/k9s/skins"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
   PATH_TO_K9S="${HOME}/.config/k9s/skins"
-  mkdir -p "${PATH_TO_K9S}"
 fi
+mkdir -p "${PATH_TO_K9S}"
 
 ln -sf "${DOTFILES_LOCATION}/k9s/monokai.yaml" "${PATH_TO_K9S}/monokai.yaml"
 ln -sf "${DOTFILES_LOCATION}/k9s/dracula.yaml" "${PATH_TO_K9S}/dracula.yaml"
