@@ -18,7 +18,6 @@ sudo apt-get upgrade -y
 printf "\n🚀 Installing apt packages\n"
 
 APT_PACKAGES=(
-  vim
 )
 
 for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && sudo apt-get install "${pkg}"; done
