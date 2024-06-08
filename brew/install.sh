@@ -64,7 +64,7 @@ for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew i
 if [ $(arch) = "arm64" ]; then
   brew install --cask font-fira-code
   brew install --cask font-hack-nerd-font
-  brew install --cask session-manager-plugin
+  # brew install --cask session-manager-plugin
 fi
 
 # Some tidying up
