@@ -36,6 +36,7 @@ BASE_PACKAGES=(
   kubectl
   kubectx
   kube-ps1
+  lazydocker
   mongosh
   mysql-client
   nvm
