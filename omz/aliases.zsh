@@ -47,6 +47,9 @@ alias mkssh='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
 alias mp='multipass'
 alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20.04 --cloud-init ${HOME}/git/github/${GITHUB_USER}/dotfiles/common/multipass-docker.yml'
 
+# neovim
+alias n=nvim
+
 # Node
 alias nvmu='nvm use'
 
