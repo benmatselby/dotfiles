@@ -3,6 +3,7 @@ command_timeout = 700
 add_newline = true
 
 format = """
+$hostname\
 (fg:#9A348E)\
 $directory\
 (fg:#DA627D)\
