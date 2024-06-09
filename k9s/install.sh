@@ -9,7 +9,7 @@ if [[ "$(uname -s)" == "Linux" ]]; then
 fi
 mkdir -p "${PATH_TO_K9S}"
 
-ln -sf "${DOTFILES_LOCATION}/k9s/monokai.yaml" "${PATH_TO_K9S}/monokai.yaml"
-ln -sf "${DOTFILES_LOCATION}/k9s/dracula.yaml" "${PATH_TO_K9S}/dracula.yaml"
-ln -sf "${DOTFILES_LOCATION}/k9s/prod.yaml" "${PATH_TO_K9S}/prod.yaml"
-ln -sf "${DOTFILES_LOCATION}/k9s/test.yaml" "${PATH_TO_K9S}/test.yaml"
+ln -sf "${PWD}/k9s/monokai.yaml" "${PATH_TO_K9S}/monokai.yaml"
+ln -sf "${PWD}/k9s/dracula.yaml" "${PATH_TO_K9S}/dracula.yaml"
+ln -sf "${PWD}/k9s/prod.yaml" "${PATH_TO_K9S}/prod.yaml"
+ln -sf "${PWD}/k9s/test.yaml" "${PATH_TO_K9S}/test.yaml"

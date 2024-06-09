@@ -6,4 +6,4 @@ set -e
 #	git clone https://github.com/LazyVim/starter ~/.config/nvim
 #fi
 
-ln -shf "${PWD}/neovim/lazy-vim" "${HOME}/.config/nvim"
+rm "${HOME}/.config/nvim"

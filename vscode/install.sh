@@ -9,8 +9,8 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   mkdir -p "${PATH_TO_VSCODE_SETTINGS}"
 fi
 
-ln -sf "${DOTFILES_LOCATION}/vscode/settings.json" "${PATH_TO_VSCODE_SETTINGS}/settings.json"
-ln -sf "${DOTFILES_LOCATION}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.json"
+ln -sf "${PWD}/vscode/settings.json" "${PATH_TO_VSCODE_SETTINGS}/settings.json"
+ln -sf "${PWD}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.json"
 
 CODE_EXTENSIONS=(
   42crunch.vscode-openapi

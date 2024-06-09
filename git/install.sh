@@ -3,7 +3,7 @@
 set -e
 
 if [ ! -f "${HOME}/.gitconfig.local" ] ; then
-  cp "${DOTFILES_LOCATION}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
+  cp "${PWD}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
 
   echo "Enter your full name";
   read -r var
@@ -18,5 +18,5 @@ if [ ! -f "${HOME}/.gitconfig.local" ] ; then
   sed -i '' "s|GITSIGNKEY|${var}|" "${HOME}/.gitconfig.local"
 fi
 
-ln -sf "${DOTFILES_LOCATION}/git/.gitconfig" "${HOME}/.gitconfig"
-ln -sf "${DOTFILES_LOCATION}/git/.gitignore" "${HOME}/.gitignore"
+ln -sf "${PWD}/git/.gitconfig" "${HOME}/.gitconfig"
+ln -sf "${PWD}/git/.gitignore" "${HOME}/.gitignore"

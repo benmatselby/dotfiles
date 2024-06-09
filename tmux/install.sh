@@ -4,5 +4,5 @@ set -e
 
 mkdir -p "${HOME}/.config/tmux/"
 
-ln -sf "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
-ln -sf "${PWD}/tmux/themes" "${HOME}/.config/tmux/themes"
+ln -shf "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+ln -shf "${PWD}/tmux/themes" "${HOME}/.config/tmux/themes"

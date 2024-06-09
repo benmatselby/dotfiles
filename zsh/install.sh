@@ -2,5 +2,5 @@
 
 set -e
 
-ln -sf "${DOTFILES_LOCATION}/zsh/.zshrc" "${HOME}/.zshrc"
-ln -sf "${DOTFILES_LOCATION}/zsh/benmatselby.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/"
+ln -sf "${PWD}/zsh/.zshrc" "${HOME}/.zshrc"
+ln -sf "${PWD}/zsh/benmatselby.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/"
