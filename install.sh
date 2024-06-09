@@ -6,7 +6,7 @@ set -e
 # Installation of packages, configurations, and dotfiles.
 ###
 DOTFILES_LOCATION=$(pwd)
-export DOTFILES_LOCATION;
+export DOTFILES_LOCATION
 
 ###
 # Install dependencies
@@ -27,6 +27,7 @@ export DOTFILES_LOCATION;
 ./bin/dotfiles install starship
 ./bin/dotfiles install tmux
 ./bin/dotfiles install vim
+./bin/dotfiles install neovim
 
 echo "🚀 Manual installation/updates"
 echo "Omz      omz update"

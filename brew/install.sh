@@ -39,6 +39,7 @@ BASE_PACKAGES=(
   lazydocker
   mongosh
   mysql-client
+  neovim
   nvm
   php
   shellcheck
