@@ -1,8 +1,6 @@
 # Ansible
 export ANSIBLE_COW_SELECTION=random
-
-# GPG
-export GPG_TTY=$(tty)
+export ANSIBLE_COW_PATH=cowsay
 
 # Git
 export GIT_EDITOR=nvim
