@@ -5,6 +5,16 @@ set -e
 command="${1}"
 package="${2}"
 
+if [ -z "${command}" ]; then
+  echo "Command is required"
+  exit 1
+fi
+
+if [ -z "${package}" ]; then
+  echo "Package is required"
+  exit 2
+fi
+
 case "${command}" in
   "install")
     echo "🚀 Installing package: ${package}"
@@ -17,7 +27,7 @@ case "${command}" in
     echo "\n"
     ;;
   *)
-    echo "${command} does not exist"
-    exit 1
+    echo "${command} is not a valid command"
+    exit 3
     ;;
 esac
