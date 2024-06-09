@@ -4,6 +4,9 @@ export ANSIBLE_COW_SELECTION=random
 # GPG
 export GPG_TTY=$(tty)
 
+# Git
+export GIT_EDITOR=nvim
+
 # Go
 export GOPATH=$HOME/go
 export GOPRIVATE='github.com/benmatselby'
@@ -15,7 +18,7 @@ export CDPATH=${CDPATH}:~/git
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 export HISTCONTROL=ignoreboth
-export EDITOR=vim
+export EDITOR=nvim
 export GREP_COLOR="1;35"
 
 # Pagers
