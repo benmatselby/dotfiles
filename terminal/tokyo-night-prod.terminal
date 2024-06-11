@@ -218,6 +218,8 @@
 	AH4AiwCgAKcAyADoAOoA7ADuAPUA+gEAAQIBBAEGDVINVw1iDWsNeA17DYgNkQ2WDZ4A
 	AAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAANoQ==
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>CursorColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -271,8 +273,10 @@
 	WCRjbGFzc2VzV05TQ29sb3KiFhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3foWHiY6Z
 	oqqtAAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
 	</data>
+	<key>VisualBell</key>
+	<false/>
 	<key>name</key>
-	<string>tokyo-night prod</string>
+	<string>tokyo-night-prod</string>
 	<key>shellExitAction</key>
 	<integer>0</integer>
 	<key>type</key>
