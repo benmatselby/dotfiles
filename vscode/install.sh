@@ -15,7 +15,7 @@ ln -sf "${PWD}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.
 CODE_EXTENSIONS=(
   42crunch.vscode-openapi
   # bmewburn.vscode-intelephense-client
-  CircleCI.circleci
+  # CircleCI.circleci
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode

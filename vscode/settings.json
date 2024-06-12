@@ -2,8 +2,6 @@
   "accessibility.signals.onDebugBreak": {
     "sound": "on"
   },
-  "circleci.hostUrl": "",
-  "circleci.notifications.areActive": "no",
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
@@ -14,6 +12,9 @@
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.scale": 3,
+  "editor.minimap.sectionHeaderFontSize": 10,
   "editor.rulers": [80, 100, 120],
   "editor.stickyScroll.enabled": true,
   "editor.suggest.showWords": false,
@@ -32,6 +33,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "github.copilot.editor.enableAutoCompletions": true,
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
   "go.toolsManagement.autoUpdate": true,
@@ -48,8 +50,6 @@
     "**/.mypy_cache": true,
     "bandit_baseline": true
   },
-  "snyk.yesWelcomeNotification": false,
-  "snyk.advanced.cliPath": "/Users/ben/Library/Application Support/snyk-ls/snyk-macos",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
@@ -64,10 +64,12 @@
   "terminal.integrated.shellIntegration.enabled": true,
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "window.autoDetectColorScheme": true,
-  "window.commandCenter": true,
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 0,
+  "window.commandCenter": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.layoutControl.enabled": false,
   "workbench.colorTheme": "Ayu Light Bordered",
   "workbench.colorCustomizations": {
     "[Ayu Light]": {
@@ -83,7 +85,7 @@
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Ayu Mirage Bordered",
-  "workbench.preferredLightColorTheme": "Solarized Dark",
+  "workbench.preferredLightColorTheme": "Monokai",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -130,11 +132,5 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "snyk.trustedFolders": ["/Users/ben/git/github/"],
-  // "editor.minimap.autohide": true,
-  "editor.minimap.enabled": false,
-  "editor.minimap.scale": 3,
-  "editor.minimap.sectionHeaderFontSize": 10,
-  "workbench.editor.editorActionsLocation": "hidden",
-  "github.copilot.editor.enableAutoCompletions": true
+  "workbench.activityBar.location": "hidden"
 }
