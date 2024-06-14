@@ -3,7 +3,7 @@ export ANSIBLE_COW_SELECTION=random
 export ANSIBLE_COW_PATH=cowsay
 
 # Git
-export GIT_EDITOR=nvim
+export GIT_EDITOR=vim
 
 # Go
 export GOPATH=$HOME/go
@@ -16,7 +16,7 @@ export CDPATH=${CDPATH}:~/git
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 export HISTCONTROL=ignoreboth
-export EDITOR=nvim
+export EDITOR=vim
 export GREP_COLOR="1;35"
 
 # Pagers
