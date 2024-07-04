@@ -136,7 +136,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # AWS - This should be done in the `aws` plugin, but it cannot find
 # aws_completer at that point, so loading this here. Less than ideal
