@@ -2,7 +2,8 @@
 
 set -e
 
-mkdir -p "${HOME}/.config/tmux/"
+# Link all the themes
+ln -shf "${PWD}/tmux" "${HOME}/.config/tmux"
 
-ln -shf "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
-ln -shf "${PWD}/tmux/themes" "${HOME}/.config/tmux/themes"
+# Symlink the one we prefer
+ln -shf "${HOME}/.config/tmux/themes/basic.conf" "${HOME}/.tmux.conf"

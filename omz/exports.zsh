@@ -45,4 +45,3 @@ export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
 # export ZSH_TMUX_ITERM2=true
 # Loading here, otherwise omz cannot find it in the paths we have
 omz plugin load tmux
-export BMS_TMUX_THEME="tokyo-night"
