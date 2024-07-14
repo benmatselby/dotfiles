@@ -69,7 +69,7 @@ alias ag='ag -i'
 alias ls='ls -lGh'
 alias envs='env | sort'
 alias envg='env | grep -i'
-alias dmChange="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
+alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 alias open-ports="lsof -i -P -n | grep LISTEN"
 
 # Random
