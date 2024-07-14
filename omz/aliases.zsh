@@ -1,3 +1,8 @@
+# AI
+alias ollama-start="docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama"
+alias ollama-run="docker exec -it ollama ollama run llama3"
+alias ollama="docker exec -it ollama ollama"
+
 # AWS
 alias aws-loggs='aws logs describe-log-groups --query "logGroups[*].logGroupName" --output table'
 alias aws-dellgg='aws logs delete-log-group --log-group-name'
@@ -83,6 +88,7 @@ alias tg='terragrunt'
 function weather() {
   curl "https://wttr.in/$1"
 }
+
 function wslim() {
   curl "https://wttr.in/$1?format=%cWeather+in+%l:+%C+%t,+%p+%w"
 }
