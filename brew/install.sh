@@ -28,6 +28,7 @@ BASE_PACKAGES=(
   gnupg
   go
   golangci-lint
+  gron
   htop
   hugo
   jq
