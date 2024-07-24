@@ -65,7 +65,7 @@ alias life='cd $HOME/git/github/benmatselby/life'
 alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main'
 
 # OS
-alias ag='ag -i'
+alias agi='ag -i'
 alias ls='ls -lGh'
 alias envs='env | sort'
 alias envg='env | grep -i'
