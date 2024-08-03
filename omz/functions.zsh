@@ -62,20 +62,6 @@ function code-branch()
 }
 
 ##
-# Connect to a vscode dev container
-##
-vscode-dev-connect() {
-  local project=$1
-
-  if [ -z "${project}" ]; then
-    printf "Please specify a project\n"
-    return
-  fi
-
-  docker exec -it "${project}" zsh
-}
-
-##
 # Open the applications I use
 ##
 start-day() {
@@ -88,7 +74,6 @@ start-day() {
   open -a Twitter
   open -a Stickies
 }
-
 
 ##
 # Sync dependabot config from repo to all repos
