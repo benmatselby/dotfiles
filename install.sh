@@ -28,16 +28,19 @@ if [ -z "${RUNNING_IN_DEV_CONTAINER}" ]; then
 fi
 
 ###
-# Application configurations
+# Application configurations (Only when not in a dev container)
 ###
-./github/install.sh
-./node/install.sh
-./mongodb/install.sh
-./k9s/install.sh
-./starship/install.sh
-./tmux/install.sh
+if [ -z "${RUNNING_IN_DEV_CONTAINER}" ]; then
+  ./github/install.sh
+  ./node/install.sh
+  ./mongodb/install.sh
+  ./k9s/install.sh
+  ./starship/install.sh
+  ./tmux/install.sh
+  ./neovim/install.sh
+fi
+
 ./vim/install.sh
-./neovim/install.sh
 
 ###
 # Deprecated
