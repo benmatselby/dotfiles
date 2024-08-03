@@ -19,11 +19,13 @@ fi
 ./git/install.sh
 
 ###
-# Applications
+# Applications (Only when not in a dev container)
 ###
-./brew/install.sh
-./vscode/install.sh
-./zed/install.sh
+if [ -z "${RUNNING_IN_DEV_CONTAINER}" ]; then
+  ./brew/install.sh
+  ./vscode/install.sh
+  ./zed/install.sh
+fi
 
 ###
 # Application configurations
