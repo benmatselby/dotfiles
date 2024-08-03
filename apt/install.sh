@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 if [[ "$(uname -s)" != "Linux" ]]; then
   exit 0

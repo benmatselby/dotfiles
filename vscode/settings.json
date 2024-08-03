@@ -85,7 +85,7 @@
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Ayu Mirage Bordered",
-  "workbench.preferredLightColorTheme": "Tomorrow Night Blue",
+  "workbench.preferredLightColorTheme": "Solarized Dark",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -132,5 +132,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "terraform.languageServer.enable": true,
   "workbench.activityBar.location": "hidden"
 }
