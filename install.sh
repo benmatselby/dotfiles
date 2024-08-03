@@ -2,6 +2,15 @@
 
 set -e
 
+# Some checks to see if we are running in dev containers
+if [ -n "${CODESPACES}" ]; then
+  export RUNNING_IN_DEV_CONTAINER=1
+fi
+
+if [ -n "${RUNNING_IN_DEV_CONTAINER}" ]; then
+  echo "🏃 Running in dev container"
+fi
+
 ###
 # Installation
 ###
