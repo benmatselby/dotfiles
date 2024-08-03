@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 tmux configuration"
+
 # Link all the themes
 ln -shf "${PWD}/tmux" "${HOME}/.config/tmux"
 

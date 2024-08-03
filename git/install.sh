@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 git configuration"
+
 if [ ! -f "${HOME}/.gitconfig.local" ] ; then
   cp "${PWD}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
 

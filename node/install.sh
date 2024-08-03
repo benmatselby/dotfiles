@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 Node configuration"
+
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
 if [ "$(arch)" = "arm64" ]; then

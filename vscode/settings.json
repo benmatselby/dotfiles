@@ -132,6 +132,5 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terraform.languageServer.enable": true,
-  "workbench.activityBar.location": "hidden"
+  "terraform.languageServer.enable": true
 }

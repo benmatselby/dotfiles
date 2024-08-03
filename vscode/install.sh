@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 VSCode configuration"
+
 PATH_TO_VSCODE_SETTINGS="${HOME}/Library/Application Support/Code/User"
 
 if [[ "$(uname -s)" == "Linux" ]]; then

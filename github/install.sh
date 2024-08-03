@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 GitHub configuration"
+
 # Installation
 gh extension install dlvhdr/gh-dash || true
 gh extension install github/gh-copilot || true

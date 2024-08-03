@@ -3,14 +3,14 @@
 set -e
 
 if test ! $(which brew); then
-  printf "\n🚀 Installing the brew package manager\n"
+  echo "🚀 Installing the brew package manager"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 ###
 # Install brew packages
 ###
-printf "\n🚀 Installing brew packages\n"
+echo "🚀 Installing brew packages"
 
 # Taps
 brew tap hashicorp/tap

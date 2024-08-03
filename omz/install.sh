@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 omzsh installation"
+
 if [ -d "${HOME}/.oh-my-zsh" ]; then
   printf "oh-my-zsh is already installed\n"
 else

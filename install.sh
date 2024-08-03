@@ -3,28 +3,42 @@
 set -e
 
 ###
-# Install dependencies
+# Installation
 ###
-./bin/dotfiles install omz
-./bin/dotfiles install zsh
-./bin/dotfiles install apt
-./bin/dotfiles install brew
-./bin/dotfiles install vscode
-./bin/dotfiles install zed
-# ./bin/dotfiles install sublime-text
-./bin/dotfiles install git
-./bin/dotfiles install github
-./bin/dotfiles install node
-./bin/dotfiles install mongodb
-#./bin/dotfiles install php
-./bin/dotfiles install k9s
-./bin/dotfiles install starship
-./bin/dotfiles install tmux
-./bin/dotfiles install vim
-./bin/dotfiles install neovim
+./omz/install.sh
+./zsh/install.sh
+./git/install.sh
 
+###
+# Applications
+###
+./brew/install.sh
+./vscode/install.sh
+./zed/install.sh
+
+###
+# Application configurations
+###
+./github/install.sh
+./node/install.sh
+./mongodb/install.sh
+./k9s/install.sh
+./starship/install.sh
+./tmux/install.sh
+./vim/install.sh
+./neovim/install.sh
+
+###
+# Deprecated
+###
+#./sublime-text/install.sh
+#./php/install.sh
+
+###
+# Manual notifications
+###
 echo "🚀 Manual installation/updates"
-echo "Omz      omz update"
+echo "Omz: omz update"
 echo ""
 
 echo "🚀 Suggestions to tidy"

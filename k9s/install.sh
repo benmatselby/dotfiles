@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🚀 k9s configuration"
+
 PATH_TO_K9S="${HOME}/Library/Application Support/k9s/skins"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
