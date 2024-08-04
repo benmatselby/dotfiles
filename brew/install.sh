@@ -1,8 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
-if test ! $(which brew); then
+if test ! "$(which brew)"; then
   echo "🚀 Installing the brew package manager"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
@@ -51,7 +51,7 @@ BASE_PACKAGES=(
   vim
 )
 
-if [ $(arch) = "arm64" ]; then
+if [ "$(arch)" = "arm64" ]; then
   BASE_PACKAGES+=(
     pyenv
     reattach-to-user-namespace
@@ -64,7 +64,7 @@ fi
 for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
 # Casks (only on Mac)
-if [ $(arch) = "arm64" ]; then
+if [ "$(arch)" = "arm64" ]; then
   brew install --cask font-fira-code
   brew install --cask font-hack-nerd-font
   # brew install --cask session-manager-plugin
