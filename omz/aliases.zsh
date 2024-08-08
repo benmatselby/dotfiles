@@ -17,8 +17,6 @@ alias brew-uninstall-packages='brew remove --force $(brew list --formula) && bre
 # Filesystem
 alias ghbms='cd ${HOME}/git/github/benmatselby/'
 alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
-alias ghjoe='cd ${HOME}/git/github/joelrap/'
-alias ghjos='cd ${HOME}/git/github/minejosh/'
 alias gic='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
 # gcloud
