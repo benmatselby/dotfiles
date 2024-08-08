@@ -12,8 +12,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skanehira/preview-markdown.vim'
 call plug#end()
 
