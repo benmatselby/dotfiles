@@ -51,7 +51,8 @@ scripts.forEach((file) => {
       serverInfo += laptop + " ";
     }
 
-    return `${serverInfo}${hasPrimary ? "₁" : "₂"} - 📖 ${readPref} - 📚 ${dbName} - 🗓  ${nowFormat} → `;
+    return `${serverInfo}${hasPrimary ? "₁" : "₂"} - 📖 ${readPref} - 📚 ${dbName} - 🗓  ${nowFormat}
+❯ `;
   };
 
   boringPrompt = () => {
