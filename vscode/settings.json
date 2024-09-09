@@ -84,7 +84,7 @@
   },
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.preferredDarkColorTheme": "Ayu Mirage Bordered",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
   "workbench.preferredLightColorTheme": "Solarized Dark",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
