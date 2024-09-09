@@ -13,3 +13,9 @@ THEME=$1
 echo "Setting background to ${THEME}"
 echo "${PWD}/themes/${THEME}/background.png"
 osascript -e "tell application \"System Events\" to set picture of every desktop to \"${PWD}/themes/${THEME}/background.png\""
+
+# Zellij
+
+# Neovim
+
+# VSCode
