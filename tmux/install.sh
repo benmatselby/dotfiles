@@ -4,8 +4,7 @@ set -e
 
 echo "🚀 tmux configuration"
 
-# Link all the themes
-ln -shf "${PWD}/tmux" "${HOME}/.config/tmux"
+mkdir -p "${HOME}/.config/tmux"
 
 # Symlink the one we prefer
-ln -shf "${HOME}/.config/tmux/themes/basic.conf" "${HOME}/.tmux.conf"
+ln -sf "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"

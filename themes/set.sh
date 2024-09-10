@@ -19,3 +19,6 @@ mkdir -p ~/.config/nvim/lua/plugins
 cp "${PWD}/themes/${THEME}/neovim.lua" ~/.config/nvim/lua/plugins/theme.lua
 
 # VSCode
+
+# Tmux
+ln -sf "${PWD}/themes/${THEME}/tmux.conf" ~/.config/tmux/theme.conf
