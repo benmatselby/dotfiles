@@ -40,13 +40,12 @@ if [ -z "${RUNNING_IN_DEV_CONTAINER}" ]; then
   ./neovim/install.sh
 fi
 
-./vim/install.sh
-
 ###
 # Deprecated
 ###
 #./sublime-text/install.sh
 #./php/install.sh
+#./vim/install.sh
 
 ###
 # Manual notifications

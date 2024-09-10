@@ -48,7 +48,7 @@ BASE_PACKAGES=(
   tldr
   tmux
   tmuxinator
-  vim
+  # vim
 )
 
 if [ "$(arch)" = "arm64" ]; then
