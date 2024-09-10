@@ -14,8 +14,6 @@ echo "Setting background to ${THEME}"
 echo "${PWD}/themes/${THEME}/background.png"
 osascript -e "tell application \"System Events\" to set picture of every desktop to \"${PWD}/themes/${THEME}/background.png\""
 
-# Zellij
-
 # Neovim
 mkdir -p ~/.config/nvim/lua/plugins
 cp "${PWD}/themes/${THEME}/neovim.lua" ~/.config/nvim/lua/plugins/theme.lua

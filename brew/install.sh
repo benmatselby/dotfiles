@@ -49,7 +49,6 @@ BASE_PACKAGES=(
   tmux
   tmuxinator
   vim
-  zellij
 )
 
 if [ "$(arch)" = "arm64" ]; then
