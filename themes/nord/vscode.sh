@@ -1,0 +1,1 @@
+VSC_THEME="Nord"

@@ -70,7 +70,7 @@
   "window.commandCenter": false,
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Ayu Light Bordered",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.colorCustomizations": {
     "[Ayu Light]": {
       "tab.activeBackground": "#FEE3BA"
@@ -85,7 +85,7 @@
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredLightColorTheme": "Nord",
+  "workbench.preferredLightColorTheme": "Tokyo Night Storm",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
