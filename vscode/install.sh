@@ -35,5 +35,10 @@ CODE_EXTENSIONS=(
   # timonwong.shellcheck
   Tyriar.sort-lines
   # xdebug.php-debug
+
+  # Themes
+  Catppuccin.catppuccin-vsc
+  arcticicestudio.nord-visual-studio-code
+  enkia.tokyo-night
 )
 for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done
