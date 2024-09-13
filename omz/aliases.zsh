@@ -54,6 +54,7 @@ alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20
 
 # neovim
 alias n=nvim
+alias vim=nvim
 
 # Node
 alias nvmu='nvm use'
@@ -69,6 +70,7 @@ alias envs='env | sort'
 alias envg='env | grep -i'
 alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 alias open-ports="lsof -i -P -n | grep LISTEN"
+alias timer="shortcuts run Timer"
 
 # Random
 alias aliasg='alias | grep '
