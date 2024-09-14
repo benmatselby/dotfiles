@@ -68,24 +68,11 @@
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 0,
   "window.commandCenter": false,
-  "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.colorCustomizations": {
-    "[Ayu Light]": {
-      "tab.activeBackground": "#FEE3BA"
-    },
-    "[Ayu Light Bordered]": {
-      "tab.activeBackground": "#FEE3BA"
-    },
-    "[Ayu Mirage]": {
-      "tab.activeBackground": "#1B1B1B"
-    }
-  },
+  "workbench.colorTheme": "Rosé Pine Moon",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredLightColorTheme": "Tokyo Night Storm",
+  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -132,6 +119,5 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terraform.languageServer.enable": true,
-  "workbench.activityBar.location": "hidden"
+  "workbench.preferredDarkColorTheme": "Rosé Pine Moon"
 }
