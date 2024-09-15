@@ -52,6 +52,8 @@
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.profiles.osx": {
     "tmux": {
       "path": "tmux",
@@ -59,7 +61,6 @@
       "args": ["-u", "new-session", "-A", "-s", "${workspaceFolderBasename}"]
     }
   },
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
   "typescript.preferences.includePackageJsonAutoImports": "on",
