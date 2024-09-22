@@ -1,5 +1,8 @@
 [include]
   path = ~/.gitconfig.local
+
+[alias]
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 [core]
   excludesfile = ~/.gitignore
 [color]
@@ -7,15 +10,15 @@
 [diff]
   compactionHeuristic = true
   noprefix = true
-[pull]
-  ff = only
-[init]
-  defaultBranch = main
-[user]
-  name = Ben Selby
-[safe]
-  directory = *
-[alias]
-  ignored = !git ls-files -v | grep "^[[:lower:]]"
+[fetch]
+  prune = true
 [gpg]
   format = ssh
+[init]
+  defaultBranch = main
+[pull]
+  ff = only
+[safe]
+  directory = *
+[user]
+  name = Ben Selby
