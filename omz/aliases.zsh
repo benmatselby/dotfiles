@@ -72,6 +72,7 @@ alias envg='env | grep -i'
 alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 alias open-ports="lsof -i -P -n | grep LISTEN"
 alias timer="shortcuts run Timer"
+alias path-list='echo $PATH | tr ":" "\n"'
 
 # Random
 alias aliasg='alias | grep '
