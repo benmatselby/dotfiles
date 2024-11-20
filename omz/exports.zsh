@@ -14,6 +14,10 @@ export GOPRIVATE='github.com/benmatselby'
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+# lolcommits
+export PATH=$PATH:/Users/ben/.gem/ruby/3.3.0/bin
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 # OS
 export CDPATH=${CDPATH}:~/git
 export HISTSIZE=1000

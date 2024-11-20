@@ -66,6 +66,7 @@ alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit 
 # OS
 alias agi='ag -i'
 alias ag='ag --hidden'
+alias ag-notests='ag --hidden --ignore="*_tests.py"'
 alias ls='ls -lGh'
 alias envs='env | sort'
 alias envg='env | grep -i'
