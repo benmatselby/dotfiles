@@ -51,7 +51,8 @@ fi
 # Manual notifications
 ###
 echo "🚀 Manual installation/updates"
-echo "Omz: omz update"
+echo "Omz:     omz update"
+echo "Gcloud:  gcloud components update
 echo ""
 
 echo "🚀 Suggestions to tidy"
