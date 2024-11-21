@@ -54,7 +54,6 @@ alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20
 
 # neovim
 alias n=nvim
-alias vim=nvim
 
 # Node
 alias nvmu='nvm use'
