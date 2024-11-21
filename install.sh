@@ -17,6 +17,7 @@ fi
 ./omz/install.sh
 ./zsh/install.sh
 ./git/install.sh
+./vim/install.sh
 
 ###
 # Applications (Only when not in a dev container)
@@ -45,14 +46,13 @@ fi
 ###
 #./sublime-text/install.sh
 #./php/install.sh
-#./vim/install.sh
 
 ###
 # Manual notifications
 ###
 echo "🚀 Manual installation/updates"
 echo "Omz:     omz update"
-echo "Gcloud:  gcloud components update
+echo "Gcloud:  gcloud components update"
 echo ""
 
 echo "🚀 Suggestions to tidy"
