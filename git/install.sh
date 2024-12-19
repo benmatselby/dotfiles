@@ -4,8 +4,8 @@ set -e
 
 echo "🚀 git configuration"
 
-# Check if the file exists and it RUNNING_IN_DEV_CONTAINER is false
-if [ ! -f "${HOME}/.gitconfig" ] && [ -z "${RUNNING_IN_DEV_CONTAINER}" ]; then
+# Check if the file exists
+if [ ! -f "${HOME}/.gitconfig" ]; then
   cp "${PWD}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
 
   echo "Enter your full name";
