@@ -47,9 +47,6 @@ alias mkssh='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
 alias mp='multipass'
 alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20.04 --cloud-init ${HOME}/git/github/${GITHUB_USER}/dotfiles/common/multipass-docker.yml'
 
-# neovim
-alias n=nvim
-
 # Node
 alias nvmu='nvm use'
 
@@ -58,23 +55,21 @@ alias life='cd $HOME/git/github/benmatselby/life'
 alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main'
 
 # OS
-alias agi='ag -i'
-alias ag='ag --hidden'
 alias ag-notests='ag --hidden --ignore="*_tests.py"'
-alias ls='ls -lGh'
-alias envs='env | sort'
-alias envg='env | grep -i'
-alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
-alias open-ports="lsof -i -P -n | grep LISTEN"
-alias timer="shortcuts run Timer"
-alias path-list='echo $PATH | tr ":" "\n"'
-
-# Random
+alias ag='ag --hidden'
+alias agi='ag -i'
 alias aliasg='alias | grep '
-alias open-chrome='open -a "Google Chrome"'
+alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
+alias envg='env | grep -i'
+alias envs='env | sort'
 alias guid='uuidgen | tr "[:upper:]" "[:lower:]"'
-alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\\  -f2"
+alias ls='ls -lGh'
+alias open-chrome='open -a "Google Chrome"'
+alias open-ports="lsof -i -P -n | grep LISTEN"
+alias path-list='echo $PATH | tr ":" "\n"'
+alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias timer="shortcuts run Timer"
 alias week='date +%V'
 
 # Terraform

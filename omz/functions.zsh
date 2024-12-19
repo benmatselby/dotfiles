@@ -66,13 +66,11 @@ function code-branch()
 ##
 start-day() {
   open -a Mail
-  open -a "Google Chrome"
+  open -a Safari
   open -a Slack
   open -a Obsidian
   open -a "Visual Studio Code"
   open -a Music
-  open -a Twitter
-  open -a Stickies
 }
 
 ##
