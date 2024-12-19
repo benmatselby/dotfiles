@@ -1,2 +1,0 @@
-VSC_THEME_DARK="Nord"
-VSC_THEME_LIGHT="Nord"

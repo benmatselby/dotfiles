@@ -17,7 +17,6 @@ ln -sf "${PWD}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.
 CODE_EXTENSIONS=(
   42crunch.vscode-openapi
   # bmewburn.vscode-intelephense-client
-  # CircleCI.circleci
   DavidAnson.vscode-markdownlint
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
@@ -35,11 +34,5 @@ CODE_EXTENSIONS=(
   # timonwong.shellcheck
   Tyriar.sort-lines
   # xdebug.php-debug
-
-  # Themes
-  Catppuccin.catppuccin-vsc
-  arcticicestudio.nord-visual-studio-code
-  enkia.tokyo-night
-  mvllow.rose-pine
 )
 for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done

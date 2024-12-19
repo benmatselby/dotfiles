@@ -29,46 +29,39 @@ BASE_PACKAGES=(
   go
   golangci-lint
   gron
+  hashicorp/tap/terraform
   htop
   hugo
   jq
   k6
   k9s
+  kube-ps1
   kubectl
   kubectx
-  kube-ps1
   lazydocker
   mongosh
   mysql-client
   neovim
   nvm
   php
+  pyenv
+  reattach-to-user-namespace
   shellcheck
   starship
+  terragrunt
+  tflint
   tldr
   tmux
   tmuxinator
-  # vim
+  vim
 )
-
-if [ "$(arch)" = "arm64" ]; then
-  BASE_PACKAGES+=(
-    pyenv
-    reattach-to-user-namespace
-    hashicorp/tap/terraform
-    terragrunt
-    tflint
-  )
-fi
 
 for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew install "${pkg}"; done
 
-# Casks (only on Mac)
-if [ "$(arch)" = "arm64" ]; then
-  brew install --cask font-fira-code
-  brew install --cask font-hack-nerd-font
-  # brew install --cask session-manager-plugin
-fi
+# Casks
+brew install --cask font-fira-code
+brew install --cask font-hack-nerd-font
+# brew install --cask session-manager-plugin
 
 # Some tidying up
 brew autoremove -v
