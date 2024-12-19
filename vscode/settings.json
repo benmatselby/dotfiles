@@ -69,11 +69,10 @@
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 0,
   "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.layoutControl.enabled": true,
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
   "workbench.editor.enablePreview": true,
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12,
   "workbench.tree.enableStickyScroll": true,
@@ -119,6 +118,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.preferredDarkColorTheme": "Rosé Pine Moon"
+  }
 }
