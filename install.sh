@@ -11,7 +11,6 @@ set -e
 ./vim/install.sh
 ./brew/install.sh
 ./vscode/install.sh
-./zed/install.sh
 ./github/install.sh
 ./node/install.sh
 ./mongodb/install.sh
@@ -22,6 +21,7 @@ set -e
 ###
 # Deprecated
 ###
+# ./zed/install.sh
 # ./neovim/install.sh
 # ./sublime-text/install.sh
 # ./php/install.sh
