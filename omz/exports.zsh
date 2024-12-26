@@ -44,8 +44,3 @@ export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
-
-# tmux
-# export ZSH_TMUX_ITERM2=true
-# Loading here, otherwise omz cannot find it in the paths we have
-omz plugin load tmux
