@@ -53,6 +53,7 @@ BASE_PACKAGES=(
   tldr
   tmux
   tmuxinator
+  uv
   vim
 )
 
