@@ -1,7 +1,7 @@
 aliases:
     prc: pr create
     prcf: pr create --fill
-    pramr: pr merge --auto -d -r
+    pramm: pr merge --auto -d -r
     prama: pr merge --auto -d -m
     rv: repo view -w
     mpr: repo list --visibility public --no-archived --source -L 50
