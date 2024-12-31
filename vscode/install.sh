@@ -35,4 +35,17 @@ CODE_EXTENSIONS=(
   Tyriar.sort-lines
   # xdebug.php-debug
 )
+
+if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
+  BASE_PACKAGES+=(
+		charliermarsh.ruff
+		ms-python.isort
+		ms-python.python
+		ms-python.vscode-pylance
+		snyk-security.snyk-vulnerability-scanner
+		vitest.explorer
+		vue.volar
+  )
+fi
+
 for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done
