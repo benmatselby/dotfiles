@@ -5,7 +5,7 @@ set -e
 ###
 # Installation
 ###
-./omz/install.sh
+./shell/install.sh
 ./zsh/install.sh
 ./git/install.sh
 ./vim/install.sh

@@ -1,6 +1,6 @@
 # This is mainly used for raspberry pis which are still running bash
 # We want to make use of what we already have here
 
-. ~/git/github/benmatselby/dotfiles/omz/aliases.zsh
-. ~/git/github/benmatselby/dotfiles/omz/exports.zsh
-. ~/git/github/benmatselby/dotfiles/omz/functions.zsh
+. ~/git/github/benmatselby/dotfiles/shell/aliases.zsh
+. ~/git/github/benmatselby/dotfiles/shell/exports.zsh
+. ~/git/github/benmatselby/dotfiles/shell/functions.zsh
