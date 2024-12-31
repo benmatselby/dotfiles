@@ -7,5 +7,5 @@
 
 # Load the bash prompt if the file is defined
 if [ -f ~/.bash_prompt ]; then
-    . ~/.bash_prompt
+  . ~/.bash_prompt
 fi
