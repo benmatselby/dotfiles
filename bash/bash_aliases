@@ -4,3 +4,8 @@
 . ~/git/github/benmatselby/dotfiles/shell/aliases.zsh
 . ~/git/github/benmatselby/dotfiles/shell/exports.zsh
 . ~/git/github/benmatselby/dotfiles/shell/functions.zsh
+
+# Load the bash prompt if the file is defined
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
+fi
