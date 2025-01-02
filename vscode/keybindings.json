@@ -1,19 +1,12 @@
 [
-  {
-    "key": "cmd+b",
-    "command": "runCommands",
-    "args": {
-      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.action.toggleActivityBarVisibility"]
-    }
-  },
   { "key": "shift+alt+o", "command": "python.sortImports" },
-  {
-    "key": "alt+cmd+o",
-    "command": "runCommands",
-    "args": {
-      "commands": ["outline.toggleVisibility", "workbench.action.toggleAuxiliaryBar"]
-    }
-  },
+  // {
+  //   "key": "alt+cmd+o",
+  //   "command": "runCommands",
+  //   "args": {
+  //     "commands": ["outline.toggleVisibility", "workbench.action.toggleAuxiliaryBar"]
+  //   }
+  // },
   { "key": "ctrl+cmd+t", "command": "workbench.action.createTerminalEditor" },
   { "key": "cmd+k cmd+f", "command": "editor.foldAll" },
   { "key": "cmd+k cmd+u", "command": "editor.unfoldAll" }
