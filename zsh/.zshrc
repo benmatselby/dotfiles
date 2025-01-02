@@ -77,7 +77,7 @@ fi
 
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(aws docker git golang kubectl macos pyenv pylint python tmux tmuxinator)
+  plugins=(aws docker git golang kubectl macos pyenv pylint python tmuxinator)
 fi
 
 # Ubuntu

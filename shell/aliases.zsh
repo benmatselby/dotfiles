@@ -76,6 +76,14 @@ alias week='date +%V'
 alias tf='terraform'
 alias tg='terragrunt'
 
+# tmux - Pulled from omz plugin
+alias ta="tmux attach"
+alias tkss="tmux kill-session -t"
+alias tksv='tmux kill-server'
+alias tl='tmux list-sessions'
+alias tmuxconf='$EDITOR $ZSH_TMUX_CONFIG'
+alias ts="tmux new-session -s"
+
 # Weather
 function weather() {
   curl "https://wttr.in/$1"
