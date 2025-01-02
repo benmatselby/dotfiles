@@ -1,3 +1,6 @@
+# Uncomment this to profile the setup (See zprof at the bottom of file too)
+# zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -71,18 +74,9 @@ ZSH_DISABLE_COMPFIX=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-if [[ "$(uname -s)" == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
   plugins=(aws docker git golang kubectl macos pyenv pylint python tmuxinator)
-fi
-
-# Ubuntu
-if [[ "$(uname -s)" == "Linux" ]]; then
-  plugins=(aws docker git golang tmuxinator)
 fi
 
 # VS Code Containers
@@ -125,11 +119,6 @@ if [ "$(arch)" = "arm64" ]; then
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
-if [[ "$(uname -s)" == "Linux" ]]; then
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-fi
-
 # Python
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
@@ -141,3 +130,5 @@ source <(fzf --zsh)
 # AWS - This should be done in the `aws` plugin, but it cannot find
 # aws_completer at that point, so loading this here. Less than ideal
 complete -C aws_completer aws
+
+# zprof
