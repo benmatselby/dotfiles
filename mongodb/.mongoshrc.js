@@ -1,7 +1,9 @@
 var scriptsFolder = "/Users/ben/.mongodb/mongosh/scripts/";
 var scripts = fs.readdirSync(scriptsFolder);
 scripts.forEach((file) => {
-  load(scriptsFolder + file);
+  if (file.endsWith(".js")) {
+    load(scriptsFolder + file);
+  }
 });
 
 (() => {
