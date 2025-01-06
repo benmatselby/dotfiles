@@ -99,7 +99,7 @@ alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit 
 # OS
 alias ag-notests='ag --hidden --ignore="*_tests.py"'
 alias ag='ag --hidden'
-alias agi='ag -i'
+alias agi='ag --hidden -i'
 alias aliasg='alias | grep '
 alias dm-change="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 alias envg='env | grep -i'
