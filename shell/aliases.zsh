@@ -20,12 +20,54 @@ alias gcloud-proj-use='gcloud config configurations activate'
 
 # Git
 ## Rely mainly on omz git plugin
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbD='git branch --delete --force'
+alias gbd='git branch --delete'
+alias gbvv='git branch -vv'
+alias gbvv='git branch -vv'
+alias gc='git commit --verbose'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+alias gcs='git commit --gpg-sign -v' # Override omz to provide -v flag
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gdn='git diff --name-only'
 alias gdn='git diff --name-only'
 alias gdns='git diff --name-status'
-alias gcs='git commit --gpg-sign -v' # Override omz to provide -v flag
-alias gnignore='git update-index --no-assume-unchanged'
+alias gdns='git diff --name-status'
+alias gds='git diff --staged'
+alias gf='git fetch'
+alias gfa='git fetch --all --tags --prune --jobs=10'
+alias gfg='git ls-files | grep'
+alias gfo='git fetch origin'
+alias ggpull='git pull origin "$(git_current_branch)"'
+alias ggpush='git push origin "$(git_current_branch)"'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
-alias gbvv='git branch -vv'
+alias gnignore='git update-index --no-assume-unchanged'
+alias glg='git log --stat'
+alias glgg='git log --graph'
+alias glgp='git log --stat --patch'
+alias glola='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'
+alias glols='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'
+alias gnignore='git update-index --no-assume-unchanged'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbd='git rebase $(git_develop_branch)'
+alias grbi='git rebase --interactive'
+alias grbm='git rebase $(git_main_branch)'
+alias grbo='git rebase --onto'
+alias grh='git reset'
+alias grhh='git reset --hard'
+alias grhk='git reset --keep'
+alias grhs='git reset --soft'
+alias grmc='git rm --cached'
+alias gsh='git show'
 
 # Docker
 alias drasi='docker rmi $(docker images -f "dangling=true" -q)'
@@ -71,6 +113,9 @@ alias path-list='echo $PATH | tr ":" "\n"'
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias timer="shortcuts run Timer"
 alias week='date +%V'
+
+# Python
+
 
 # Terraform
 alias tf='terraform'
