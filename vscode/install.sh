@@ -39,7 +39,6 @@ CODE_EXTENSIONS=(
 if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
   BASE_PACKAGES+=(
 		charliermarsh.ruff
-		ms-python.isort
 		ms-python.python
 		ms-python.vscode-pylance
 		snyk-security.snyk-vulnerability-scanner
