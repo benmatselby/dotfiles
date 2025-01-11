@@ -98,10 +98,11 @@ alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit 
 
 # OS
 alias -- -='cd -'
-alias -- ...=../..
-alias -- ....=../../..
-alias -- .....=../../../..
-alias -- ......=../../../../..
+alias ..='cd ../'
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
 alias 1='cd -1'
 alias 2='cd -2'
 alias 3='cd -3'
