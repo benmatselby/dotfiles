@@ -79,11 +79,6 @@ if [ $(arch) = "arm64" ]; then
   plugins=(aws docker git golang kubectl macos pyenv pylint python tmuxinator)
 fi
 
-# VS Code Containers
-if [[ ${REMOTE_CONTAINERS} ]] ; then
-  plugins=(docker git golang)
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -108,9 +103,8 @@ unsetopt share_history
 # Auto completion
 autoload -U compinit; compinit
 
-if [[ ! ${REMOTE_CONTAINERS} ]] ; then
-  eval "$(starship init zsh)"
-fi
+# Starship
+#eval "$(starship init zsh)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
