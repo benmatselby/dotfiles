@@ -18,3 +18,4 @@ PROMPT="${return_status} ${username} ${directory} "
 PROMPT+='$(git_prompt_info)'
 PROMPT+="${time}${newline}${user_type} "
 PROMPT2='${prompt_two_cursor}'
+RPROMPT=""
