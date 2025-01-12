@@ -1,6 +1,5 @@
 [include]
   path = ~/.gitconfig.local
-
 [alias]
   ignored = !git ls-files -v | grep "^[[:lower:]]"
 [core]
@@ -18,7 +17,5 @@
   defaultBranch = main
 [pull]
   ff = only
-[safe]
-  directory = *
 [user]
   name = Ben Selby
