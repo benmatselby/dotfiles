@@ -17,6 +17,7 @@ set -e
 ./k9s/install.sh
 ./starship/install.sh
 ./tmux/install.sh
+./ghostty/install.sh
 
 ###
 # Deprecated
