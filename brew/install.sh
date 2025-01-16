@@ -28,7 +28,6 @@ BASE_PACKAGES=(
   gnupg
   go
   golangci-lint
-  gron
   hashicorp/tap/terraform
   htop
   hugo
@@ -62,6 +61,7 @@ for pkg in "${BASE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && brew i
 # Casks
 brew install --cask font-fira-code
 brew install --cask font-hack-nerd-font
+brew install --cask ghostty
 # brew install --cask session-manager-plugin
 
 # Some tidying up
