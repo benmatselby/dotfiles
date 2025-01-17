@@ -136,3 +136,18 @@ function sync-dependabot()
   )
   done
 }
+
+##
+# Run a MySQL server instance in Docker
+##
+function mysql-server() {
+  local version=${1:-latest}
+
+  docker run \
+    -d \
+    -p 3306:3306 \
+    -eMYSQL_ROOT_PASSWORD=password \
+    --name mysql-${version} \
+    mysql:${version}
+}
+
