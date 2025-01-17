@@ -22,5 +22,5 @@ vim.o.softtabstop = 2
 
 -- Ensure these settings are applied to all file types
 vim.cmd [[
-  autocmd FileType * setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd BufRead,BufNewFile * setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 ]]
