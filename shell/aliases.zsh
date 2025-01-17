@@ -154,6 +154,9 @@ alias tl='tmux list-sessions'
 alias tmuxconf='$EDITOR $ZSH_TMUX_CONFIG'
 alias ts="tmux new-session -s"
 
+# Vim
+alias vim='nvim'
+
 # Weather
 function weather() {
   curl "https://wttr.in/$1"
