@@ -5,3 +5,5 @@
 local opt = vim.opt
 
 opt.relativenumber = false
+
+vim.go.background = "dark"
