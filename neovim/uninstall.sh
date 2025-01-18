@@ -7,3 +7,5 @@ set -e
 #fi
 
 rm "${HOME}/.config/nvim"
+rm "${HOME}/.local/share/nvim"
+rm "${HOME}/.local/state/nvim"
