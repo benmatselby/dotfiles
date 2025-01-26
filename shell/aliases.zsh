@@ -136,9 +136,6 @@ alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias timer="shortcuts run Timer"
 alias week='date +%V'
 
-# Python
-
-
 # Terraform
 alias tf='terraform'
 alias tg='terragrunt'
