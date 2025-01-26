@@ -1,5 +1,5 @@
 # Uncomment this to profile the setup (See zprof at the bottom of file too)
-# zmodload zsh/zprof
+#zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -106,13 +106,6 @@ autoload -U compinit; compinit
 # Starship
 #eval "$(starship init zsh)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-if [ "$(arch)" = "arm64" ]; then
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-fi
-
 # Python
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
@@ -125,4 +118,4 @@ source <(fzf --zsh)
 # aws_completer at that point, so loading this here. Less than ideal
 complete -C aws_completer aws
 
-# zprof
+#zprof

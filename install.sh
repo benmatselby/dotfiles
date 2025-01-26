@@ -12,7 +12,6 @@ set -e
 ./brew/install.sh
 ./vscode/install.sh
 ./github/install.sh
-./node/install.sh
 ./mongodb/install.sh
 ./k9s/install.sh
 ./starship/install.sh
@@ -36,5 +35,5 @@ echo "Gcloud:  gcloud components update"
 echo ""
 
 echo "🚀 Suggestions to tidy"
-echo "- Old node versions: nvm list"
+echo "- Old node versions: volta ls all"
 echo "- ~/Library/Appliation Support"
