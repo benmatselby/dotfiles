@@ -151,3 +151,23 @@ function mysql-server() {
     mysql:${version}
 }
 
+##
+# Run a MariaDB service instance in Docker
+##
+function mariadb-server() {
+  local version=${1:-latest}
+
+  docker run \
+    -d \
+    -p 3306:3306 \
+    -eMYSQL_ROOT_PASSWORD=password \
+    --name mariadb-${version} \
+    mariadb:${version}
+}
+
+##
+# Connect to a local MySQL/MariaDB instance
+##
+function mysql-client() {
+  mysql -h 127.0.0.1 -u root -p
+}
