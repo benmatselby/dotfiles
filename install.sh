@@ -35,5 +35,5 @@ echo "Gcloud:  gcloud components update"
 echo ""
 
 echo "🚀 Suggestions to tidy"
-echo "- Old node versions: volta ls all"
+echo "- Old node versions: volta ls all | nvm list"
 echo "- ~/Library/Appliation Support"

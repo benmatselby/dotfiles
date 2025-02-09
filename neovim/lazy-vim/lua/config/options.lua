@@ -6,4 +6,4 @@ local opt = vim.opt
 
 opt.relativenumber = false
 
-vim.go.background = "dark"
+vim.go.background = "light"
