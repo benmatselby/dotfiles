@@ -17,6 +17,7 @@ alias gic='cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/'
 # gcloud
 alias gcloud-proj-list='gcloud config configurations list'
 alias gcloud-proj-use='gcloud config configurations activate'
+alias gcloud-auth-login='gcloud auth login && gcloud auth application-default login'
 
 # Git
 ## Rely mainly on omz git plugin
