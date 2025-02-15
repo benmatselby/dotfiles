@@ -5,20 +5,9 @@ set -e
 echo "🚀 git configuration"
 
 # Check if the file exists
-if [ ! -f "${HOME}/.gitconfig" ]; then
+if [ ! -f "${HOME}/.gitconfig.local" ]; then
   cp "${PWD}/git/.gitconfig.local" "${HOME}/.gitconfig.local"
-
-  echo "Enter your full name";
-  read -r var
-  sed -i '' "s|GITNAME|${var}|" "${HOME}/.gitconfig.local"
-
-  echo "Enter your email address";
-  read -r var
-  sed -i '' "s|GITEMAIL|${var}|" "${HOME}/.gitconfig.local"
-
-  echo "Entire the path to your public ssh key"
-  read -r var
-  sed -i '' "s|GITSIGNKEY|${var}|" "${HOME}/.gitconfig.local"
+  @echo "ℹ️ git configuration: created ${HOME}/.gitconfig.local - Please update it!!"
 fi
 
 ln -sf "${PWD}/git/.gitconfig" "${HOME}/.gitconfig"
