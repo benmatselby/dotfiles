@@ -9,6 +9,9 @@ alias ringli='~/git/github/benmatselby/ringli/bin/ringli'
 # Brew
 alias brew-uninstall-packages='brew remove --force $(brew list --formula) && brew remove --cask --force $(brew list)'
 
+# Docker
+alias gh-docker-login='echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${GITHUB_USER} --password-stdin'
+
 # Filesystem
 alias ghbms='cd ${HOME}/git/github/benmatselby/'
 alias ghw='cd ${HOME}/git/github/${GITHUB_ORG}/'
