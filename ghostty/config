@@ -1,3 +1,11 @@
-theme = light:ayu_light,dark:Ayu Mirage
+# Standard theme
+theme = Dracula
+
+# Production
+#theme = Red Alert
+
+# Testing
+#theme = Purple Rain
+
 macos-option-as-alt = true
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
