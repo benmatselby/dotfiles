@@ -7,3 +7,4 @@ aliases:
     mpr: repo list --visibility public --no-archived --source -L 50
     mtr: repo list prolific-oss --topic team-incubator
 version: "1"
+git_protocol: ssh
