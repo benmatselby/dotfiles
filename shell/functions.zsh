@@ -10,7 +10,7 @@ function code-sync()
 
       if [ -d .git ]; then
         git fetch -p origin && \
-        git pull origin "$(git_current_branch)"
+        git pull origin $(git rev-parse --abbrev-ref HEAD)
       else
         echo 'Not a git repo, skipping...'
       fi
