@@ -7,5 +7,8 @@ theme = Dracula
 # Testing
 #theme = Purple Rain
 
+# Make alt work
 macos-option-as-alt = true
+
+# ctrl+` for quick terminal
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
