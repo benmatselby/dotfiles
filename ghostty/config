@@ -1,5 +1,8 @@
-# Standard theme
+# Dark theme
 theme = Dracula
+
+# Light theme
+#theme = dawnfox
 
 # Production
 #theme = Red Alert
