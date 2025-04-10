@@ -1,26 +1,28 @@
+# https://github.com/dlvhdr/gh-dash/blob/main/.gh-dash.yml
 prSections:
   - title: My Pull Requests
     filters: is:open author:@me
-  - title: Assigned
-    filters: is:open is:pr assignee:benmatselby archived:false
-  - title: Mentioned
-    filters: is:open is:pr mentions:benmatselby archived:false
   - title: Needs My Review
-    filters: is:open review-requested:@me
+    filters: is:open -is:draft -label=psg-no-alert review-requested:@me
+  - title: Assigned
+    filters: is:open -is:draft assignee:@me
+  - title: Involved
+    filters: is:open -is:draft involves:@me -author:@me
 issuesSections:
   - title: My Issues
-    filters: is:open author:@me archived:false
+    filters: is:open author:@me
   - title: Assigned
-    filters: is:open assignee:@me archived:false
-  - title: Mentioned
-    filters: is:open is:issue mentions:benmatselby archived:false
+    filters: is:open assignee:@me
+  - title: Involved
+    filters: is:open involves:@me -author:@me
 defaults:
   preview:
     open: true
     width: 50
-  prsLimit: 20
-  issuesLimit: 20
+  prsLimit: 50
+  issuesLimit: 50
   view: prs
+  refetchIntervalMinutes: 1
 keybindings:
   prs: []
 repoPaths: {}
