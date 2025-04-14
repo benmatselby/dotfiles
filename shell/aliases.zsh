@@ -132,6 +132,8 @@ alias path-list='echo $PATH | tr ":" "\n"'
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias timer="shortcuts run Timer"
 alias week='date +%V'
+alias musicn="music next && music status"
+alias musicp="music previous && music status"
 
 # Terraform
 alias tf='terraform'
