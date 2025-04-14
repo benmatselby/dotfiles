@@ -3,11 +3,12 @@ prSections:
   - title: My Pull Requests
     filters: is:open author:@me
   - title: Needs My Review
-    filters: is:open -is:draft -label=psg-no-alert review-requested:@me
+    filters: is:open -is:draft -label:psg-no-alert review-requested:@me
   - title: Assigned
     filters: is:open -is:draft assignee:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
+
 issuesSections:
   - title: My Issues
     filters: is:open author:@me
@@ -15,6 +16,7 @@ issuesSections:
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
+
 defaults:
   preview:
     open: true
@@ -22,7 +24,9 @@ defaults:
   prsLimit: 50
   issuesLimit: 50
   view: prs
-  refetchIntervalMinutes: 1
+  refetchIntervalMinutes: 3
+
 keybindings:
   prs: []
+
 repoPaths: {}
