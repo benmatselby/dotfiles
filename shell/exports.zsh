@@ -44,4 +44,3 @@ export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
 
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
-

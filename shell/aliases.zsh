@@ -95,6 +95,17 @@ alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.P
 # Kubernetes
 alias k='kubectl'
 
+# Minikube
+alias mkmount='minikube mount "$(pwd)":"$(pwd)"'
+alias mkssh='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
+
+# Multipass
+alias mp='multipass'
+alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20.04 --cloud-init ${HOME}/git/github/${GITHUB_USER}/dotfiles/common/multipass-docker.yml'
+
+# Node
+alias nvmu='nvm use'
+
 # Note taking
 alias life='cd $HOME/git/github/benmatselby/life'
 alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main'

@@ -12,6 +12,7 @@ set -e
 ./brew/install.sh
 ./vscode/install.sh
 ./github/install.sh
+./node/install.sh
 ./mongodb/install.sh
 ./k9s/install.sh
 ./starship/install.sh

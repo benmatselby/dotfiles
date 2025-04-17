@@ -1,5 +1,5 @@
 # Uncomment this to profile the setup (See zprof at the bottom of file too)
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -123,4 +123,4 @@ source <(fzf --zsh)
 # aws_completer at that point, so loading this here. Less than ideal
 complete -C aws_completer aws
 
-#zprof
+# zprof
