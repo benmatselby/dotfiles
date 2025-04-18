@@ -46,6 +46,7 @@
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "prettier.printWidth": 120,
+  "python.analysis.autoImportCompletions": true,
   "redhat.telemetry.enabled": false,
   "search.exclude": {
     "**/.mypy_cache": true,

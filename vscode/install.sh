@@ -38,12 +38,13 @@ CODE_EXTENSIONS=(
 
 if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
   BASE_PACKAGES+=(
-		charliermarsh.ruff
-		ms-python.python
-		ms-python.vscode-pylance
-		snyk-security.snyk-vulnerability-scanner
-		vitest.explorer
-		vue.volar
+    charliermarsh.ruff
+    ms-python.python
+    ms-python.vscode-pylance
+    njpwerner.autodocstring
+    snyk-security.snyk-vulnerability-scanner
+    vitest.explorer
+    vue.volar
   )
 fi
 
