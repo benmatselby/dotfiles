@@ -23,7 +23,6 @@ alias gcloud-proj-use='gcloud config configurations activate'
 alias gcloud-auth-login='gcloud auth login && gcloud auth application-default login'
 
 # Git
-alias gh='GITHUB_TOKEN= gh'
 ## Rely mainly on omz git plugin
 alias ga='git add'
 alias gb='git branch'
