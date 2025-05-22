@@ -27,7 +27,7 @@ CODE_EXTENSIONS=(
   github.vscode-pull-request-github
   golang.go
   # hashicorp.terraform
-  ms-azuretools.vscode-docker
+  ms-azuretools.vscode-containers
   ms-vscode-remote.remote-containers
   ms-vscode.remote-repositories
   streetsidesoftware.code-spell-checker
