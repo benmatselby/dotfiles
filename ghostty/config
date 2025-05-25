@@ -1,8 +1,5 @@
-# Dark theme
-theme = nightfox
-
-# Light theme
-#theme = dawnfox
+# Theme
+theme = dark:catppuccin-frappe,light:catppuccin-latte
 
 # Production
 #theme = Red Alert
