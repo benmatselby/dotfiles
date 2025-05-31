@@ -13,39 +13,3 @@ fi
 
 ln -sf "${PWD}/vscode/settings.json" "${PATH_TO_VSCODE_SETTINGS}/settings.json"
 ln -sf "${PWD}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.json"
-
-CODE_EXTENSIONS=(
-  42crunch.vscode-openapi
-  # bmewburn.vscode-intelephense-client
-  DavidAnson.vscode-markdownlint
-  dbaeumer.vscode-eslint
-  esbenp.prettier-vscode
-  firsttris.vscode-jest-runner
-  github.copilot
-  github.copilot-chat
-  github.vscode-github-actions
-  github.vscode-pull-request-github
-  golang.go
-  # hashicorp.terraform
-  ms-azuretools.vscode-containers
-  ms-vscode-remote.remote-containers
-  ms-vscode.remote-repositories
-  streetsidesoftware.code-spell-checker
-  # timonwong.shellcheck
-  Tyriar.sort-lines
-  # xdebug.php-debug
-)
-
-if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
-  BASE_PACKAGES+=(
-    charliermarsh.ruff
-    ms-python.python
-    ms-python.vscode-pylance
-    njpwerner.autodocstring
-    snyk-security.snyk-vulnerability-scanner
-    vitest.explorer
-    vue.volar
-  )
-fi
-
-for ext in "${CODE_EXTENSIONS[@]}"; do printf "installing %s\n" "${ext}" && code --install-extension "${ext}" --force; done

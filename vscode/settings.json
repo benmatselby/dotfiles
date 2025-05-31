@@ -3,7 +3,6 @@
     "sound": "on"
   },
   "cSpell.diagnosticLevel": "Hint",
-  "cSpell.enableFiletypes": ["terraform"],
   "cSpell.language": "en-GB",
   "diffEditor.codeLens": true,
   "dotfiles.repository": "https://github.com/benmatselby/dotfiles.git",
@@ -34,7 +33,12 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "editor": true,
+    "editorInlineSuggestion": true,
+    "editorInlineSuggestion.showWhenTyping": true,
+    "editorInlineSuggestion.showWhenNoSuggestions": true
+  },
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
   "go.toolsManagement.autoUpdate": true,
