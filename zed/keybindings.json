@@ -2,7 +2,6 @@
   {
     "context": "Editor",
     "bindings": {
-      "cmd-alt-c": "editor::CopyRelativePath",
       "cmd-k cmd-f": "editor::FoldSelectedRanges",
       "cmd-k cmd-u": "editor::UnfoldLines"
     }
@@ -10,7 +9,9 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-cmd-t": "workspace::NewCenterTerminal"
+      "cmd-alt-c": "workspace::CopyRelativePath",
+      "ctrl-cmd-t": "workspace::NewCenterTerminal",
+      "ctrl-r": "projects::OpenRecent"
     }
   }
 ]
