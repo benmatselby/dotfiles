@@ -8,6 +8,8 @@ prSections:
     filters: is:open -is:draft assignee:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
+  - title: Releases
+    filters: is:pr label:customer-facing closed:>=2025-05-26 psg
 
 issuesSections:
   - title: My Issues
@@ -20,7 +22,7 @@ issuesSections:
 defaults:
   preview:
     open: true
-    width: 50
+    width: 75
   prsLimit: 50
   issuesLimit: 50
   view: prs
