@@ -145,5 +145,38 @@
     "GitHub.copilot",
     "GitHub.copilot-chat",
     "GitHub.vscode-pull-request-github"
-  ]
+  ],
+
+  "mcp": {
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "github_token",
+        "description": "GitHub Personal Access Token",
+        "password": true
+      },
+      {
+        "type": "promptString",
+        "id": "prolific_token",
+        "description": "Prolific API Key",
+        "password": true
+      }
+    ],
+    "servers": {
+      "github": {
+        "command": "docker",
+        "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+        }
+      },
+      "prolific": {
+        "command": "docker",
+        "args": ["run", "-i", "--rm", "-e", "PROLIFIC_TOKEN", "mcp/prolific"],
+        "env": {
+          "PROLIFIC_TOKEN": "${input:prolific_token}"
+        }
+      }
+    }
+  }
 }
