@@ -6,6 +6,6 @@ set -e
 #	git clone https://github.com/LazyVim/starter ~/.config/nvim
 #fi
 
-rm "${HOME}/.config/nvim"
-rm "${HOME}/.local/share/nvim"
-rm "${HOME}/.local/state/nvim"
+rm -fr "${HOME}/.config/nvim"
+rm -fr "${HOME}/.local/share/nvim"
+rm -fr "${HOME}/.local/state/nvim"
