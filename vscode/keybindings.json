@@ -9,5 +9,13 @@
   // },
   { "key": "ctrl+cmd+t", "command": "workbench.action.createTerminalEditor" },
   { "key": "cmd+k cmd+f", "command": "editor.foldAll" },
-  { "key": "cmd+k cmd+u", "command": "editor.unfoldAll" }
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.unfoldAll"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  }
 ]
