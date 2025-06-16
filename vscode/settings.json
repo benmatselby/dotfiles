@@ -15,11 +15,7 @@
   "editor.minimap.enabled": false,
   "editor.minimap.scale": 3,
   "editor.minimap.sectionHeaderFontSize": 10,
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
+  "editor.rulers": [80, 100, 120],
   "editor.stickyScroll.enabled": true,
   "editor.suggest.showWords": false,
   "editor.tabSize": 2,
@@ -50,9 +46,7 @@
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
-  "go.lintFlags": [
-    "--fast"
-  ],
+  "go.lintFlags": ["--fast"],
   "openapi.defaultPreviewRenderer": "redoc",
   "outline.collapseItems": "alwaysCollapse",
   "php.suggest.basic": false,
@@ -72,13 +66,7 @@
     "tmux": {
       "path": "tmux",
       "icon": "terminal-tmux",
-      "args": [
-        "-u",
-        "new-session",
-        "-A",
-        "-s",
-        "${workspaceFolderBasename}"
-      ]
+      "args": ["-u", "new-session", "-A", "-s", "${workspaceFolderBasename}"]
     }
   },
   "terminal.integrated.scrollback": 10000,
@@ -99,7 +87,7 @@
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    "editor.defaultFormatter": "docker.docker"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -178,28 +166,14 @@
     "servers": {
       "github": {
         "command": "docker",
-        "args": [
-          "run",
-          "-i",
-          "--rm",
-          "-e",
-          "GITHUB_PERSONAL_ACCESS_TOKEN",
-          "ghcr.io/github/github-mcp-server"
-        ],
+        "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
         "env": {
           "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
         }
       },
       "prolific": {
         "command": "docker",
-        "args": [
-          "run",
-          "-i",
-          "--rm",
-          "-e",
-          "PROLIFIC_TOKEN",
-          "mcp/prolific"
-        ],
+        "args": ["run", "-i", "--rm", "-e", "PROLIFIC_TOKEN", "mcp/prolific"],
         "env": {
           "PROLIFIC_TOKEN": "${input:prolific_token}"
         }
@@ -207,13 +181,10 @@
       "docker-build-kit": {
         "type": "stdio",
         "command": "docker",
-        "args": [
-          "mcp",
-          "gateway",
-          "run"
-        ]
+        "args": ["mcp", "gateway", "run"]
       }
     }
   },
-  "docker.extension.enableComposeLanguageServer": false
+  "docker.extension.enableComposeLanguageServer": false,
+  "database-client.autoSync": true
 }
