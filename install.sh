@@ -18,6 +18,7 @@ set -e
 ./starship/install.sh
 ./tmux/install.sh
 ./ghostty/install.sh
+./sqlite/install.sh
 
 ###
 # Deprecated
