@@ -38,9 +38,5 @@ else
   export PATH=/usr/local/bin:$PATH
 fi
 
-# MySQL
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-export MYSQL_PS1='\u@\h \R:\m:\s mysql> '
-
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
