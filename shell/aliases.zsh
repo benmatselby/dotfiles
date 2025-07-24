@@ -24,7 +24,7 @@ alias gcloud-auth-login='gcloud auth login && gcloud auth application-default lo
 
 # Git
 ## Rely mainly on omz git plugin
-alias ga='git add'
+alias ga='git add -v'
 alias gb='git branch'
 alias gba='git branch --all'
 alias gbD='git branch --delete --force'
