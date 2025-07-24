@@ -1,0 +1,38 @@
+{
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${input:github_mcp_pat}"
+      }
+    },
+    "docker-build-kit": {
+      "type": "stdio",
+      "command": "docker",
+      "args": ["mcp", "gateway", "run"]
+    },
+    "prolific": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "PROLIFIC_TOKEN", "mcp/prolific"],
+      "env": {
+        "PROLIFIC_TOKEN": "${input:prolific_token}"
+      },
+      "type": "stdio"
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "prolific_token",
+      "description": "Prolific API Key",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "github_mcp_pat",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ]
+}

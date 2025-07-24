@@ -76,7 +76,6 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
   "window.zoomLevel": 0,
-  "window.commandCenter": false,
   "workbench.layoutControl.enabled": true,
   "workbench.preferredDarkColorTheme": "Visual Studio Dark",
   "workbench.editor.enablePreview": true,
@@ -129,6 +128,10 @@
   },
   "githubPullRequests.queries": [
     {
+      "label": "Local Pull Request Branches",
+      "query": "default"
+    },
+    {
       "label": "Waiting For My Review",
       "query": "repo:${owner}/${repository} is:open review-requested:${user}"
     },
@@ -139,6 +142,10 @@
     {
       "label": "Created By Me",
       "query": "repo:${owner}/${repository} is:open author:${user}"
+    },
+    {
+      "label": "All Open",
+      "query": "default"
     }
   ],
   "terraform.languageServer.enable": true,
@@ -148,30 +155,9 @@
     "GitHub.copilot-chat",
     "GitHub.vscode-pull-request-github"
   ],
-  "mcp": {
-    "inputs": [
-      {
-        "type": "promptString",
-        "id": "prolific_token",
-        "description": "Prolific API Key",
-        "password": true
-      }
-    ],
-    "servers": {
-      // "prolific": {
-      //   "command": "docker",
-      //   "args": ["run", "-i", "--rm", "-e", "PROLIFIC_TOKEN", "mcp/prolific"],
-      //   "env": {
-      //     "PROLIFIC_TOKEN": "${input:prolific_token}"
-      //   }
-      // },
-      "docker-build-kit": {
-        "type": "stdio",
-        "command": "docker",
-        "args": ["mcp", "gateway", "run"]
-      }
-    }
-  },
   "docker.extension.enableComposeLanguageServer": false,
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "window.nativeTabs": true,
+  "window.commandCenter": false,
+  "github.copilot.nextEditSuggestions.enabled": true
 }

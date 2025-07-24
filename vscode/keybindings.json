@@ -17,5 +17,17 @@
     "key": "ctrl+`",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.showPreviousWindowTab"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.showNextWindowTab"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "workbench.action.newWindowTab"
   }
 ]
