@@ -5,11 +5,11 @@ prSections:
   - title: Needs My Review
     filters: is:open -is:draft -label:psg-no-alert review-requested:@me
   - title: Assigned
-    filters: is:open -is:draft assignee:@me
+    filters: is:open assignee:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Releases
-    filters: is:pr label:customer-facing closed:>=2025-05-26 psg
+    filters: is:pr label:customer-facing closed:>=2025-07-14 psg
 
 issuesSections:
   - title: My Issues
@@ -32,3 +32,22 @@ keybindings:
   prs: []
 
 repoPaths: {}
+
+theme:
+  ui:
+    table:
+      showSeparator: true
+  colors:
+    text:
+      primary: "#2b2b2b"
+      secondary: "#ff79c6"
+      inverted: "#282a36"
+      faint: "#ffb86c"
+      warning: "#ff5555"
+      success: "#50fa7b"
+    background:
+      selected: "#AD85FC"
+    border:
+      primary: "#383B5B"
+      secondary: "#39386B"
+      faint: "#2B2B40"
