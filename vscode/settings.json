@@ -36,6 +36,10 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
     "editor": true,
     "editorInlineSuggestion": true,
     "editorInlineSuggestion.showWhenTyping": true,
