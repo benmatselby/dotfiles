@@ -42,7 +42,7 @@ brew "uv"
 brew "vim"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-cask "google-cloud-sdk"
+# cask "google-cloud-sdk"
 
 vscode "42crunch.vscode-openapi"
 vscode "asyncapi.asyncapi-preview"
