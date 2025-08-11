@@ -1,5 +1,6 @@
 # Theme
-theme = dark:rose-pine-moon,light:Monokai Pro Light Sun
+theme = dark:rose-pine-moon,light:rose-pine-dawn
+#theme = dark:catppuccin-frappe,light:catppuccin-latte
 
 # Production
 #theme = Red Alert
@@ -12,3 +13,6 @@ macos-option-as-alt = true
 
 # ctrl+` for quick terminal
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+window-padding-x = 10
+window-padding-y = 10
