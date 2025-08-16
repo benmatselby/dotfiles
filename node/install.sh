@@ -26,7 +26,5 @@ echo "Activating ${ACTIVE_NODE_VERSION} version of node"
 nvm alias default ${ACTIVE_NODE_VERSION}
 
 echo "Installing node packages"
-NODE_PACKAGES=(
-  @openai/codex
-)
+NODE_PACKAGES=()
 for pkg in "${NODE_PACKAGES[@]}"; do printf "installing %s\n" "${pkg}" && npm install -g "${pkg}"; done
