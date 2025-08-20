@@ -8,7 +8,6 @@ set -e
 ./shell/install.sh
 ./zsh/install.sh
 ./git/install.sh
-./vim/install.sh
 ./brew/install.sh
 ./vscode/install.sh
 ./github/install.sh
@@ -27,6 +26,7 @@ set -e
 # ./neovim/install.sh
 # ./sublime-text/install.sh
 # ./php/install.sh
+#./vim/install.sh
 
 ###
 # Manual notifications
@@ -37,5 +37,5 @@ echo "Gcloud:  gcloud components update"
 echo ""
 
 echo "🚀 Suggestions to tidy"
-echo "- Old node versions: volta ls all | nvm list"
+echo "- Old node versions: nvm list"
 echo "- ~/Library/Appliation Support"
