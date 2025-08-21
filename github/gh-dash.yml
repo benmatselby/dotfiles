@@ -1,5 +1,7 @@
 # https://github.com/dlvhdr/gh-dash/blob/main/.gh-dash.yml
 prSections:
+  - title: My projects
+    filters: is:open user:@me
   - title: My Pull Requests
     filters: is:open author:@me
   - title: Needs My Review
