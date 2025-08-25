@@ -35,21 +35,21 @@ keybindings:
 
 repoPaths: {}
 
-theme:
-  ui:
-    table:
-      showSeparator: true
-  colors:
-    text:
-      primary: "#2b2b2b"
-      secondary: "#ff79c6"
-      inverted: "#282a36"
-      faint: "#ffb86c"
-      warning: "#ff5555"
-      success: "#50fa7b"
-    background:
-      selected: "#AD85FC"
-    border:
-      primary: "#383B5B"
-      secondary: "#39386B"
-      faint: "#2B2B40"
+# theme:
+#   ui:
+#     table:
+#       showSeparator: true
+#   colors:
+#     text:
+#       primary: "#2b2b2b"
+#       secondary: "#ff79c6"
+#       inverted: "#282a36"
+#       faint: "#ffb86c"
+#       warning: "#ff5555"
+#       success: "#50fa7b"
+#     background:
+#       selected: "#AD85FC"
+#     border:
+#       primary: "#383B5B"
+#       secondary: "#39386B"
+#       faint: "#2B2B40"
