@@ -108,6 +108,8 @@ alias nvmu='nvm use'
 # Note taking
 alias life='cd $HOME/git/github/benmatselby/life'
 alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main'
+alias thoughts='cd $HOME/documents/thinking/'
+alias eod-thoughts='cd $HOME/documents/thinking/ && git add . && git commit -anm "`date`" && git push origin main'
 
 # OS
 alias -- -='cd -'
