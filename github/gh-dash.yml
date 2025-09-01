@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Releases
-    filters: is:pr label:customer-facing closed:>=2025-07-14 psg
+    filters: is:pr label:customer-facing closed:>=2025-09-01 psg
 
 issuesSections:
   - title: My Issues
