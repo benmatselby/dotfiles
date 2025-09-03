@@ -3,5 +3,5 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "100,120"
+vim.opt.colorcolumn = "80,100,120"
 vim.go.background = "dark"
