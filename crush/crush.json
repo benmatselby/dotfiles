@@ -1,0 +1,36 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "mcp": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "$(echo Bearer $GITHUB_TOKEN)"
+      }
+    },
+    "docker-build-kit": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ]
+    },
+    "prolific": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "PROLIFIC_TOKEN",
+        "mcp/prolific"
+      ],
+      "env": {
+        "PROLIFIC_TOKEN": "$(echo $PROLIFIC_TOKEN)"
+      },
+      "type": "stdio"
+    }
+  }
+}
