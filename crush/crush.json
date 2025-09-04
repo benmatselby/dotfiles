@@ -32,5 +32,22 @@
       },
       "type": "stdio"
     }
+  },
+  "providers": {
+    "ollama": {
+      "name": "Ollama",
+      "base_url": "http://localhost:11434/v1/",
+      "type": "openai",
+      "models": [
+        {
+          "name": "Gemma3",
+          "id": "gemma3:latest"
+        },
+        {
+          "name": "llama3.2",
+          "id": "llama3.2:latest"
+        }
+      ]
+    }
   }
 }
