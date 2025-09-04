@@ -28,7 +28,7 @@ defaults:
   prsLimit: 50
   issuesLimit: 50
   view: prs
-  refetchIntervalMinutes: 3
+  refetchIntervalMinutes: 10
 
 keybindings:
   prs: []
