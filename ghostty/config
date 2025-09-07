@@ -14,7 +14,7 @@ theme = tokyonight_moon
 macos-option-as-alt = true
 
 # ctrl+` for quick terminal
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
+#keybind = global:ctrl+grave_accent=toggle_quick_terminal
 
 window-padding-x = 10
 window-padding-y = 10
