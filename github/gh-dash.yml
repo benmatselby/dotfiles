@@ -10,8 +10,8 @@ prSections:
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
-  - title: Releases
-    filters: is:pr label:customer-facing closed:>=2025-09-01 psg
+  - title: Approved not merged
+    filters: is:open reviewed-by:@me
 
 issuesSections:
   - title: My Issues
