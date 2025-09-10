@@ -13,3 +13,16 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Keep the cusor in the middle when word searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- Copy filename
+vim.keymap.set("n", "<leader>fz", function()
+  local filename = vim.fn.expand("%")
+  vim.fn.setreg("+", filename)
+  print("Copied filename: " .. filename)
+end, { desc = "Copy relative filname" })
+
+vim.keymap.set("n", "<leader>fZ", function()
+  local filename = vim.fn.expand("%:p")
+  vim.fn.setreg("+", filename)
+  print("Copied filename: " .. filename)
+end, { desc = "Copy full filename" })
