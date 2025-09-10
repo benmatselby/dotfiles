@@ -1,17 +1,17 @@
 # https://github.com/dlvhdr/gh-dash/blob/main/.gh-dash.yml
 prSections:
-  - title: My projects
-    filters: is:open user:@me
+  # - title: My projects
+  #   filters: is:open user:@me
   - title: My Pull Requests
     filters: is:open author:@me
   - title: Needs My Review
     filters: is:open -is:draft -label:psg-no-alert review-requested:@me
-  - title: Assigned
-    filters: is:open assignee:@me
+  # - title: Assigned
+  #   filters: is:open assignee:@me
+  - title: Approved not merged
+    filters: is:open review:approved reviewed-by:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
-  - title: Approved not merged
-    filters: is:open reviewed-by:@me
 
 issuesSections:
   - title: My Issues
