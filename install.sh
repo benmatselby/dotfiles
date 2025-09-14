@@ -9,7 +9,6 @@ set -e
 ./zsh/install.sh
 ./git/install.sh
 ./brew/install.sh
-./vscode/install.sh
 ./github/install.sh
 ./node/install.sh
 ./mongodb/install.sh
@@ -27,7 +26,8 @@ set -e
 # ./neovim/install.sh
 # ./sublime-text/install.sh
 # ./php/install.sh
-#./vim/install.sh
+# ./vim/install.sh
+# ./vscode/install.sh
 
 ###
 # Manual notifications
