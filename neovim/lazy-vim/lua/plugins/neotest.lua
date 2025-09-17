@@ -1,12 +1,17 @@
 return {
   {
     "nvim-neotest/neotest",
+    dependencies = {
+      "marilari88/neotest-vitest",
+    },
     config = function()
       local Path = require("plenary.path")
       local neotest = require("neotest")
 
       neotest.setup({
         adapters = {
+          require("neotest-golang"),
+          require("neotest-vitest"),
           require("neotest-python")({
             is_test_file = function(file_path)
               if not vim.endswith(file_path, ".py") then
