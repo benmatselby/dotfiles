@@ -13,3 +13,5 @@ vim.cmd([[
     autocmd BufWritePre * %s/\s\+$//e
   augroup END
 ]])
+
+vim.o.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
