@@ -103,9 +103,6 @@ unsetopt share_history
 # Auto completion
 autoload -U compinit; compinit
 
-# Starship
-#eval "$(starship init zsh)"
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
