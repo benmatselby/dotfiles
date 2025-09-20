@@ -22,14 +22,9 @@ export GREP_COLOR="1;35"
 # Pagers
 export MANPAGER="less -X";
 export PAGER="less -X";
-export AWS_PAGER=
 
 # Path
-if [ "$(arch)" = "arm64" ]; then
-  export PATH=/opt/homebrew/bin:$PATH
-else
-  export PATH=/usr/local/bin:$PATH
-fi
+export PATH=/opt/homebrew/bin:$PATH
 
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
