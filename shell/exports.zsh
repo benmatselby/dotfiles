@@ -5,9 +5,6 @@ export ANSIBLE_COW_PATH=cowsay
 # DOCKER
 export DOCKER_CLI_HINTS=false
 
-# Git
-export GIT_EDITOR=nvim
-
 # Go
 export GOPATH=$HOME/go
 export GOPRIVATE='github.com/benmatselby'

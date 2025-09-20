@@ -76,7 +76,7 @@ ZSH_DISABLE_COMPFIX=true
 
 # Apple Silicon
 if [ $(arch) = "arm64" ]; then
-  plugins=(aws docker git golang kubectl macos pyenv pylint python tmuxinator)
+  plugins=(git macos)
 fi
 
 source $ZSH/oh-my-zsh.sh
