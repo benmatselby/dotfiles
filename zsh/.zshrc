@@ -74,10 +74,7 @@ ZSH_DISABLE_COMPFIX=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# Apple Silicon
-if [ $(arch) = "arm64" ]; then
-  plugins=(git macos)
-fi
+plugins=(macos)
 
 source $ZSH/oh-my-zsh.sh
 
