@@ -113,8 +113,4 @@ fi
 # FZF
 source <(fzf --zsh)
 
-# AWS - This should be done in the `aws` plugin, but it cannot find
-# aws_completer at that point, so loading this here. Less than ideal
-complete -C aws_completer aws
-
 # zprof
