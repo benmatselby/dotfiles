@@ -26,5 +26,3 @@ export PAGER="less -X";
 # Path
 export PATH=/opt/homebrew/bin:$PATH
 
-# Starship
-export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
