@@ -13,7 +13,6 @@ set -e
 ./node/install.sh
 ./mongodb/install.sh
 ./k9s/install.sh
-./starship/install.sh
 ./tmux/install.sh
 ./ghostty/install.sh
 ./sqlite/install.sh
