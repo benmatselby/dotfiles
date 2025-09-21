@@ -1,8 +1,6 @@
 # Theme
-#theme = dark:rose-pine-moon,light:rose-pine-dawn
-theme = dark:TokyoNight Moon,light:Rose Pine Dawn
+theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 #theme = dark:catppuccin-frappe,light:catppuccin-latte
-#theme = tokyonight_moon
 
 # Production
 #theme = Red Alert
