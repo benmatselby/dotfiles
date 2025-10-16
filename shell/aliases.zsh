@@ -59,6 +59,9 @@ alias gst='git status'
 # Go
 alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.Path}}: {{.Version}} -> {{.Update.Version}}{{end}}" -m all 2> /dev/null'
 
+# Kubernetes
+alias k='kubectl'
+
 # Minikube
 alias mkmount='minikube mount "$(pwd)":"$(pwd)"'
 alias mkssh='ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)'
