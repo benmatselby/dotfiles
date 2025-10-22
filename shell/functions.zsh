@@ -69,7 +69,7 @@ start-day() {
   open -a Safari
   open -a Slack
   open -a Obsidian
-  open -a "Visual Studio Code"
+  open -a Ghostty
   open -a Music
 }
 
