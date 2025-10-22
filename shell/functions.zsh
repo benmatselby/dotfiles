@@ -20,6 +20,26 @@ function code-sync()
 }
 
 ##
+# Delete all merged branches
+#
+function code-delete-merged-branches()
+{
+  for dir in */; do
+    (
+      echo "${dir}"
+      cd "${dir}" > /dev/null 2>&1 || exit
+
+      if [ -d .git ]; then
+        LANG=C git branch --no-color -vv | grep ": gone\]" | cut -c 3- | awk '{print $1}' | xargs git branch -D
+      else
+        echo 'Not a git repo, skipping...'
+      fi
+      echo ""
+    )
+  done
+}
+
+##
 # Run git clean for all the git repos
 #
 function code-clean()
