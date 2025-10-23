@@ -24,5 +24,5 @@ export MANPAGER="less -X";
 export PAGER="less -X";
 
 # Path
-export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/.local/bin:$PATH
 
