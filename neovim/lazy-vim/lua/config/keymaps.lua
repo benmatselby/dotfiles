@@ -18,3 +18,6 @@ vim.keymap.set("n", "<leader>fZ", function()
   vim.fn.setreg("+", filename)
   print("Copied filename: " .. filename)
 end, { desc = "Copy full filename" })
+
+-- Provide keymap to close all buffers including current one
+vim.keymap.set("n", "<leader>ba", ":%bd<CR>", { desc = "Delete all buffers" })
