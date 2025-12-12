@@ -21,3 +21,23 @@ end, { desc = "Copy full filename" })
 
 -- Provide keymap to close all buffers including current one
 vim.keymap.set("n", "<leader>ba", ":%bd<CR>", { desc = "Delete all buffers" })
+
+-- Open daily file (YYYY/MM/YY-MM-YYYY.md)
+vim.keymap.set("n", "<leader>xfdn", function()
+  local date = os.date("*t")
+  local year = string.format("%04d", date.year)
+  local month = string.format("%02d", date.month)
+  local day = string.format("%02d", date.day)
+
+  -- Format: YYYY/MM/YY-MM-YYYY.md
+  local daily_file = string.format("diary/%s/%s/%s-%s-%s.md", year, month, day, month, year)
+
+  -- Check if file exists
+  local file = io.open(daily_file, "r")
+  if file then
+    file:close()
+    vim.cmd("edit " .. daily_file)
+  else
+    print("Daily file does not exist: " .. daily_file)
+  end
+end, { desc = "Open daily note" })
