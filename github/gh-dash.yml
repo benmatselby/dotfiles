@@ -6,12 +6,12 @@ prSections:
     filters: is:open author:@me
   - title: Needs My Review
     filters: is:open -is:draft -label:psg-no-alert review-requested:@me
-  # - title: Assigned
-  #   filters: is:open assignee:@me
   - title: Approved not merged
     filters: is:open review:approved reviewed-by:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
+  - title: Team deployments
+    filters: is:pr is:merged closed:2026-01-19..2026-01-25 org:prolific-oss psg in:title
 
 issuesSections:
   - title: My Issues
