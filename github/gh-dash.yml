@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-01-19..2026-01-25 org:prolific-oss psg in:title
+    filters: is:pr is:merged closed:2026-01-26..2026-02-02 org:prolific-oss psg in:title
 
 issuesSections:
   - title: My Issues
@@ -21,12 +21,27 @@ issuesSections:
   - title: Involved
     filters: is:open involves:@me -author:@me
 
+notificationsSections:
+  - title: All
+    filters: "is:all"
+  - title: Created
+    filters: "reason:author is:all"
+  - title: Participating
+    filters: "reason:participating is:all"
+  - title: Mentioned
+    filters: "reason:mention is:all"
+  - title: Subscribed
+    filters: "reason:subscribed is:all"
+  - title: Team Mentioned
+    filters: "reason:team-mention is:all"
+
 defaults:
   preview:
     open: true
     width: 75
   prsLimit: 50
   issuesLimit: 50
+  notificationsLimit: 50
   view: prs
   refetchIntervalMinutes: 10
 
@@ -35,21 +50,3 @@ keybindings:
 
 repoPaths: {}
 
-# theme:
-#   ui:
-#     table:
-#       showSeparator: true
-#   colors:
-#     text:
-#       primary: "#2b2b2b"
-#       secondary: "#ff79c6"
-#       inverted: "#282a36"
-#       faint: "#ffb86c"
-#       warning: "#ff5555"
-#       success: "#50fa7b"
-#     background:
-#       selected: "#AD85FC"
-#     border:
-#       primary: "#383B5B"
-#       secondary: "#39386B"
-#       faint: "#2B2B40"
