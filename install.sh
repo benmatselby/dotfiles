@@ -16,7 +16,6 @@ set -e
 ./tmux/install.sh
 ./ghostty/install.sh
 ./sqlite/install.sh
-./crush/install.sh
 ./claude/install.sh
 
 ###
