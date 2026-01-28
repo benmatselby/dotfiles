@@ -1,7 +1,6 @@
 # Theme
-#theme = Rose Pine Moon
-theme = dark:Rose Pine Moon,light:Rose Pine Dawn
-#theme = dark:catppuccin-frappe,light:catppuccin-latte
+theme = Rose Pine Moon
+#theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 
 # Production
 #theme = Red Alert
