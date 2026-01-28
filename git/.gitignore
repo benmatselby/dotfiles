@@ -11,3 +11,4 @@
 # Tools
 .husky/post-commit
 crush/
+.claude
