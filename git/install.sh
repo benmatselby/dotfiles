@@ -12,3 +12,4 @@ fi
 
 ln -sf "${PWD}/git/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${PWD}/git/.gitignore" "${HOME}/.gitignore"
+ln -sf "${PWD}/git/git_functions.zsh" "${HOME}/.oh-my-zsh/custom/git_functions.zsh"

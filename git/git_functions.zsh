@@ -1,3 +1,5 @@
+#!/usr/env/bin zsh
+
 ##
 # Sync the codebases for a branch
 #
@@ -82,77 +84,54 @@ function code-branch()
 }
 
 ##
-# Open the applications I use
-##
-start-day() {
-  open -a Mail
-  open -a Safari
-  open -a Slack
-  open -a Obsidian
-  open -a Ghostty
-  open -a Music
+# Create a new git worktree in current repo, and store in the parent folder.
+#
+# Create a tmux window with three panes:
+# - Two columns
+# - Left column split horizontally (2 panes)
+# - Right column is a single pane
+#
+# Layout:
+# +-------+-------+
+# | pane1 | pane3 |
+# +-------+       |
+# | pane2 |       |
+# +-------+-------+
+#
+function code-worktree-add() {
+    local branch="${1:?Usage: tmux_three_pane <window-name>}"
+
+    # Get just the name of the current folder
+    local repo_name=$(basename "$(pwd)")
+
+    # Build the worktree name now
+    local worktree_name="${repo_name}-${branch}"
+
+    # Create the worktree
+    git worktree add -b "${branch}" ../"${worktree_name}"
+
+    # Setup tmux how I like it
+    tmux new-window -n "$worktree_name" -c "../${worktree_name}"
+    tmux split-window -t "$worktree_name" -h -c "../${worktree_name}"
+    tmux select-pane  -t "$worktree_name" -L
+    tmux split-window  -t "$worktree_name" -v -c "../${worktree_name}"
 }
 
 ##
-# Sync dependabot config from repo to all repos
-##
-function sync-dependabot()
-{
-  local from=$1
-  local msg=$2
-  local dependabot=".github/dependabot.yml"
-  local branch="dependabot-sync"
-  local usage="Usage: sync-dependabot <from> <msg>"
+# Delete a git worktree in current repo and then close tmux winwdow
+#
+function code-worktree-remove() {
+    # Get just the name of the current folder
+    local worktree_name=$(basename "$(pwd)")
 
-  if [ -z "${from}" ]; then
-    printf "Please specify a repo to sync from\n"
-    printf "${usage}\n"
-    return
-  fi
+    # Get the parent folder of this worktree
+    local parent="$(git worktree list --porcelain | grep -m1 '^worktree ' | cut -d' ' -f2)"
 
-  if [ -z "${msg}" ]; then
-    printf "Please specify a commit message\n"
-    printf "${usage}\n"
-    return
-  fi
+    cd "${parent}" || return
 
-  for dir in */; do
-  (
-    repo="${dir/\//}"
-    if [[ "${repo}" == "${from}" ]]; then
-      return
-    fi
+    # Remove the worktree
+    git worktree remove "${worktree_name}"
 
-    echo "\n\n${repo}"
-    echo "Synching ${from}/${dependabot} to ${repo}/${dependabot}"
-
-    cp "${from}/${dependabot}" "${repo}/${dependabot}" || exit
-
-    cd "${repo}" > /dev/null 2>&1 || exit
-
-    if ! $(git status --porcelain); then
-
-      git checkout -b "${branch}" || exit
-      git add "${dependabot}"
-
-      if git commit -am "${msg}"; then
-        gh pr create --body "${msg}" --title "${msg}"
-      else
-        echo "Failed to raise PR for ${repo}"
-      fi
-
-      if ! git checkout main; then
-        echo "Failed to checkout main"
-      fi
-
-      if ! git branch -D "${branch}"; then
-        echo "Failed to remove branch: ${branch}"
-      fi
-    else
-      echo "Nothing to sync 👏🏻"
-    fi
-
-    echo ""
-  )
-  done
+    # Close the current tmux window
+    tmux kill-window -t "${worktree_name}"
 }

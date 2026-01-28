@@ -12,5 +12,4 @@ fi
 
 ln -sf "${PWD}/shell/aliases.zsh" "${HOME}/.oh-my-zsh/custom/aliases.zsh"
 ln -sf "${PWD}/shell/exports.zsh" "${HOME}/.oh-my-zsh/custom/exports.zsh"
-ln -sf "${PWD}/shell/functions.zsh" "${HOME}/.oh-my-zsh/custom/functions.zsh"
 ln -sf "${PWD}/shell/bind.zsh" "${HOME}/.oh-my-zsh/custom/bind.zsh"
