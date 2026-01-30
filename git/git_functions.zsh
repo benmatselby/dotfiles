@@ -132,6 +132,12 @@ function code-worktree-remove() {
     # Remove the worktree
     git worktree remove "${worktree_name}"
 
+    # Delete the branch. Branch name is ${parent} minus the ${worktree_name}
+    # prefix and the hyphen
+    local repo_name=$(basename "${parent}")
+    local branch="${worktree_name#${repo_name}-}"
+    git branch -D "${branch}"
+
     # Close the current tmux window
     tmux kill-window -t "${worktree_name}"
 }
