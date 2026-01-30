@@ -23,15 +23,9 @@ issuesSections:
 
 notificationsSections:
   - title: All
-    filters: "is:all"
-  - title: Created
-    filters: "reason:author is:all"
+    filters: "not:done"
   - title: Participating
-    filters: "reason:participating is:all"
-  - title: Mentioned
-    filters: "reason:mention is:all"
-  - title: Subscribed
-    filters: "reason:subscribed is:all"
+    filters: "reason:participating not:done"
   - title: Team Mentioned
     filters: "reason:team-mention is:all"
 
