@@ -84,6 +84,28 @@ function code-branch()
 }
 
 ##
+# Take a folder and then load up tmux the way I like it.
+#
+function code-load-project() {
+  local project_path="${1:?Usage: code-load-project <folder-name>}"
+
+  # Turn relative paths into absolute paths folder
+  project_path=$(realpath "${project_path}")
+
+  # Get the project name (assume repo)
+  local project_name=$(basename "${project_path}")
+
+  echo "${project_name} at ${project_path}"
+  # Fire up tmux window
+  tmux new-window -n "${project_name}" -c "${project_path}"
+
+  tmux split-window -t "$project_name" -h -c "${project_path}"
+  tmux select-pane  -t "$project_name" -L
+  tmux split-window  -t "$project_name" -v -c "${project_path}"
+}
+
+
+##
 # Create a new git worktree in current repo, and store in the parent folder.
 #
 # Create a tmux window with three panes:
