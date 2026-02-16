@@ -132,11 +132,8 @@ function code-worktree-add() {
     # Create the worktree
     git worktree add -b "${branch}" ../"${worktree_name}"
 
-    # Setup tmux how I like it
-    tmux new-window -n "$worktree_name" -c "../${worktree_name}"
-    tmux split-window -t "$worktree_name" -h -c "../${worktree_name}"
-    tmux select-pane  -t "$worktree_name" -L
-    tmux split-window  -t "$worktree_name" -v -c "../${worktree_name}"
+    # Load tmux windowing
+    code-load-project "../${worktree_name}"
 }
 
 ##
