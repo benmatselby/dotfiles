@@ -95,5 +95,8 @@ alias week='date +%V'
 alias musicn="music next && music status"
 alias musicp="music previous && music status"
 
+# Tmux
+alias ta="tmux attach"
+
 # Vim
 alias vim='nvim'
