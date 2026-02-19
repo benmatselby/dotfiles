@@ -1,5 +1,4 @@
-tap "oven-sh/bun"
-
+brew "anomalyco/tap/opencode"
 brew "ansible-lint"
 brew "ansible"
 brew "bash"
