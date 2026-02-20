@@ -1,6 +1,5 @@
 return {
   "benmatselby/nvim-make",
-  dir = "~/git/github/benmatselby/nvim-make/",
   dependencies = { "nvim-lua/plenary.nvim" },
   cmd = "NvimMake",
   opts = {},
