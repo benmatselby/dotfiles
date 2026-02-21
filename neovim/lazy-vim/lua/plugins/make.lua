@@ -11,5 +11,13 @@ return {
       end,
       desc = "Run make target",
     },
+
+    {
+      "<leader>xb",
+      function()
+        require("nvim_make").pick_make_target(os.getenv("BOX_PATH_TO_PROJECT"))
+      end,
+      desc = "Run box target",
+    },
   },
 }
