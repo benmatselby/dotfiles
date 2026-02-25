@@ -31,6 +31,7 @@ If the issue has comments, read through all of them as they often contain crucia
 
 Based on the issue description:
 
+- Assume the current folder is the repo root.
 - Identify the areas of the codebase that are likely relevant to the problem.
 - Use search and file reading tools to explore those areas.
 - Look for the specific code paths, configurations, or logic mentioned or implied by the issue.
