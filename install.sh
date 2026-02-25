@@ -16,7 +16,7 @@ set -e
 ./tmux/install.sh
 ./ghostty/install.sh
 ./sqlite/install.sh
-./claude/install.sh
+./agents/install.sh
 
 ###
 # Deprecated
