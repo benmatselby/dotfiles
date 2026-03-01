@@ -17,13 +17,13 @@ set -e
 ./ghostty/install.sh
 ./sqlite/install.sh
 ./agents/install.sh
+./sublime-text/install.sh
 
 ###
 # Deprecated
 ###
 # ./zed/install.sh
 # ./neovim/install.sh
-# ./sublime-text/install.sh
 # ./php/install.sh
 # ./vim/install.sh
 # ./vscode/install.sh
