@@ -1,0 +1,9 @@
+# Search hidden files
+--hidden
+
+# Don't bother searching git
+--glob=!.git/*
+
+# Ignore casing
+--smart-case
+

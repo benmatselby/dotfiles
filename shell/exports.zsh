@@ -26,3 +26,5 @@ export PAGER="less -X";
 # Path
 export PATH=/opt/homebrew/bin:$HOME/.local/bin:$PATH
 
+# Ripgrep
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
