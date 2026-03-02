@@ -39,5 +39,15 @@ vim.keymap.set("n", "<leader>xfdn", function()
     vim.cmd("edit " .. daily_file)
   else
     print("Daily file does not exist: " .. daily_file)
+    print("Looking for generate-eod.sh script in the repo...")
+    local script_path = vim.fn.system("fd --type f 'generate-eod.sh' --max-results 1"):gsub("%s+$", "")
+    if script_path ~= "" then
+      print("Found generate-eod.sh script: " .. script_path)
+      -- Call the script to generate the daily file.
+      vim.fn.system(script_path)
+      vim.cmd("edit " .. daily_file)
+    else
+      print("No generate-eod.sh script found in the repo.")
+    end
   end
 end, { desc = "Open daily note" })
