@@ -1,18 +1,13 @@
 # Theme
-theme = Rose Pine Moon
-#theme = dark:Rose Pine Moon,light:Rose Pine Dawn
-
-# Production
-#theme = Red Alert
-
-# Testing
-#theme = Purple Rain
+#theme = Rose Pine Moon
+theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 
 # Make alt work
 macos-option-as-alt = true
 
-# ctrl+` for quick terminal
-#keybind = global:ctrl+grave_accent=toggle_quick_terminal
-
+# Some stylistic changes
 window-padding-x = 10
 window-padding-y = 10
+
+# Set the ti
+title = "Coding is life"
