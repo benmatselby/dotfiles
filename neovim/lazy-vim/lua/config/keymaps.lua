@@ -11,7 +11,7 @@ vim.keymap.set("n", "<leader>fz", function()
   local filename = vim.fn.expand("%")
   vim.fn.setreg("+", filename)
   print("Copied filename: " .. filename)
-end, { desc = "Copy relative filname" })
+end, { desc = "Copy relative filename" })
 
 vim.keymap.set("n", "<leader>fZ", function()
   local filename = vim.fn.expand("%:p")
