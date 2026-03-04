@@ -6,6 +6,11 @@
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Give me the hash symbol
+vim.keymap.set("i", "<M-3>", "#", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-3>", "#", { noremap = true, silent = true })
+vim.keymap.set("c", "<M-3>", "#", { noremap = true, silent = true })
+
 -- Copy filename
 vim.keymap.set("n", "<leader>fz", function()
   local filename = vim.fn.expand("%")
