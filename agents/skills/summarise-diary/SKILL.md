@@ -1,5 +1,5 @@
 ---
-name: summarise-diary
+name: bms:summarise-diary
 description: Summarize diary entries for a given time period
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: git-log-summary
+name: bms:git-log-summary
 description: Provides a summary of the git log for the past period of time. Use when asked to provide a git log summary.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: proofread-blog
+name: bms:proofread-blog
 description: Proofreads a blog post for clarity, balance, and general quality. Use when asked to proofread, review, or critique a blog post or article.
 ---
 

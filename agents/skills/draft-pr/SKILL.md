@@ -1,5 +1,5 @@
 ---
-name: draft-pr
+name: bms:draft-pr
 description: Create a draft pull request for the current branch. Summarises the diff, fills in any PR templates, and opens the PR via the gh CLI.
 ---
 

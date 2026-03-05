@@ -1,5 +1,5 @@
 ---
-name: github-issue-analyzer
+name: bms:github-issue-analyzer
 description: Analyzes a GitHub issue by fetching its details and exploring the relevant codebase to identify the root cause and suggest solutions. Use when given a GitHub issue URL to investigate.
 ---
 
