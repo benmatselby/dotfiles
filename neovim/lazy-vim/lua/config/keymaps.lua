@@ -56,3 +56,30 @@ vim.keymap.set("n", "<leader>xfdn", function()
     end
   end
 end, { desc = "Open daily note" })
+
+-- Show changed files on branch vs origin
+vim.keymap.set("n", "<leader>gE", function()
+  Snacks.picker.pick({
+    finder = function(opts, ctx)
+      local cwd = ctx:git_root()
+      ctx.picker:set_cwd(cwd)
+      return require("snacks.picker.source.proc").proc(
+        ctx:opts({
+          cmd = "git",
+          args = { "diff", "--name-only", "origin/HEAD" },
+          cwd = cwd,
+          transform = function(item)
+            if item.text == "" then
+              return false
+            end
+            item.file = item.text
+            item.cwd = cwd
+          end,
+        }),
+        ctx
+      )
+    end,
+    format = "file",
+    preview = "file",
+  })
+end, { desc = "Git Diff branch files" })
