@@ -18,7 +18,10 @@ return {
             end
             local elems = vim.split(file_path, Path.path.sep)
             local file_name = elems[#elems]
-            return vim.endswith(file_name, "_test.py") or vim.endswith(file_name, "_tests.py")
+            return vim.endswith(file_name, "_test.py")
+              or vim.endswith(file_name, "_tests.py")
+              or vim.startswith(file_name, "test_")
+              or vim.startswith(file_name, "tests_")
           end,
         })
       )
