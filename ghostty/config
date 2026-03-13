@@ -16,4 +16,4 @@ title = "Coding is life"
 cursor-color = #ff69b4
 
 # Start tmux by default
-command = /opt/homebrew/bin/tmux new-session -A -s main
+command = /opt/homebrew/bin/tmux new-session -A -s general
