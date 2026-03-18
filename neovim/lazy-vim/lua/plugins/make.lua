@@ -1,6 +1,6 @@
 return {
   "benmatselby/nvim-make",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
   cmd = "NvimMake",
   opts = {},
   keys = {
@@ -11,7 +11,6 @@ return {
       end,
       desc = "Run make target",
     },
-
     {
       "<leader>xb",
       function()
