@@ -100,17 +100,23 @@ unsetopt share_history
 # Auto completion
 autoload -U compinit; compinit
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# I use mise for personal machines - but work still uses the older tooling
+if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
+  # NVM
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Python
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
+  # Python
+  if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+  fi
 fi
 
 # FZF
 source <(fzf --zsh)
+
+# Mise
+eval "$(mise activate zsh)"
 
 # zprof
