@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-01-26..2026-02-02 org:prolific-oss psg in:title
+    filters: is:pr is:merged closed:2026-03-16..2026-03-22 org:prolific-oss psg in:title
 
 issuesSections:
   - title: My Issues
@@ -24,10 +24,18 @@ issuesSections:
 notificationsSections:
   - title: All
     filters: "not:done"
+  - title: Created
+    filters: "reason:author"
   - title: Participating
-    filters: "reason:participating not:done"
+    filters: "reason:participating"
+  - title: Mentioned
+    filters: "reason:mention"
+  - title: Review Requested
+    filters: "reason:review-requested"
+  - title: Subscribed
+    filters: "reason:subscribed"
   - title: Team Mentioned
-    filters: "reason:team-mention is:all"
+    filters: "reason:team-mention"
 
 defaults:
   preview:
@@ -40,7 +48,7 @@ defaults:
   refetchIntervalMinutes: 10
 
 keybindings:
-  prs: []
-
-repoPaths: {}
+  prs:
+    - key: T
+      command: gh enhance -R {{.RepoName}} {{.PrNumber}}
 

@@ -6,6 +6,7 @@ echo "🚀 GitHub configuration"
 
 # Installation
 gh extension install dlvhdr/gh-dash || true
+gh extension install dlvhdr/gh-enhance || true
 gh extension install github/gh-copilot || true
 
 # Upgrades
