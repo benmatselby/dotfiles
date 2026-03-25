@@ -70,6 +70,10 @@ Structure the feedback as a numbered list of issues, ordered by severity (most c
 
 After the numbered list, provide a short summary (2-4 sentences) that captures the overall state of the code and the most important theme the author should focus on.
 
+### 8. Save the code review
+
+Save the full review to `/tmp/[repo-name]-[session-name]-code-review.txt` for the author to access after the conversation. Include the file paths and line numbers in the review so the author can easily find the issues. Present the file path to the user at the end of the review.
+
 ## Guidelines
 
 - Do NOT modify any files. This skill is for review only.
