@@ -72,7 +72,7 @@ After the numbered list, provide a short summary (2-4 sentences) that captures t
 
 ### 8. Save the code review
 
-Save the full review to `/tmp/[repo-name]-[session-name]-code-review.txt` for the author to access after the conversation. Include the file paths and line numbers in the review so the author can easily find the issues. Present the file path to the user at the end of the review.
+Save the full review to `[repo-name]-[session-name]-code-review.txt` for the author to access after the conversation. Include the file paths and line numbers in the review so the author can easily find the issues. Present the file path to the user at the end of the review.
 
 ## Guidelines
 
