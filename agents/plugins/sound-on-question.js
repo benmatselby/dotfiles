@@ -13,7 +13,7 @@ export const SoundOnQuestionPlugin = async ({ $ }) => {
 
   return {
     event: async ({ event }) => {
-      if (event.type === "question.asked") {
+      if (event.type === "question.asked" || event.type === "permission.asked") {
         try {
           await $`osascript -e 'display notification "AI needs an answer" with title "opencode"'`;
           await $`afplay /System/Library/Sounds/Funk.aiff`;
