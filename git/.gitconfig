@@ -19,3 +19,5 @@
   ff = only
 [user]
   name = Ben Selby
+[push]
+	default = current
