@@ -113,11 +113,11 @@ if [[ "${BMS_MACHINE_TYPE}" == "work" ]]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm for real
     nvm "$@"  # Run the original command
-  }
 
-  node() { nvm; node "$@"; }
-  npm()  { nvm; npm  "$@"; }
-  npx()  { nvm; npx  "$@"; }
+    node() { nvm; node "$@"; }
+    npm()  { nvm; npm  "$@"; }
+    npx()  { nvm; npx  "$@"; }
+  }
 
   # Python
   if command -v pyenv 1>/dev/null 2>&1; then
