@@ -99,7 +99,10 @@ function code-load-project() {
   # Fire up tmux window
   tmux new-window -n "${project_name}" -c "${project_path}"
 
-  tmux split-window -t "$project_name" -h -c "${project_path}"
+  # Right hand pane
+  tmux split-window -t "$project_name" -h -c "${project_path}" "nvim"
+
+  # Select left hand pane and split it vertically
   tmux select-pane  -t "$project_name" -L
   tmux split-window  -t "$project_name" -v -c "${project_path}"
 }
