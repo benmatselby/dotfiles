@@ -17,3 +17,7 @@ cursor-color = #ff69b4
 
 # Start tmux by default
 command = /opt/homebrew/bin/tmux new-session -A -s flow
+
+# Windows
+window-width = 120
+window-height = 40
