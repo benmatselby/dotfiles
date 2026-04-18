@@ -49,4 +49,8 @@ keybindings:
   prs:
     - key: T
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
-
+  notifications:
+    - key: d
+      builtin: markAsDone
+    - key: D
+      builtin: markAllAsDone
