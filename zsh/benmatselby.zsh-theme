@@ -1,19 +1,19 @@
 # benmatselby.zsh-theme
 
-# Colours from https://rosepinetheme.com/palette (Moon variant)
+# Colours from https://github.com/tokyo-night/tokyo-night-vscode-theme (Night variant)
 
 # Git settings
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{#ea9a97}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{#f7768e}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{#ea9a97}%1{✗%}%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %F{#f7768e}%1{✗%}%f"
 ZSH_THEME_GIT_PROMPT_CLEAN="%f"
 
-local return_status="%(?:%{%F{#3e8fb0}%}✔︎:%{%F{#eb6f92}%}✘)%f"
-local username="%F{#c4a7e7}%n%f"
-local directory="%F{#9ccfd8}%~%f"
-local time="%F{#6e6a86}%D{%H:%M:%S}%f"
-local user_type="%F{#6e6a86}%(!.#.❯)%f"
-local prompt_two_cursor="%F{#6e6a86}\ %f"
+local return_status="%(?:%{%F{#73daca}%}✔︎:%{%F{#f7768e}%}✘)%f"
+local username="%F{#bb9af7}%n%f"
+local directory="%F{#7dcfff}%~%f"
+local time="%F{#565f89}%D{%H:%M:%S}%f"
+local user_type="%F{#565f89}%(!.#.❯)%f"
+local prompt_two_cursor="%F{#565f89}\ %f"
 local newline=$'\n'
 
 PROMPT="${return_status} ${username} ${directory} "
