@@ -1,6 +1,7 @@
 # Theme
-#theme = Rose Pine Moon
-theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+#theme = TokyoNight Day
+theme = dark:TokyoNight Moon, light:TokyoNight Day
+#theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 
 # Make alt work
 macos-option-as-alt = true
