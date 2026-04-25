@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Delete and paste
+vim.keymap.set("x", "p", [["_dP]])
+
 -- Word shifting
 vim.keymap.set("i", "<A-l>", "<C-o>w") -- Alt+L to jump word right
 vim.keymap.set("i", "<A-h>", "<C-o>b") -- Alt+H to jump word left
