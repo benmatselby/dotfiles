@@ -23,4 +23,4 @@ Summarise diary entries for a monthly performance review.
 
 ## Output format
 
-Use markdown. Start with a heading lik.
+Use markdown. Start with a heading for the month (e.g. `# January 2025`).

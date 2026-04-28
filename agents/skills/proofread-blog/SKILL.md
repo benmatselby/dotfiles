@@ -5,21 +5,13 @@ description: Proofreads a blog post for clarity, balance, and general quality. U
 
 # Proofread Blog Post
 
-Review a blog post to identify areas where clarity can be improved, assess whether the piece is balanced, and suggest general improvements. This skill is advisory only -- it does not rewrite the post.
+Review a blog post to identify areas where clarity can be improved, assess whether the piece is balanced, and suggest general improvements.
 
 ## Instructions
 
-### 1. Get the blog post content
+Read the full content before beginning any analysis. Identify the audience, purpose, and tone the author is going for.
 
-- Ask the user for the blog post content if not already provided. This could be a file path, a URL, or pasted text.
-- Read the full content before beginning any analysis.
-
-### 2. Read through the post completely
-
-- Read the entire post end to end before making any notes.
-- Identify the audience, purpose, and tone the author is going for.
-
-### 3. Assess clarity
+### 1. Assess clarity
 
 Look for areas where the writing could be clearer. Consider:
 
@@ -29,7 +21,7 @@ Look for areas where the writing could be clearer. Consider:
 - **Weak transitions** -- flag places where the jump between paragraphs or sections feels abrupt.
 - **Buried key points** -- note when an important idea is hidden in the middle of a dense paragraph rather than being stated up front.
 
-### 4. Assess balance
+### 2. Assess balance
 
 Even personal blog posts benefit from balanced reasoning. Evaluate:
 
@@ -38,7 +30,7 @@ Even personal blog posts benefit from balanced reasoning. Evaluate:
 - **Tone consistency** -- check whether the tone shifts unexpectedly (e.g. from measured analysis to a rant) in a way that undermines credibility.
 - **Fair representation** -- if the post discusses tools, technologies, or approaches, check whether alternatives are dismissed without fair consideration.
 
-### 5. Identify general areas for improvement
+### 3. Identify general areas for improvement
 
 Look at the post holistically:
 
@@ -50,7 +42,7 @@ Look at the post holistically:
 - **Grammar and spelling** -- flag any errors, but do not make this the focus of the review.
 - **Title** -- does the title accurately reflect the content? Would it make someone want to read the post?
 
-### 6. Present the review
+### 4. Present the review
 
 Structure the feedback as follows:
 
@@ -64,9 +56,8 @@ For each piece of feedback, reference the specific section or quote the relevant
 
 ## Guidelines
 
-- Do NOT rewrite the post. Provide feedback that the author can act on themselves.
-- Be direct and specific. Vague feedback like "this could be better" is not useful. Explain what the issue is and why it matters.
-- Respect the author's voice. The goal is to help them write more clearly, not to impose a different style.
-- If the post is personal or opinionated, do not penalise it for having a point of view. Assess whether the opinion is presented thoughtfully, not whether you agree with it.
-- Be honest. If the post is strong, say so. If it has significant problems, say that too. Do not soften feedback to the point where it loses meaning.
-- Prioritise the most impactful feedback. A few high-value suggestions are more useful than an exhaustive list of nitpicks.
+- Be direct and specific. Vague feedback like "this could be better" is not useful.
+- Respect the author's voice. The goal is clarity, not imposing a different style.
+- If the post is personal or opinionated, assess whether the opinion is presented thoughtfully, not whether you agree with it.
+- Be honest. If the post is strong, say so. If it has significant problems, say that too.
+- Prioritise the most impactful feedback. A few high-value suggestions beat an exhaustive list of nitpicks.

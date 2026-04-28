@@ -5,21 +5,13 @@ description: Analyzes a GitHub issue by fetching its details and exploring the r
 
 # GitHub Issue Analyzer
 
-Analyze a GitHub issue to understand the problem and suggest solutions. This skill operates in a read-only, diagnostic capacity.
+Analyze a GitHub issue to understand the problem and suggest solutions.
 
 ## Instructions
 
-### 1. Get the GitHub issue URL
+### 1. Fetch the issue
 
-Ask the user for the GitHub issue URL if one has not already been provided. The URL should be in the format `https://github.com/<owner>/<repo>/issues/<number>`.
-
-### 2. Parse the URL
-
-Extract the owner, repo, and issue number from the URL.
-
-### 3. Fetch the issue
-
-Use the `gh` CLI to fetch the issue details:
+Use the `gh` CLI to fetch the issue details (extract owner, repo, and number from the provided URL):
 
 ```
 gh issue view <number> --repo <owner>/<repo> --json title,body,labels,state,comments
@@ -27,7 +19,7 @@ gh issue view <number> --repo <owner>/<repo> --json title,body,labels,state,comm
 
 If the issue has comments, read through all of them as they often contain crucial debugging information, workarounds, or clarifications from the reporter.
 
-### 4. Explore the codebase
+### 2. Explore the codebase
 
 Based on the issue description:
 
@@ -38,7 +30,7 @@ Based on the issue description:
 - If the issue mentions error messages, search the codebase for where those messages originate.
 - If the issue mentions specific features or commands, trace the execution flow.
 
-### 5. Provide analysis
+### 3. Provide analysis
 
 Structure your response as follows:
 
@@ -52,7 +44,6 @@ Structure your response as follows:
 
 ## Guidelines
 
-- Do NOT make any changes to the codebase. This skill is for analysis only.
 - Be precise about code locations. Always reference files and line numbers.
 - If the issue lacks enough information to diagnose confidently, say so and list what additional information would help.
 - Consider environment differences (OS, versions, PATH, configuration) as potential causes.

@@ -5,17 +5,11 @@ description: Evaluates whether a GitHub repository (tool, library, or framework)
 
 # Dependency Evaluator
 
-Evaluate whether an external GitHub repository is worth adopting for the current project. This skill is advisory only -- it does not install or modify anything.
+Evaluate whether an external GitHub repository is worth adopting for the current project.
 
 ## Instructions
 
-### 1. Get the GitHub repo URL
-
-Ask the user for the GitHub repository URL if one has not already been provided. The URL should be in the format `https://github.com/<owner>/<repo>`.
-
-If the user provides something other than a GitHub URL, stop and explain that this skill only evaluates GitHub repositories.
-
-### 2. Fetch the dependency details
+### 1. Fetch the dependency details
 
 Gather information about the dependency from two sources:
 
@@ -36,7 +30,7 @@ From these sources, establish:
 - Its license and any constraints that implies.
 - Its dependencies and operational requirements (e.g. requires dnsmasq, needs root access, macOS-only).
 
-### 3. Explore the current project
+### 2. Explore the current project
 
 Use the Task tool with the explore agent to understand the current project. The exploration should focus on aspects relevant to the dependency being evaluated. At minimum, establish:
 
@@ -48,7 +42,7 @@ Use the Task tool with the explore agent to understand the current project. The 
 
 Tailor the exploration to the dependency. If the dependency is a testing library, focus on the project's test setup. If it is a deployment tool, focus on the project's deployment configuration.
 
-### 4. Assess applicability
+### 3. Assess applicability
 
 Compare the dependency against the current project across these dimensions:
 
@@ -59,7 +53,7 @@ Compare the dependency against the current project across these dimensions:
 - **Operational fit** -- Does it work with the project's deployment model? Are there platform restrictions (e.g. macOS-only, requires specific infrastructure)?
 - **Alternatives** -- Are there simpler ways to achieve the same result? Could a small amount of custom code, a configuration change, or an already-installed dependency solve the problem?
 
-### 5. Present the report
+### 4. Present the report
 
 Structure the output as follows:
 
@@ -73,10 +67,9 @@ Structure the output as follows:
 
 ## Guidelines
 
-- Do NOT install, configure, or modify anything. This skill is for evaluation only.
-- Be honest and direct. If the dependency is not a good fit, say so clearly, even if the user seems enthusiastic about it. A dependency that adds complexity without solving a real problem is a net negative.
-- Ground the assessment in specifics. Reference files, configurations, and architecture decisions in the current project. Avoid vague statements like "this could be useful."
+- Be honest and direct. If it is not a good fit, say so clearly. A dependency that adds complexity without solving a real problem is a net negative.
+- Ground the assessment in specifics. Reference files, configurations, and architecture decisions in the current project.
 - Evaluate the dependency as it is today, not as it might be in the future. Roadmap promises do not count.
-- If the dependency is very early-stage (few commits, no releases, single contributor, no stars), flag this as a risk factor. Early-stage tools can disappear or change direction without warning.
-- Consider the project's scale. A tool designed for large teams or complex microservice architectures may be overkill for a small personal project, and vice versa.
-- If you cannot determine enough about either the dependency or the current project to make a confident assessment, say so and list what additional information would help.
+- Flag early-stage tools (few commits, no releases, single contributor) as a risk factor.
+- Consider the project's scale. A tool for large teams may be overkill for a small personal project.
+- If you cannot make a confident assessment, say so and list what additional information would help.

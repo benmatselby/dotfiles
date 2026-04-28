@@ -5,14 +5,11 @@ description: Performs a harsh but constructive code review of a file or set of f
 
 # Code Review
 
-Review code with the critical eye of a senior engineer whose goal is to make the author better. This skill is advisory only -- it does not modify any files.
+Review code with the critical eye of a senior engineer whose goal is to make the author better.
 
 ## Instructions
 
-### 1. Get the code to review
-
-- Ask the user for the file(s) to review if not already provided. This could be a file path, a set of glob patterns, or a diff.
-- Read every file in full before beginning analysis. Do not start writing feedback after reading only part of the code.
+Read every file in full before beginning analysis. Do not start writing feedback after reading only part of the code.
 
 ### 2. Understand the surrounding context
 
@@ -76,12 +73,11 @@ Save the full review to `[repo-name]-[session-name]-code-review.txt` for the aut
 
 ## Guidelines
 
-- Do NOT modify any files. This skill is for review only.
-- Be harsh but constructive. The goal is to make the author a better engineer, not to demoralise them. Every criticism should come with enough context that the author learns something.
-- Be specific. "This could be better" is useless feedback. "Line 42 compares `now >= get_race_utc(event)` but `get_race_utc` returns `datetime | None`, so this raises `TypeError` when the return is `None`" is useful feedback.
-- Prioritise by impact. A logic bug that makes a feature silently broken is more important than a missing type annotation. Lead with the issues that matter most.
-- Don't pad the review. If the code is good, say so briefly and focus on the few things that could improve. If the code has serious problems, don't soften the message with false praise.
-- Don't nitpick formatting or style if the project has a formatter or linter configured. Focus on things that tools can't catch.
-- Verify your claims. If you say a function is unused, confirm it with a search. If you say a condition is inverted, trace the logic. Wrong feedback is worse than no feedback.
-- Consider the project's scale and context. A personal CLI tool has different standards than a production service. Adjust severity accordingly, but don't lower the bar on correctness.
-- If prior review feedback exists in the conversation, check whether it was addressed. Note improvements and flag issues that were raised before but not fixed.
+- Be harsh but constructive. Every criticism should come with enough context that the author learns something.
+- Be specific. "This could be better" is useless. "Line 42 compares `now >= get_race_utc(event)` but `get_race_utc` returns `datetime | None`, so this raises `TypeError` when the return is `None`" is useful.
+- Prioritise by impact. Lead with the issues that matter most.
+- Don't pad the review. If the code is good, say so briefly. If it has serious problems, don't soften the message.
+- Don't nitpick formatting or style if the project has a formatter or linter configured. Focus on things tools can't catch.
+- Verify your claims. If you say a function is unused, confirm it with a search. Wrong feedback is worse than no feedback.
+- Consider the project's scale and context. A personal CLI tool has different standards than a production service.
+- If prior review feedback exists in the conversation, check whether it was addressed. Note improvements and flag unresolved issues.

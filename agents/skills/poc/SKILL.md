@@ -17,15 +17,7 @@ Implement the smallest possible working solution to prove a concept. This skill 
 
 ## Instructions
 
-### 1. Understand the concept to prove
-
-Ask the user what idea or approach they want to validate if it has not already been stated clearly. Establish:
-
-- What question does this PoC need to answer?
-- What is the simplest input/output that would demonstrate success?
-- Are there any hard constraints (language, runtime, existing codebase, specific library to try)?
-
-### 2. Explore the existing codebase (if applicable)
+### 1. Explore the existing codebase (if applicable)
 
 If the PoC is intended to fit within an existing project, use the Task tool with the explore agent to understand the relevant context:
 
@@ -35,7 +27,7 @@ If the PoC is intended to fit within an existing project, use the Task tool with
 
 Skip this step if the PoC is a standalone script or has no relation to an existing codebase.
 
-### 3. Plan the minimal implementation
+### 2. Plan the minimal implementation
 
 Before writing any code, state clearly:
 
@@ -45,7 +37,7 @@ Before writing any code, state clearly:
 - State the proof of concept.
 - Write this to a file in them current folder e.g. `poc-[subject]-plan.txt`
 
-### 4. Implement
+### 3. Implement
 
 Write the code. Adhere strictly to the principles above:
 
@@ -54,7 +46,7 @@ Write the code. Adhere strictly to the principles above:
 - No README unless the user explicitly asks for one.
 - Comments only where the intent would otherwise be unclear.
 
-### 5. Show how to run it
+### 4. Show how to run it
 
 After writing the code, provide the exact command(s) needed to run the PoC and observe the result. If there are prerequisites (install a dependency, set an env var, have a file present), state them plainly.
 
