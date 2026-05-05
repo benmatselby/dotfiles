@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-04-06..2026-04-12 org:prolific-oss psg in:title
+    filters: is:pr is:merged closed:2026-05-04..2026-05-11 org:prolific-oss psg in:title
 
 issuesSections:
   - title: My Issues
@@ -28,8 +28,6 @@ notificationsSections:
     filters: "reason:author"
   - title: Participating
     filters: "reason:participating"
-  - title: Mentioned
-    filters: "reason:mention"
   - title: Review Requested
     filters: "reason:review-requested"
   - title: Subscribed
