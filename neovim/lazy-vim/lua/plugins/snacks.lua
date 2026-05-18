@@ -22,11 +22,11 @@ Never give up, never surrender!!
       sources = {
         explorer = {
           hidden = true,
-          ignored = true,
+          -- ignored = true,
         },
         files = {
           hidden = true, -- show dotfiles in fuzzy finder
-          ignored = true, -- optional: show gitignored files
+          -- ignored = true, -- optional: show gitignored files
         },
       },
     },
