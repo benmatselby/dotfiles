@@ -10,11 +10,15 @@ vim.keymap.set("i", "<A-l>", "<C-o>w") -- Alt+L to jump word right
 vim.keymap.set("i", "<A-h>", "<C-o>b") -- Alt+H to jump word left
 
 -- Window resizing
-vim.keymap.set("n", "<A-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-vim.keymap.set("n", "<A-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
-
+vim.keymap.set("n", "<A-k>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<A-j>", "<cmd>resize -5<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -5<cr>", { desc = "Decrease Window Width" })
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +5<cr>", { desc = "Increase Window Width" })
+vim.keymap.set("n", "<A-K>", "<cmd>resize +30<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<A-J>", "<cmd>resize -30<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<A-H>", "<cmd>vertical resize -30<cr>", { desc = "Decrease Window Width" })
+vim.keymap.set("n", "<A-L>", "<cmd>vertical resize +30<cr>", { desc = "Increase Window Width" })
+--
 -- Allow block moving up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
