@@ -28,9 +28,16 @@ vim.keymap.set("i", "<M-3>", "#", { noremap = true, silent = true })
 vim.keymap.set("n", "<M-3>", "#", { noremap = true, silent = true })
 vim.keymap.set("c", "<M-3>", "#", { noremap = true, silent = true })
 
--- Copy filename
+-- Copy filename (relative to .git root, fallback to cwd-relative)
 vim.keymap.set("n", "<leader>fz", function()
-  local filename = vim.fn.expand("%")
+  local full_path = vim.fn.expand("%:p")
+  local git_root = vim.fn.systemlist("git -C " .. vim.fn.shellescape(vim.fn.expand("%:p:h")) .. " rev-parse --show-toplevel")[1]
+  local filename
+  if git_root and git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
+    filename = full_path:sub(#git_root + 2)
+  else
+    filename = vim.fn.expand("%:.")
+  end
   vim.fn.setreg("+", filename)
   print("Copied filename: " .. filename)
 end, { desc = "Copy relative filename" })
