@@ -22,3 +22,4 @@ command = /opt/homebrew/bin/tmux new-session -A -s flow
 # Windows
 window-width = 120
 window-height = 40
+confirm-close-surface = false 
