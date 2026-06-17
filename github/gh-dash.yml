@@ -5,13 +5,13 @@ prSections:
   - title: My Pull Requests
     filters: is:open author:@me
   - title: Needs My Review
-    filters: is:open -is:draft -label:psg-no-alert review-requested:@me
+    filters: is:open -is:draft -label:no-slay-alert review-requested:@me
   - title: Approved not merged
     filters: is:open review:approved reviewed-by:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-05-18..2026-05-24 org:prolific-oss psg in:title
+    filters: is:pr is:merged closed:2026-06-15..2026-06-20 org:prolific-oss slay in:title
 
 issuesSections:
   - title: My Issues
