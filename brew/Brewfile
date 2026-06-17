@@ -1,4 +1,4 @@
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode", trusted: true
 brew "ansible-lint"
 brew "ansible"
 brew "bash"
