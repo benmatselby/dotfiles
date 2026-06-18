@@ -51,6 +51,18 @@ end, { desc = "Copy full filename" })
 -- Provide keymap to close all buffers including current one
 vim.keymap.set("n", "<leader>ba", ":%bd<CR>", { desc = "Delete all buffers" })
 
+-- Insert current time (HH:MM:SS)
+vim.keymap.set({ "n", "v" }, "xvn", function()
+  local time = os.date("%H:%M:%S")
+  local mode = vim.fn.mode()
+  if mode == "v" or mode == "V" or mode == "\22" then
+    vim.cmd('normal! c')
+    vim.api.nvim_put({ time }, "c", false, true)
+  else
+    vim.api.nvim_put({ time }, "c", true, true)
+  end
+end, { desc = "Insert current time (HH:MM:SS)" })
+
 -- Open daily file (YYYY/MM/YY-MM-YYYY.md)
 vim.keymap.set("n", "<leader>xfdn", function()
   local date = os.date("*t")
