@@ -8,6 +8,7 @@ echo "🚀 GitHub configuration"
 gh extension install dlvhdr/gh-dash || true
 gh extension install dlvhdr/gh-enhance || true
 gh extension install github/gh-copilot || true
+gh extension install github/gh-stack || true
 
 # Upgrades
 gh extension upgrade --all
