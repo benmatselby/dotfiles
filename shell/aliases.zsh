@@ -72,7 +72,7 @@ alias mp-docker-start='multipass launch -c 2 -m 2G -d 40G -n docker-multipass 20
 
 # Note taking
 alias life='cd $HOME/git/github/benmatselby/life'
-alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main'
+alias eod-life='cd $HOME/git/github/benmatselby/life && git add . && git commit -anm "`date`" && git push origin main; cp ~/.config/wibble/wibble.db /Volumes/ben/backups/wibble/wibble.db'
 
 # OS
 alias -- -='cd -'
@@ -100,3 +100,7 @@ alias ta="tmux attach"
 
 # Vim
 alias vim='nvim'
+
+# Wibble
+alias wibble-save='cp ~/.config/wibble/wibble.db /Volumes/ben/backups/wibble/wibble.db'
+alias wibble-restore='cp /Volumes/ben/backups/wibble/wibble.db ~/.config/wibble/wibble.db'
