@@ -17,7 +17,7 @@ title = "Coding is life"
 cursor-color = #ff69b4
 
 # Start tmux by default
-command = /opt/homebrew/bin/tmux new-session -A -s flow
+# command = /opt/homebrew/bin/tmux new-session -A -s flow
 
 # Windows
 window-width = 120
