@@ -45,7 +45,7 @@ defaults:
 
 keybindings:
   prs:
-    - key: ctrl+t
+    - key: C
       name: tuicr
       command: >
         tuicr tui pr {{.RepoName}}#{{.PrNumber}}
