@@ -30,8 +30,6 @@ notificationsSections:
     filters: "reason:review-requested"
   - title: Participating
     filters: "reason:participating"
-  - title: Subscribed
-    filters: "reason:subscribed"
   - title: All
     filters: "not:done"
 
