@@ -45,6 +45,10 @@ defaults:
 
 keybindings:
   prs:
+    - key: ctrl+t
+      name: tuicr
+      command: >
+        tuicr tui pr {{.RepoName}}#{{.PrNumber}}
     - key: T
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
   notifications:
