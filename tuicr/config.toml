@@ -1,0 +1,27 @@
+appearance = "system"
+theme_dark = "gruvbox-dark"
+theme_light = "gruvbox-light"
+
+diff_view = "side-by-side"
+ignore_whitespace = true
+show_file_list = true
+mouse = true
+leader = " "
+comment_vim = false
+comment_tab_width = 4
+wrap = false
+relative_line_numbers = false
+cursor_line = true
+transparent_background = true
+scroll_offset = 5
+no_update_check = false
+review_watch_interval_ms = 1000
+
+comment_types = [
+  { id = "question", definition = "ask for clarification", color = "yellow" },
+  { id = "suggestion", definition = "possible improvements" },
+  { id = "issue", definition = "problems to fix" },
+  { id = "praise", definition = "positive feedback" },
+  { id = "note", label = "note", definition = "non-blocking but something to be aware of" },
+  { id = "thought", definition = "something that cropped up during review", color = "#d19a66" },
+]

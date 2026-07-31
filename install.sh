@@ -18,6 +18,7 @@ set -e
 ./agents/install.sh
 ./neovim/install.sh
 ./sublime-text/install.sh
+./tuicr/install.sh
 
 ###
 # Deprecated

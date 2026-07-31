@@ -1,3 +1,4 @@
+brew "agavra/tap/tuicr", trusted: true
 brew "anomalyco/tap/opencode", trusted: true
 brew "ansible-lint"
 brew "ansible"
