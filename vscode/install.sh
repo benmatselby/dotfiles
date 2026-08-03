@@ -14,4 +14,3 @@ fi
 ln -sf "${PWD}/vscode/settings.json" "${PATH_TO_VSCODE_SETTINGS}/settings.json"
 ln -sf "${PWD}/vscode/keybindings.json" "${PATH_TO_VSCODE_SETTINGS}/keybindings.json"
 ln -sf "${PWD}/vscode/mcp.json" "${PATH_TO_VSCODE_SETTINGS}/mcp.json"
-ln -shf "${PWD}/vscode/prompts" "${PATH_TO_VSCODE_SETTINGS}/prompts"

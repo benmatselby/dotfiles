@@ -19,6 +19,7 @@ set -e
 ./neovim/install.sh
 ./sublime-text/install.sh
 ./tuicr/install.sh
+./vscode/install.sh
 
 ###
 # Deprecated
@@ -26,7 +27,6 @@ set -e
 # Moved to neovim
 # ./zed/install.sh
 # ./vim/install.sh
-# ./vscode/install.sh
 # Moved to mise
 # ./node/install.sh
 # ./php/install.sh

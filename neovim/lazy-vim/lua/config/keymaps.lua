@@ -6,8 +6,8 @@
 vim.keymap.set("x", "p", [["_dP]])
 
 -- Word shifting
-vim.keymap.set("i", "<A-l>", "<C-o>w") -- Alt+L to jump word right
-vim.keymap.set("i", "<A-h>", "<C-o>b") -- Alt+H to jump word left
+vim.keymap.set("i", "<C-Left>", "<C-o>e") -- Alt+L to jump word right
+vim.keymap.set("i", "<C-Right>", "<C-o>b") -- Alt+H to jump word left
 
 -- Window resizing
 vim.keymap.set("n", "<A-k>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
@@ -31,7 +31,8 @@ vim.keymap.set("c", "<M-3>", "#", { noremap = true, silent = true })
 -- Copy filename (relative to .git root, fallback to cwd-relative)
 vim.keymap.set("n", "<leader>fz", function()
   local full_path = vim.fn.expand("%:p")
-  local git_root = vim.fn.systemlist("git -C " .. vim.fn.shellescape(vim.fn.expand("%:p:h")) .. " rev-parse --show-toplevel")[1]
+  local git_root =
+    vim.fn.systemlist("git -C " .. vim.fn.shellescape(vim.fn.expand("%:p:h")) .. " rev-parse --show-toplevel")[1]
   local filename
   if git_root and git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
     filename = full_path:sub(#git_root + 2)
@@ -56,7 +57,7 @@ vim.keymap.set({ "n", "v" }, "xvn", function()
   local time = os.date("%H:%M:%S")
   local mode = vim.fn.mode()
   if mode == "v" or mode == "V" or mode == "\22" then
-    vim.cmd('normal! c')
+    vim.cmd("normal! c")
     vim.api.nvim_put({ time }, "c", false, true)
   else
     vim.api.nvim_put({ time }, "c", true, true)

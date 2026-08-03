@@ -1,6 +1,7 @@
+# https://github.com/agavra/tuicr/blob/main/docs/CONFIG.md
 appearance = "system"
-theme_dark = "gruvbox-dark"
-theme_light = "gruvbox-light"
+theme_dark = "solarized-dark"
+theme_light = "solarized-light"
 
 diff_view = "side-by-side"
 ignore_whitespace = true
@@ -9,7 +10,7 @@ mouse = true
 leader = " "
 comment_vim = false
 comment_tab_width = 4
-wrap = false
+wrap = true
 relative_line_numbers = false
 cursor_line = true
 transparent_background = true

@@ -1,6 +1,6 @@
 {
   "accessibility.signals.onDebugBreak": {
-    "sound": "on"
+    "sound": "on",
   },
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.language": "en-GB",
@@ -26,11 +26,11 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock"
+    "package.json": "package-lock.json, yarn.lock",
   },
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.hcl": "terraform"
+    "*.hcl": "terraform",
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -43,7 +43,7 @@
     "editor": true,
     "editorInlineSuggestion": true,
     "editorInlineSuggestion.showWhenTyping": true,
-    "editorInlineSuggestion.showWhenNoSuggestions": true
+    "editorInlineSuggestion.showWhenNoSuggestions": true,
   },
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
@@ -60,7 +60,7 @@
   "redhat.telemetry.enabled": false,
   "search.exclude": {
     "**/.mypy_cache": true,
-    "bandit_baseline": true
+    "bandit_baseline": true,
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -70,8 +70,8 @@
     "tmux": {
       "path": "tmux",
       "icon": "terminal-tmux",
-      "args": ["-u", "new-session", "-A", "-s", "${workspaceFolderBasename}"]
-    }
+      "args": ["-u", "new-session", "-A", "-s", "${workspaceFolderBasename}"],
+    },
   },
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
@@ -90,78 +90,91 @@
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.hideLineNumbers": false,
   "[dockercompose]": {
-    "editor.defaultFormatter": "docker.docker"
+    "editor.defaultFormatter": "docker.docker",
   },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[python]": {
     "editor.wordBasedSuggestions": "off",
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
+      "source.organizeImports": "explicit",
     },
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
   },
   "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "githubPullRequests.queries": [
     {
       "label": "Local Pull Request Branches",
-      "query": "default"
+      "query": "default",
     },
     {
       "label": "Waiting For My Review",
-      "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+      "query": "repo:${owner}/${repository} is:open review-requested:${user} -label:no-slay-alert",
     },
     {
       "label": "Assigned To Me",
-      "query": "repo:${owner}/${repository} is:open assignee:${user}"
+      "query": "repo:${owner}/${repository} is:open assignee:${user}",
     },
     {
       "label": "Created By Me",
-      "query": "repo:${owner}/${repository} is:open author:${user}"
+      "query": "repo:${owner}/${repository} is:open author:${user}",
     },
     {
       "label": "All Open",
-      "query": "default"
-    }
+      "query": "default",
+    },
   ],
   "terraform.languageServer.enable": true,
   "editor.multiCursorLimit": 31000,
   "remote.defaultExtensionsIfInstalledLocally": [
     "GitHub.copilot",
     "GitHub.copilot-chat",
-    "GitHub.vscode-pull-request-github"
+    "GitHub.vscode-pull-request-github",
   ],
   "docker.extension.enableComposeLanguageServer": false,
   "database-client.autoSync": true,
   "window.nativeTabs": true,
   "window.commandCenter": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml",
+  ],
+  "workbench.preferredLightColorTheme": "Solarized Dark",
+  "window.customTitleBarVisibility": "never",
+  "chat.viewSessions.orientation": "stacked",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:claude-opus-4.6",
 }
