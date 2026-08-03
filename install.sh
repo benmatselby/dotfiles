@@ -19,7 +19,7 @@ set -e
 ./neovim/install.sh
 ./sublime-text/install.sh
 ./tuicr/install.sh
-./vscode/install.sh
+#./vscode/install.sh
 
 ###
 # Deprecated
