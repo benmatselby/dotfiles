@@ -5,9 +5,14 @@
 -- Delete and paste
 vim.keymap.set("x", "p", [["_dP]])
 
--- Word shifting
-vim.keymap.set("i", "<C-Left>", "<C-o>e") -- Alt+L to jump word right
-vim.keymap.set("i", "<C-Right>", "<C-o>b") -- Alt+H to jump word left
+-- Word shifting (Alt+Left/Right)
+-- Ghostty (and most macOS terminals) send Alt-Left/Alt-Right as literal
+-- `ESC b` / `ESC f` rather than a true CSI arrow-key sequence, so map
+-- <M-b>/<M-f> directly instead of <M-Left>/<M-Right> (which never arrive).
+vim.keymap.set({ "n", "v" }, "<M-b>", "b", { desc = "Word back" })
+vim.keymap.set({ "n", "v" }, "<M-f>", "w", { desc = "Word forward" })
+vim.keymap.set("i", "<M-b>", "<C-o>b", { desc = "Word back" })
+vim.keymap.set("i", "<M-f>", "<C-o>w", { desc = "Word forward" })
 
 -- Window resizing
 vim.keymap.set("n", "<A-k>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
