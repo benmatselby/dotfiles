@@ -22,3 +22,6 @@ cursor-color = #ff69b4
 window-width = 120
 window-height = 40
 confirm-close-surface = false 
+
+# Fonts
+font-family = "Inconsolata"
