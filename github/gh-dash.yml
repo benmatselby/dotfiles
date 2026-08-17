@@ -54,5 +54,5 @@ keybindings:
   notifications:
     - key: d
       builtin: markAsDone
-    - k29: D
+    - key: D
       builtin: markAllAsDone
