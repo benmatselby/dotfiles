@@ -27,6 +27,7 @@ brew "tmuxinator"
 brew "uv"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+cask "font-inconsolata"
 
 # VS Code plugins
 # vscode "charliermarsh.ruff"
