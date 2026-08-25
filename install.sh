@@ -16,6 +16,7 @@ set -e
 ./ghostty/install.sh
 ./sqlite/install.sh
 ./agents/install.sh
+./claude/install.sh
 ./neovim/install.sh
 ./sublime-text/install.sh
 ./tuicr/install.sh
