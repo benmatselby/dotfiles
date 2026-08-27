@@ -97,6 +97,7 @@ alias musicp="music previous && music status"
 
 # Tmux
 alias ta="tmux attach"
+alias tn="tmux new"
 
 # Vim
 alias vim='nvim'
