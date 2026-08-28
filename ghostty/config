@@ -1,6 +1,7 @@
 # Theme
 #theme = dark:TokyoNight Moon, light:TokyoNight Day
-theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+#theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+theme = Rose Pine Moon
 
 # Make alt work
 macos-option-as-alt = true
@@ -9,7 +10,7 @@ macos-option-as-alt = true
 window-padding-x = 10
 window-padding-y = 10
 
-# Set the ti
+# Set the title
 title = "Coding is life"
 
 # Colourise the cursor
@@ -22,6 +23,7 @@ cursor-color = #ff69b4
 window-width = 120
 window-height = 40
 confirm-close-surface = false 
+background-opacity = 0.95
 
 # Fonts
 font-family = "Inconsolata"
