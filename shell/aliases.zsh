@@ -55,7 +55,7 @@ alias grh='git reset'
 alias grhh='git reset --hard'
 alias gsh='git show'
 alias gst='git status'
-alias convential-commits='printf "build\nci\ndocs\nfeat\nfix\nperf\nrefactor\nstyle\ntest\n"'
+alias convential-commits='printf "build\nchore\nci\ndocs\nfeat\nfix\nperf\nrefactor\nstyle\ntest\n"'
 
 # Go
 alias godeps='go list -u -f "{{if (and (not (or .Main .Indirect)) .Update)}}{{.Path}}: {{.Version}} -> {{.Update.Version}}{{end}}" -m all 2> /dev/null'
