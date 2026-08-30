@@ -20,6 +20,7 @@ set -e
 ./neovim/install.sh
 ./sublime-text/install.sh
 ./tuicr/install.sh
+./macos/install.sh
 #./vscode/install.sh
 
 ###
