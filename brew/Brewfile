@@ -1,7 +1,6 @@
-brew "agavra/tap/tuicr", trusted: true
 brew "anomalyco/tap/opencode", trusted: true
-brew "ansible-lint"
 brew "ansible"
+brew "ansible-lint"
 brew "bash"
 brew "cowsay"
 brew "fd"
@@ -24,6 +23,7 @@ brew "ruff"
 brew "shellcheck"
 brew "tmux"
 brew "tmuxinator"
+brew "tuicr"
 brew "uv"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
