@@ -39,7 +39,7 @@ defaults:
   issuesLimit: 50
   notificationsLimit: 50
   view: prs
-  refetchIntervalMinutes: 10
+  refetchIntervalMinutes: 30
 
 keybindings:
   prs:
