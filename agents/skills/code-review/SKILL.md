@@ -9,75 +9,77 @@ Review code with the critical eye of a senior engineer whose goal is to make the
 
 ## Instructions
 
-Read every file in full before beginning analysis. Do not start writing feedback after reading only part of the code.
+### 1. Read everything first
+
+Read every file in full before analysing. Don't start writing feedback after reading only part of the code.
 
 ### 2. Understand the surrounding context
 
-Use the Task tool with the explore agent to understand how the code under review fits into the broader project. At minimum, establish:
+Use the Task tool with the explore agent to establish:
 
-- The project's language, framework, and key conventions.
-- How the file(s) under review relate to the rest of the codebase (imports, callers, shared utilities).
-- Whether there are tests for the code under review.
-- Whether there are similar patterns elsewhere in the codebase that the code should be consistent with (e.g. another command module, a sibling service, a parallel implementation).
+- Language, framework, and key conventions.
+- How the file(s) relate to the rest of the codebase (imports, callers, shared utilities).
+- Whether tests exist for the code under review.
+- Whether similar patterns exist elsewhere that this code should be consistent with.
 
-This context is essential. A function that looks fine in isolation may be redundant, inconsistent, or misplaced when viewed in the context of the project.
+A function that looks fine in isolation may be redundant, inconsistent, or misplaced in context. This step is not optional.
 
-### 3. Analyse for correctness
+### 3. Analyse
 
-This is the highest priority. Look for:
+Work through each category below. Only report what you actually find, don't pad.
 
-- **Logic bugs** -- inverted conditions, off-by-one errors, unreachable code, comparisons that don't do what the author intended. If a condition is wrong, state clearly what it does and what it should do.
-- **Unhandled edge cases** -- null/None values, empty collections, missing keys, zero-length inputs, boundary conditions. Trace the data flow and identify inputs that would cause crashes or wrong results.
-- **Error handling** -- bare `except` clauses that swallow errors silently, missing error handling on I/O or network calls, error messages that hide useful information. Silent failure is always worth flagging.
-- **Type safety** -- functions that can return None where callers don't check for it, implicit type coercions, missing type annotations that hide contract mismatches.
-- **Concurrency and state** -- race conditions, shared mutable state, inconsistent snapshots (e.g. calling `datetime.now()` multiple times when a single value should be used).
+**Correctness (highest priority)**
 
-### 4. Analyse for duplication and structure
+- Logic bugs: inverted conditions, off-by-one errors, unreachable code, wrong comparisons.
+- Unhandled edge cases: null/None, empty collections, missing keys, zero-length inputs, boundaries.
+- Error handling: swallowed exceptions, missing I/O/network error handling, unhelpful error messages.
+- Type safety: unchecked `None`/nullable returns, implicit coercions, missing annotations hiding contract mismatches.
+- Concurrency/state: race conditions, shared mutable state, inconsistent snapshots (e.g. `datetime.now()` called multiple times where one value should be reused).
 
-- **Duplicated logic** -- identify code that appears in multiple places (within the file or across the codebase) and should be extracted into a shared function or module. Be specific: name the locations and describe what the shared abstraction would look like.
-- **Wrong location** -- flag code that doesn't belong in the file it's in. Utility functions buried in a command module, platform-specific logic mixed with business logic, configuration embedded in application code.
-- **Redundant work** -- identify places where the code computes the same thing twice, iterates a collection multiple times when once would suffice, or fetches data it already has.
-- **Abstraction level** -- flag functions that operate at mixed levels of abstraction (e.g. a function that does high-level orchestration and also manual string formatting).
+**Duplication and structure**
 
-### 5. Analyse for performance
+- Duplicated logic that should be extracted (name the locations, describe the shared abstraction).
+- Code in the wrong location (utilities buried in command modules, config embedded in app code).
+- Redundant work: recomputation, repeated iteration, refetching known data.
+- Mixed abstraction levels within a function.
 
-Only flag performance issues that are likely to matter in practice. Consider:
+**Performance** (only if likely to matter in practice)
 
-- **N+1 patterns** -- loops that make a network call or database query per iteration when a batch operation exists.
-- **Sequential I/O that could be parallel** -- independent network calls or file reads that are executed one at a time when they could be concurrent.
-- **Unnecessary work** -- computations inside loops that could be hoisted, data structures that force repeated linear scans, allocations that could be avoided.
+- N+1 patterns: per-iteration network/DB calls where batching exists.
+- Sequential I/O that could run concurrently.
+- Unnecessary work: loop-invariant computation, repeated linear scans, avoidable allocations.
 
-Do not flag micro-optimisations that would hurt readability for negligible gain. Focus on algorithmic and I/O-level issues.
+Skip micro-optimisations that would hurt readability for negligible gain.
 
-### 6. Analyse for maintainability
+**Maintainability**
 
-- **Missing tests** -- note if the code has no tests, especially for pure functions that are trivially testable. Note functions that are hard to test due to tight coupling with external dependencies.
-- **Naming** -- flag names that are misleading, ambiguous, or inconsistent with the codebase's conventions. A variable named `data` or `result` in a context where something more specific would be clearer.
-- **Comments and documentation** -- flag misleading comments, outdated docstrings, or missing documentation on public interfaces. Do not demand comments on self-explanatory code.
-- **User-facing text** -- typos, grammatical errors, or misleading messages in help text, error messages, or CLI output.
-- **Consistency** -- note where the code deviates from patterns established elsewhere in the same project without good reason.
+- Missing tests, especially for trivially-testable pure functions; note code that's hard to test due to tight coupling.
+- Misleading, ambiguous, or inconsistent naming.
+- Misleading comments, outdated docstrings, missing docs on public interfaces (don't demand comments on self-explanatory code).
+- Typos/errors in user-facing text (help output, error messages).
+- Deviations from established codebase patterns without good reason.
 
-### 7. Present the review
+### 4. Present the review
 
-Structure the feedback as a numbered list of issues, ordered by severity (most critical first). For each issue:
+Numbered list, most critical issue first. For each:
 
-- **State the problem clearly** -- what is wrong and where. Reference specific line numbers using the `file_path:line_number` format.
-- **Explain why it matters** -- don't just say "this is bad." Explain the consequence: what breaks, what's harder to maintain, what confuses the next reader.
-- **Show what better looks like** -- provide a concrete suggestion or code snippet where appropriate. Not a full rewrite, but enough that the author knows what direction to go.
+- **Problem** - what's wrong and where, using `file_path:line_number`.
+- **Why it matters** - the concrete consequence, not just "this is bad."
+- **Better** - a concrete suggestion or snippet, not a full rewrite.
 
-After the numbered list, provide a short summary (2-4 sentences) that captures the overall state of the code and the most important theme the author should focus on.
+Close with a 2-4 sentence summary: overall state of the code and the single most important theme to focus on.
 
-### 8. Save the code review
+### 5. Save the review
 
-Save the full review to `[repo-name]-[session-name]-code-review.txt` for the author to access after the conversation. Include the file paths and line numbers in the review so the author can easily find the issues. Present the file path to the user at the end of the review.
+Save to `[repo-name]-[session-name]-code-review.txt`, including file paths and line numbers. Tell the user the file path at the end.
 
 ## Guidelines
 
-- Be harsh but constructive. Every criticism should come with enough context that the author learns something.
-- Be specific. "This could be better" is useless. "Line 42 compares `now >= get_race_utc(event)` but `get_race_utc` returns `datetime | None`, so this raises `TypeError` when the return is `None`" is useful.
-- Prioritise by impact. Lead with the issues that matter most.
-- Don't pad the review. If the code is good, say so briefly. If it has serious problems, don't soften the message.
-- Don't nitpick formatting or style if the project has a formatter or linter configured. Focus on things tools can't catch.
-- Verify your claims. If you say a function is unused, confirm it with a search. Wrong feedback is worse than no feedback.
-- Consider the project's scale and context. A personal CLI tool has different standards than a production service.
-- If prior review feedback exists in the conversation, check whether it was addressed. Note improvements and flag unresolved issues.
+- Be harsh but constructive; every criticism should teach something.
+- Be specific — "line 42 compares `now >= get_race_utc(event)` but `get_race_utc` can return `None`, so this raises `TypeError`" not "this could be better."
+- Prioritise by impact; lead with what matters most.
+- Don't pad the review — if the code is good, say so briefly.
+- Skip formatting/style nits already covered by a formatter or linter.
+- Verify claims (e.g. confirm "unused" with a search) — wrong feedback is worse than none.
+- Weigh the project's scale and context (personal CLI vs. production service).
+- If prior review feedback exists in the conversation, note what was addressed and what wasn't.
