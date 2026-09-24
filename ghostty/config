@@ -10,9 +10,6 @@ macos-option-as-alt = true
 window-padding-x = 10
 window-padding-y = 10
 
-# Set the title
-title = "Coding is life"
-
 # Colourise the cursor
 cursor-color = #ff69b4
 
