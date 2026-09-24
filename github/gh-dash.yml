@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-09-25..2026-10-07 org:prolific-oss slay in:title
+    filters: is:pr is:merged closed:2026-09-24..2026-10-07 org:prolific-oss slay in:title
 
 issuesSections:
   - title: My Issues
