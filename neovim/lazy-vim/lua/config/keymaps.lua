@@ -14,6 +14,13 @@ vim.keymap.set({ "n", "v" }, "<M-f>", "w", { desc = "Word forward" })
 vim.keymap.set("i", "<M-b>", "<C-o>b", { desc = "Word back" })
 vim.keymap.set("i", "<M-f>", "<C-o>w", { desc = "Word forward" })
 
+-- Scroll a fixed 10 lines with <C-d>/<C-u>.
+-- Note: we deliberately don't rely on `vim.opt.scroll`, because 'scroll'
+-- is a window-local option that Neovim silently recalculates to half the
+-- window height whenever a window is created/resized
+vim.keymap.set({ "n", "v" }, "<C-d>", "10<C-d>", { desc = "Scroll down 10 lines" })
+vim.keymap.set({ "n", "v" }, "<C-u>", "10<C-u>", { desc = "Scroll up 10 lines" })
+
 -- Window resizing
 vim.keymap.set("n", "<A-k>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
 vim.keymap.set("n", "<A-j>", "<cmd>resize -5<cr>", { desc = "Decrease Window Height" })
