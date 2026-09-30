@@ -1,7 +1,7 @@
 # https://github.com/agavra/tuicr/blob/main/docs/CONFIG.md
-appearance = "system"
-theme_dark = "solarized-dark"
-theme_light = "solarized-light"
+appearance = "dark"
+theme_dark = "github-dark"
+theme_light = "github-light"
 
 diff_view = "side-by-side"
 ignore_whitespace = true
