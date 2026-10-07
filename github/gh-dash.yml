@@ -5,13 +5,13 @@ prSections:
   - title: My Pull Requests
     filters: is:open author:@me
   - title: Needs My Review
-    filters: is:open -is:draft -label:no-slay-alert review-requested:@me
+    filters: is:open -is:draft -label:no-mkt-alert review-requested:@me
   - title: Approved not merged
     filters: is:open review:approved reviewed-by:@me
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-09-24..2026-10-07 org:prolific-oss slay in:title
+    filters: is:pr is:merged closed:2026-10-05..2026-10-11 org:prolific-oss mkt in:title
 
 issuesSections:
   - title: My Issues
@@ -38,7 +38,7 @@ defaults:
   prsLimit: 50
   issuesLimit: 50
   notificationsLimit: 50
-  view: prs
+  view: notifications
   refetchIntervalMinutes: 30
 
 keybindings:
