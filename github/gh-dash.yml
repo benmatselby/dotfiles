@@ -11,7 +11,7 @@ prSections:
   - title: Involved
     filters: is:open -is:draft involves:@me -author:@me
   - title: Team deployments
-    filters: is:pr is:merged closed:2026-10-12..2026-10-18 org:prolific-oss mkt in:title
+    filters: is:pr is:merged closed:2026-10-19..2026-10-25 org:prolific-oss mkt in:title
 
 issuesSections:
   - title: My Issues
@@ -20,8 +20,12 @@ issuesSections:
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
+  - title: Issues on My Repos
+    filters: is:open user:benmatselby -author:@me
 
 notificationsSections:
+  - title: All
+    filters: ""
   - title: Unread
     filters: "is:unread"
   - title: Created
