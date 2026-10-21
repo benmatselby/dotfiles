@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.colorcolumn = "80,100,120"
 vim.go.background = "dark"
 vim.o.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
+vim.o.wrap = true
 
 -- Ensure that neovim can see the mise tooling
 vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
