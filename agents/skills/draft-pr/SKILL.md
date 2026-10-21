@@ -15,8 +15,9 @@ Create a draft pull request for the current branch with a well-written _and conc
 - Understand the full diff carefully. Understand what changed and why.
 - Check for a PR template.
   - Check, in order: `.github/pull_request_template.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `docs/pull_request_template.md`, `pull_request_template.md`, `.github/PULL_REQUEST_TEMPLATE/*.md`.
-  - If found, fill in every section based on the diff - never leave one empty (write "N/A" with a reason if not applicable). If not found, use the default format below.
-  - If not, complete the headings: "Summary", "Changes", and "Notes" (if applicable).
+  - If found, fill in every section based on the diff - never leave one empty (write "N/A" with a reason if not applicable).
+  - If not found, use the following format: "Summary", "Changes", and "Notes" (if applicable).
+  - Do not do both!
 - The title should be concise, imperative mood ("Add user authentication", not "Added..."), under 72 characters.
   - Check if conventional commits are used, if so, follow that convention for the title.
 - Please make it clear on the PR what the prompts were (if any), with any questions answered.
