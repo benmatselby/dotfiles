@@ -23,3 +23,5 @@
 	default = current
 [tag]
 	sort = -version:refname
+[branch]
+	sort = -committerdate
