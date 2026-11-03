@@ -1,5 +1,8 @@
 {
   "permissions": {
     "defaultMode": "plan"
-  }
+  },
+  "preferredNotifChannel": "ghostty",
+  "autoCompactEnabled": true,
+  "autoContinueAtUsageLimit": false
 }
