@@ -7,7 +7,7 @@ description: Create a draft pull request for the current branch. Summarises the 
 
 Create a draft pull request for the current branch with a well-written _and concise_ summary.
 
-- Confirm the current branch is not `main`. If it is, stop and tell the user.
+- Confirm the current branch is not `main`. If it is, create a relevant branch name first.
 - Identify the base branch.
 - Confirm there's at least one commit ahead of it: `git log <base>..HEAD --oneline`. If empty, stop and tell the user.
 - Warn the user if there are uncommitted changes in the working tree - the PR should represent the committed state.
@@ -20,7 +20,20 @@ Create a draft pull request for the current branch with a well-written _and conc
   - Do not do both!
 - The title should be concise, imperative mood ("Add user authentication", not "Added..."), under 72 characters.
   - Check if conventional commits are used, if so, follow that convention for the title.
-- Please make it clear on the PR what the prompts were (if any), with any questions answered.
+- Please make it clear on the PR what the full prompts were (if any), with any questions answered. The format should be:
+
+```
+🤖 AI prompts
+
+Prompt 1
+
+> The prompt used
+
+Prompt 2 etc
+
+> The pronmpt used
+```
+
 - Raise the PR in draft mode using the `gh` CLI.
 - Request that Copilot for a review.
 - Give the user the PR URL and confirm the title and draft status.
