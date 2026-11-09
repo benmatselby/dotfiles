@@ -20,7 +20,7 @@ Create a draft pull request for the current branch with a well-written _and conc
   - Do not do both!
 - The title should be concise, imperative mood ("Add user authentication", not "Added..."), under 72 characters.
   - Check if conventional commits are used, if so, follow that convention for the title.
-- Please make it clear on the PR what the full prompts were (if any), with any questions answered. The format should be:
+- Please make it clear on the PR what the full prompts were (if any), with any questions answered. Put this behind a "Collapsed section" to keep things neat. The format should be:
 
 ```
 🤖 AI prompts
