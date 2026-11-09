@@ -11,4 +11,4 @@
 # Tools
 .husky/post-commit
 crush/
-.claude
+.claude/settings.local.json
