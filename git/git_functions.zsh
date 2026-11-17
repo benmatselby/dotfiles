@@ -127,7 +127,7 @@ function code-load-project() {
 # Calls code-load-project to load the worktree in a new tmux window.
 #
 function code-worktree-add() {
-    local branch="${1:?Usage: tmux_three_pane <window-name>}"
+    local branch="${1:?Usage: code-worktree-add <branch-name>}"
 
     # Get just the name of the current folder
     local repo_name=$(basename "$(pwd)")
@@ -140,6 +140,26 @@ function code-worktree-add() {
 
     # Load tmux windowing
     code-load-project "../${worktree_name}"
+}
+
+##
+# Pick a repo with fzf, ask for a branch name, then call code-worktree-add.
+#
+# Designed to run inside a tmux popup (see M-n in .tmux.conf).
+#
+function code-worktree-pick() {
+    local repo
+    repo=$(fd -HI -t d '^\.git$' ~/git --max-depth 4 -x dirname {} \
+        | sort \
+        | fzf --reverse --prompt 'repo> ') || return
+    [[ -z "${repo}" ]] && return
+
+    local name
+    read -r "name?Branch name: "
+    [[ -z "${name}" ]] && return
+
+    cd "${repo}" || return
+    code-worktree-add "${name}"
 }
 
 ##
