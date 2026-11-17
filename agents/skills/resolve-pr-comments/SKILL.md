@@ -113,7 +113,7 @@ mutation {
 }'
 ```
 
-Confirm the response shows `"isResolved": true`.
+Confirm the response shows `"isResolved": true`. Prefix any replies with [AI generated response] to indicate the comment was addressed by the AI.
 
 ### 7. Report back
 
@@ -130,3 +130,4 @@ Then move on to the next unresolved comment (if any), repeating from step 2.
 - Always agree the solution with the user **before** applying it — do not make changes speculatively.
 - Only resolve a thread **after** the fix has been committed and pushed successfully.
 - If the push fails due to remote mismatch (e.g., fork vs upstream), use `git remote -v` to identify the correct remote and push target explicitly.
+- If there is an "AI Prompts" section on the PR, please update it with the new prompts/answers from this session.
