@@ -86,6 +86,15 @@ function code-branch()
 ##
 # Take a folder and then load up tmux the way I like it.
 #
+# Layout:
+# +-------+-------+
+# | pane1 | pane2 |
+# |       +-------+
+# |       | pane3 |
+# +-------+-------+
+#
+# pane1 runs nvim, pane2 and pane3 are shells in the project folder.
+#
 function code-load-project() {
   local project_path="${1:?Usage: code-load-project <folder-name>}"
 
@@ -96,32 +105,26 @@ function code-load-project() {
   local project_name=$(basename "${project_path}")
 
   echo "${project_name} at ${project_path}"
-  # Fire up tmux window
-  tmux new-window -n "${project_name}" -c "${project_path}"
+  # Fire up tmux window; capture the left pane ID, start nvim in it
+  local left_pane
+  left_pane=$(tmux new-window -P -F '#{pane_id}' -n "${project_name}" -c "${project_path}")
+  tmux send-keys -t "${left_pane}" "nvim" C-m
 
-  # Right hand pane
-  tmux split-window -t "$project_name" -h -c "${project_path}" "nvim"
+  # Right hand column
+  local top_right
+  top_right=$(tmux split-window -h -P -F '#{pane_id}' -t "${left_pane}" -c "${project_path}")
 
-  # Select left hand pane and split it vertically
-  tmux select-pane  -t "$project_name" -L
-  tmux split-window  -t "$project_name" -v -c "${project_path}"
+  # Split the right column vertically to give the bottom right pane
+  tmux split-window -v -t "${top_right}" -c "${project_path}"
+
+  # Leave focus on the editor
+  tmux select-pane -t "${left_pane}"
 }
-
 
 ##
 # Create a new git worktree in current repo, and store in the parent folder.
 #
-# Create a tmux window with three panes:
-# - Two columns
-# - Left column split horizontally (2 panes)
-# - Right column is a single pane
-#
-# Layout:
-# +-------+-------+
-# | pane1 | pane3 |
-# +-------+       |
-# | pane2 |       |
-# +-------+-------+
+# Calls code-load-project to load the worktree in a new tmux window.
 #
 function code-worktree-add() {
     local branch="${1:?Usage: tmux_three_pane <window-name>}"
