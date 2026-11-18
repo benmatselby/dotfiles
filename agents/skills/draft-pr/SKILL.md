@@ -9,7 +9,9 @@ Create a draft pull request for the current branch with a well-written _and conc
 
 - Confirm the current branch is not `main`. If it is, create a relevant branch name first.
 - Identify the base branch.
-- Confirm there's at least one commit ahead of it: `git log <base>..HEAD --oneline`. If empty, stop and tell the user.
+- Confirm there's at least one commit ahead of it: `git log <base>..HEAD --oneline`. If not, then
+  - Assume what is in the index is what we want to commit.
+  - If nothing is in the index, use best judgement to create a commit message and commit the changes.
 - Warn the user if there are uncommitted changes in the working tree - the PR should represent the committed state.
 - Gather context using `git log` and `git diff`.
 - Understand the full diff carefully. Understand what changed and why.
