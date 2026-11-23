@@ -2,9 +2,9 @@
 prSections:
   - title: My projects
     filters: is:open user:@me
-  - title: My Pull Requests
+  - title: My pull requests
     filters: is:open author:@me
-  - title: Needs My Review
+  - title: Needs my review
     filters: is:open -is:draft -label:no-mkt-alert review-requested:@me
   - title: Approved not merged
     filters: is:open review:approved reviewed-by:@me
@@ -14,14 +14,16 @@ prSections:
     filters: is:pr is:merged closed:2026-11-23..2026-11-29 org:prolific-oss mkt in:title
 
 issuesSections:
-  - title: My Issues
+  - title: My issues
     filters: is:open author:@me
   - title: Assigned
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
-  - title: Issues on My Repos
+  - title: Issues on my repos
     filters: is:open user:benmatselby -author:@me
+  - title: My issues at work
+    filters: is:open org:prolific-oss author:@me
 
 notificationsSections:
   - title: All
@@ -30,7 +32,7 @@ notificationsSections:
     filters: "is:unread"
   - title: Created
     filters: "is:unread reason:author"
-  - title: Review Requested
+  - title: Review requested
     filters: "is:unread reason:review-requested"
   - title: Participating
     filters: "is:unread reason:participating"
