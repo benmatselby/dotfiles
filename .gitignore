@@ -1,2 +1,4 @@
 neovim/lazy-vim/lua/plugins/theme.lua
 .claude
+
+agents/skills/synced/
