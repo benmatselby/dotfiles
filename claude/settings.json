@@ -2,6 +2,68 @@
   "permissions": {
     "defaultMode": "plan"
   },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh working"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh working"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh waiting"
+          }
+        ]
+      },
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh idle"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh done"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -x ~/.config/tmux/agent-state.sh ] || ~/.config/tmux/agent-state.sh clear"
+          }
+        ]
+      }
+    ]
+  },
   "preferredNotifChannel": "ghostty",
   "autoCompactEnabled": true,
   "autoContinueAtUsageLimit": false
