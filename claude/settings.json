@@ -64,7 +64,7 @@
       }
     ]
   },
-  "preferredNotifChannel": "ghostty",
+  "preferredNotifChannel": "notifications_disabled",
   "autoCompactEnabled": true,
   "autoContinueAtUsageLimit": false
 }
