@@ -163,6 +163,21 @@ function code-worktree-pick() {
 }
 
 ##
+# Pick a repo with fzf and load it with code-load-project.
+#
+# Designed to run inside a tmux popup (see M-p in .tmux.conf).
+#
+function code-load-project-pick() {
+    local repo
+    repo=$(fd -HI -t d '^\.git$' ~/git --max-depth 4 -x dirname {} \
+        | sort \
+        | fzf --reverse --prompt 'project> ') || return
+    [[ -z "${repo}" ]] && return
+
+    code-load-project "${repo}"
+}
+
+##
 # Delete a git worktree in current repo and then close tmux winwdow
 #
 function code-worktree-remove() {
